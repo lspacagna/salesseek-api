@@ -1,5 +1,6 @@
 # Organization API
-dsfgs
+
+## List Organizations
 
 <blockquote class="highlight json-doc tab-json-doc">
   <h3>Request Body</h3>
