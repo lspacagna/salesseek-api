@@ -2,237 +2,183 @@
 title: SalesSeek API
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - shell
-  - ruby
-  - python
-  - javascript
-
-toc_footers:
-  - <a href='#'>Sign Up SalesSeek</a>
+  - json-doc: Request
+  - json: Response
 
 includes:
-  - errors
+  - organization
 
 search: true
 ---
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Welcome to the SalesSeek API! You can use our API to access all our API endpoints, such as the [Deal API](https://github.com/tripit/slate) to look up deal values, or the [Individual API](https://github.com/tripit/slate) to look up email addresses. 
 
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+The API is organized around [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer). All requests should be made over SSL. All request and response bodies, including errors, are encoded in JSON.
 
-This example API documentation page was created with [Slate](https://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
+URIs for SalesSeek's REST API resource have the following structure:
+
+`https://{CLIENT_ID}.salesseek.net/api/{RESOURCE}?{KEY1}={VALUE1}&{KEY2}={VALUE2}`
+
+Variable |  Description
+--------- | ------- 
+CLIENT_ID | The unique ID for your SalesSeek account. You can find this as the sub-domain when accessing your account. 
+RESOURCE | Specific [resource]() type  to be requested.
+KEYx | Parameter identifier matching one resource's parameter (optional)
+VALUEx | Value asociated to KEYx
+
 
 # Authentication
 
-> To authorize, use this code:
+SalesSeek uses cookies as the authentication method. Cookies are encrypted by the server in the HTTPS Response after login.
 
-```ruby
-require 'kittn'
+SalesSeek expects the cookie to be included in all API requests to the server after login. For this reason the first step should be Login and then any sequence of requests to the API can follow.
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+## Login
+
+<blockquote class="highlight json-doc tab-json-doc">
+  <h3>Request Header</h3>
+</blockquote>
+
+```json-doc
+  Content-Type: application/x-www-form-urlencoded
 ```
 
-```python
-import kittn
+<blockquote class="highlight json-doc tab-json-doc">
+  <h3>Request Body</h3>
+</blockquote>
 
-api = kittn.authorize('meowmeowmeow')
+```json-doc
+{
+  "email_address" : "example@salesseek.net"
+  "password":"BrfqxWrZFegnVuE382GbWQyM)n"
+}
 ```
 
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
+<blockquote class="highlight json tab-json">
+  <h3>Response Header</h3>
+</blockquote>
+
+```json
+Set-Cookie: salesseek=54fe7b67-a08a-4467-b95b-8689084b1f89; Path=/
 ```
 
-```javascript
-const kittn = require('kittn');
+<blockquote class="highlight json tab-json">
+  <h3>Response Body</h3>
+</blockquote>
 
-let api = kittn.authorize('meowmeowmeow');
+```json
+{
+  "id": "a938196a-152d-40f3-ab3d-404385143a4b",
+  "name": "Example Login",
+  "is_admin": true,
+  "uri": "users/a938196a-152d-40f3-ab3d-804985143a4b",
+  "short_id": "a938196a-152d-40f3-ab3d-804985143a4b",
+  "email_address": "example@salesseek.co.uk",
+  "latest": true,
+  "client_id": "913fa210-edf2-49c3-86a2-ec8f063d92ea",
+  "deleted": false,
+  "modified": "2017-04-27T15:57:34.916670",
+  "created": "2017-03-13T10:41:37.403733",
+  "type": "users",
+  "ical_url": "/users/a938196a-152d-40f3-ab3d-404385143a4b/icalendar_feed?token=308e39c8-584f-402c-b5d2-4b9214be8424",
+  "password_reset_required": false,
+  "notification_settings": {
+    "instant_email_notifications": "False",
+    "evening_email_notification": "False",
+    "morning_email_notification": "False",
+    "new_lead_email_notification": "False"
+  }
+}
 ```
 
-> Make sure to replace `meowmeowmeow` with your API key.
+> 
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+To login, send your email address and password to the endpoint below. If login is successful a cookie will be returned in the response header. This cookie should be used in all future calls to the API. 
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+### Request URL
 
-`Authorization: meowmeowmeow`
+`POST https://{CLIENT_ID}.salesseek.net/api/login`
+
+### Request Body Parameters
+
+Parameter |  Description
+--------- | ------- 
+email_address | Your email address used to access your account.
+password | The password used to access your account.
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+You must set the following Content-Type in the request header: <br>
+<code>Content-Type: application/x-www-form-urlencoded`</code>
+
 </aside>
 
-# Kittens
+## Logout
 
-## Get All Kittens
+Executes the logout process for the currently authenticated SalesSeek user
 
-```ruby
-require 'kittn'
+### Request URL
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
+`DELETE https://{CLIENT_ID}.salesseek.net/api/logout`
 
-```python
-import kittn
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
 
-```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
-```
 
-```javascript
-const kittn = require('kittn');
+## Request Password Reset
 
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
-```
+<blockquote class="highlight json-doc tab-json-doc">
+  <h3>Request Body</h3>
+</blockquote>
 
-> The above command returns JSON structured like this:
-
-```json
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
-```
-
-This endpoint retrieves all kittens.
-
-### HTTP Request
-
-`GET http://example.com/api/kittens`
-
-### Query Parameters
-
-Parameter | Default | Description
---------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-
-## Get a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
-```
-
-> The above command returns JSON structured like this:
-
-```json
+```json-doc
 {
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
+    email_address: "example@salesseek.net"
+    callback_url: "https://example.salesseek.net/#reset"
 }
 ```
 
-This endpoint retrieves a specific kitten.
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-
-### HTTP Request
-
-`GET http://example.com/kittens/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
-
-## Delete a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.delete(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.delete(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2"
-  -X DELETE
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.delete(2);
-```
-
-> The above command returns JSON structured like this:
+<blockquote class="highlight json tab-json">
+  <h3>Response Body</h3>
+</blockquote>
 
 ```json
+null
+```
+
+If a user has forgoten their password for their SalesSeek account make a call to this API to reset their password. After providing his email address SalesSeek will send link via to validate this person wanted to change manually their password.
+
+### Request URL
+
+`DELETE https://{CLIENT_ID}.salesseek.net/api/logout`
+
+
+
+
+## Reset Password
+
+<blockquote class="highlight json-doc tab-json-doc">
+  <h3>Request Body</h3>
+</blockquote>
+
+```json-doc
 {
-  "id": 2,
-  "deleted" : ":("
+    user_id:"b8146356634",
+    token:"76ef98545e738a51",
+    password:"I_will_remember_this_new_password"
 }
 ```
 
-This endpoint retrieves a specific kitten.
+<blockquote class="highlight json tab-json">
+  <h3>Response Body</h3>
+</blockquote>
 
-### HTTP Request
+```json
+null
+```
 
-`DELETE http://example.com/kittens/<ID>`
+Once the password reset email has been received, use the information to reset the user password
 
-### URL Parameters
+### Request URL
 
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to delete
-
+`DELETE https://{CLIENT_ID}.salesseek.net/api/reset`
