@@ -270,4 +270,12 @@ Updates values of organization by `organization_id`. The resulting organization 
 
 Deletes the organization matching the `organization_id`
 
+### Request URL
+
 `DELETE https://{CLIENT_ID}.salesseek.net/api/organizations/{organization_id}`
+
+### Request Query Parameters
+
+Parameter |  Description
+--------- | ------- 
+`organization_id` | The unique ID for the organization to be updated.
