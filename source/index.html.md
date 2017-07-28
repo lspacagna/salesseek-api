@@ -1,9 +1,9 @@
 ---
 title: SalesSeek API
 
-language_tabs: # must be one of https://git.io/vQNgJ
+<!-- language_tabs: # must be one of https://git.io/vQNgJ
   - request: Request
-  - response: Response
+  - response: Response -->
 
 includes:
   - intro
