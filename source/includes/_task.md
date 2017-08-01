@@ -100,7 +100,7 @@ Creates a new task and then returns the newly created task.
 `POST https://{CLIENT_ID}.salesseek.net/api/tasks`
 
 
-## Update Organization
+## Update Task
 
 > A example request body to change the task due date would be:
 
@@ -121,3 +121,83 @@ Parameter |  Description
 `task_id`      | The ID for the task you'd like to update **String**
 
 
+
+## Delete Task
+
+Deletes the task matching the `task_id`
+
+### Request URL
+
+`DELETE https://{CLIENT_ID}.salesseek.net/api/tasks/{task_id}`
+
+### Request Query Parameters
+
+Parameter |  Description
+--------- | ------- 
+`task_id` | The unique ID for the task to be deleted.
+
+
+
+
+## List Tasks
+
+> An example request to get the first 50 tasks in your SalesSeek account (when ordered by due date) would be:
+
+```http
+GET https://example.salesseek.net/api/tasks?rows=50&start=0&order_by=due_date%20asc
+```
+
+> The reponse header contains the following information:
+
+```
+Records-Rows: 50
+Records-Start: 0
+Records-Total: 2000
+```
+
+Returns a list of tasks from your SalesSeek account.
+
+### Request URL
+
+`GET https://{CLIENT_ID}.salesseek.net/api/tasks`
+
+### Request Query Parameters
+
+Parameter |  Description
+--------- | ------- 
+`rows` | The maximum number of organizations to be returned.
+`start` | The row number to start to retrieve data. (0 for start)
+`order_by` | Results are ordered by the provided field name followed by `%20desc` or `%20asc`
+
+<aside class="notice">The response header contain the total number of records.</aside>
+
+### Response Header Parameters
+
+Parameter |  Description
+--------- | ------- 
+`Records-Rows` | The number of rows returned in this request
+`Records-Start` | The start number of rows in this request (out of total)
+`Records-Total` | The total number of rows available
+
+
+## Search Tasks
+
+> An example request for tasks where the name contains 'example'
+
+```
+https://example.salesseek.net/api/tasks?search=test
+```
+
+Provides the the subset of tasks where the tasks name matches the `search_string`. 
+
+### Request URL
+
+`GET https://{CLIENT_ID}.salesseek.net/api/tasks?search={search_string}`
+
+### Request Query Parameters
+
+Parameter |  Description
+--------- | ------- 
+`search_string` | Searches for all Organizations containing this string.
+
+<aside class="notice">The set of information returned is reduced to maintain search performance.</aside>

@@ -12,6 +12,7 @@ includes:
   - individual
   - deal
   - task
+  - campaigns
 
 search: true
 ---
