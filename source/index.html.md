@@ -10,6 +10,8 @@ includes:
   - authentication
   - organization
   - individual
+  - deal
+  - task
 
 search: true
 ---
