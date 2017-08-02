@@ -5,6 +5,10 @@ title: SalesSeek API
   - request: Request
   - response: Response -->
 
+toc_footers:
+  - <a href='https://www.salesseek.com'>SalesSeek Website</a>
+
+
 includes:
   - intro
   - authentication

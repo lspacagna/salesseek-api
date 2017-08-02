@@ -110,9 +110,14 @@ html, body {
     }
   }
 
+  .logo-wrapper{
+    width: 100%;
+    text-align: center;
+  }
+
   .logo {
     //margin-bottom: $logo-margin;
-    margin: 20px auto;
+    margin: 35px auto;
     width: 55%;
   }
 
@@ -190,16 +195,24 @@ html, body {
 
   .toc-footer {
     padding: 1em 0;
-    margin-top: 1em;
-    border-top: 1px dashed $nav-footer-border-color;
+    //margin-top: 1em;
+    //border-top: 1px dashed $nav-footer-border-color;
 
     li,a {
       color: $nav-text;
       text-decoration: none;
     }
+  
+    a:before{
+      font-family: 'icomoon' !important;
+      content: "\e900";
+      margin-right: 5px;
+      position: relative;
+      top: 2px;
+    }
 
     a:hover {
-      text-decoration: underline;
+      //text-decoration: underline;
     }
 
     li {
@@ -263,7 +276,7 @@ html, body {
 
 .banner{
   position: fixed;
-  height: 4px;
+  height: 5px;
   background-image: linear-gradient(90deg, #008EFF 0%, #9380FF 100%);
   width: 100%;
   z-index: 10000;
@@ -378,6 +391,10 @@ html, body {
     // border-bottom: 1px solid #ccc;
     background-color: #fdfdfd;
     font-weight: normal;
+  }
+
+  h1:first-of-type {
+    padding-top: 40px;
   }
 
   h1:first-child, div:first-child + h1 {
