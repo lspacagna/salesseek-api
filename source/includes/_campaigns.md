@@ -2,6 +2,90 @@
 
 ## Campaign Attributes
 
+> The JSON encoded response looks like this.
+
+```json
+{
+  "id": "0a6a5701-99c9-4a80-ad78-c5g05c9497bc",
+  "name": "Free Webinar today at 3pm",
+  "status": "draft",
+  "subject": "Free Webinar today at 3pm",
+  "campaign_type": "campaign",
+  "to_group_id": "99c90-a6a5701-4a80-ad78-c5g05c9497bc",
+  "to_group": null,
+  "sent": null,
+  "used_in_automations": false,
+  "used_in_live_automations": null,
+  "include_signature": true,
+  "campaign_schedule_id": a1053ecf-ef72-4f5f-8b74-56ce1b7b401e,
+  "campaign_schedule": {
+    "id": "a1053ecf-ef72-4f5f-8b74-56ce1b7b401e",
+    "timezone": "UTC",
+    "utc_offset": "-60",
+    "when": "2017-09-29T12:00:00",
+    "when_utc": "2017-09-29T11:00:00"
+  },
+  "track": true,
+  "owner_id": "1445cf43-06c5-4821-9e92-7b5810840a92",
+  "creator_id": "a4c510ac-5f3b-4a2a-b3bd-ef0dc1ae1680"
+  "last_modified_by_id": "a4c510ac-5f3b-4a2a-b3bd-ef0dc1ae1680",
+  "created": "2017-05-23T08:56:14.036080",
+  "modified": "2017-07-31T11:13:07.689772",
+  "from_user_id": "a4c510ac-5f3b-4a2a-b3bd-ef0dc1ae1680",
+  "from_user": {
+    ...
+  },
+  "creator": {
+    ...
+  },
+  "owner": {
+    ...
+  },
+  "email_status_stats": {
+    "sent": 0,
+    "queued": 0,
+    "in_progress": 0,
+    "failed": 0,
+    "cancelled": 0
+  },
+  "email_event_stats": {
+    "undelivered_rate": 4,
+    "unsubscribed_rate": 0,
+    "click": 74,
+    "queued": 0,
+    "delivered": 15536,
+    "soft_bounce": 460,
+    "reject": 18,
+    "soft_bounce_rate": 2,
+    "spam": 627,
+    "spam_rate": 3,
+    "send": 16347,
+    "unsubscribed_list": 0,
+    "unsubscribed_all_rate": 0,
+    "bounce_rate": 4,
+    "click_rate": 0,
+    "open_rate": 10,
+    "hard_bounce": 333,
+    "delivered_rate": 95,
+    "send_rate": 0,
+    "hard_bounce_rate": 2,
+    "open": 1678,
+    "undelivered": 811,
+    "unsubscribed_list_rate": 0,
+    "bounce": 793,
+    "unsubscribed": 136,
+    "reject_rate": 0,
+    "unsubscribed_all": 136
+  },
+  "content": "<!DOCTYPE html><h1>Example HTML Email</h1></html>",
+  
+}
+
+```
+
+
+
+
 Parameter |  Description
 --------- | ------- 
 `id`      | The unique identifier for this campaign **String**
@@ -65,3 +149,219 @@ Parameter |  Description
 `email_event_stats.reject_rate` | Rate of rejections in this campaign **Integer**
 `email_event_stats.unsubscribed_all` | Number of individuals who have unsubscibed from all email campaigns **Int**
 `content` | HTML content for this email **String**
+
+
+## Get Campaign
+
+Returns the unique organization matching the `campaign_id`
+
+### Request URL
+
+`GET https://{CLIENT_ID}.salesseek.net/api/campaigns/{campaign_id}`
+
+Parameter |  Description
+--------- | ------- 
+`campaign_id`      | The ID for the campaign you'd like to retrieve **String**
+
+
+## Create Campaign
+
+Creates a new campaign and then returns the newly created campaign.
+
+### Request URL
+
+`POST https://{CLIENT_ID}.salesseek.net/api/campaigns`
+
+## Update Campaign
+
+> A sample request body to update the campaign subject.
+
+```json
+{
+  "subject": "Free Webinar @5pm"
+}
+```
+
+Updates values of a campaign by `campaign_id`. The resulting campaign is returned.
+
+### Request URL
+
+`PATCH https://{CLIENT_ID}.salesseek.net/api/campaigns/{campaign_id}`
+
+Parameter |  Description
+--------- | ------- 
+`campaign_id`      | The ID for the campaign you'd like to update **String**
+
+### Request Body
+
+The only fields updated are the one passed on the request body JSON. You can pass any [attribute](#campaign-attributes) to update. 
+
+
+## Delete Campaign
+
+Deletes the campaign matching the `campaign_id`
+
+### Request URL
+
+`DELETE https://{CLIENT_ID}.salesseek.net/api/campaigns/{campaign_id}`
+
+### Request Query Parameters
+
+Parameter |  Description
+--------- | ------- 
+`campaign_id` | The unique ID for the campaign to be deleted.
+
+
+## List Campaigns
+
+> An example request to get the first 50 *unsent* campaigns in your SalesSeek account (when ordered by modfied date) would be:
+
+```http
+GET https://example.salesseek.net/api/campaigns?rows=50&start=0&order_by=modified%20desc&status=ready,draft
+```
+
+> The reponse header contains the following information:
+
+```
+Records-Rows: 50
+Records-Start: 0
+Records-Total: 2000
+```
+
+Returns a list of campaigns from your SalesSeek account.
+
+
+### Request URL
+
+`GET https://{CLIENT_ID}.salesseek.net/api/campaigns`
+
+### Request Query Parameters
+
+Parameter |  Description
+--------- | ------- 
+`rows` | The maximum number of organizations to be returned.
+`start` | The row number to start to retrieve data. (0 for start)
+`order_by` | Results are ordered by the provided field name followed by &desc or &asc
+
+<div class="wrap">
+  <p class="flash info">
+    The response header contain the total number of records.
+  </p>
+</div>
+
+### Response Header Parameters
+
+Parameter |  Description
+--------- | ------- 
+`Records-Rows` | The number of rows returned in this request
+`Records-Start` | The start number of rows in this request (out of total)
+`Records-Total` | The total number of rows available
+
+
+## Send Campaign Test
+
+> An example request to send a test of a campaign to *example@salesseek.com* would be made to:
+
+```http
+POST https://{CLIENT_ID}.salesseek.net/api/campaigns?test=example@salesseek.com
+```
+
+> An example request body would be:
+
+```json
+{
+  "campaign_type": "direct",
+  "content": "<!DOCTYPE html>\n<html>\n<head>\n</head>\n<body>\n<p>Example Email</p>\n</body>\n</html>",
+  "status": "draft",
+  "from_user": {
+    "id": "a938196a-1d2d-40f3-ab3d-804985143a4b",
+    "name": "SalesSeek Example",
+    "email_address": "example@salesseek.com",
+    "email_signature": "<h2>Email Signature</h2>"
+  },
+  "include_signature": true,
+  "track": true,
+  "name": "Example Email",
+  "subject": "Example Email",
+  "to_group": {
+    "id": "68b2647d-bf9d-4f6f-9cbc-0d1f21687ae0",
+    "name": "Email Group"
+  }
+}
+```
+
+> This enpoint will respond with `null`.
+
+Sends a test email of the campaign content to chosen SalesSeek users. 
+
+### Request URL
+
+`POST https://{CLIENT_ID}.salesseek.net/api/campaigns?test={user_email}`
+
+### Request Query Parameters
+
+Parameter |  Description
+--------- | ------- 
+`user_email` | The maximum number of organizations to be returned.
+
+### Request Body Parameters
+
+Parameter |  Description
+--------- | ------- 
+`campaign_type` | The type of the campaign (`direct`, `campaign`) **Enum (String)**
+`content` | HTML content for this email **String**
+`status`  | Current status of the campaign (`draft`, `ready`, `scheduled`, `sent`) **Enum (String)**
+`from_user`| Object containing detailed information about the user the campaign will be sent from **Object**
+`from_user.id` | ID of the SalesSeek user the email will be sent from **String**
+`from_user.name` | Name of the SalesSeek user the email will be sent from **String**
+`from_user.email_address` | Email address of the SalesSeek user the email will be sent from **String**
+`from_user.email_signature` | Signature for the SalesSeek user the email will be sent from **String**
+`include_signature` | Set to `true` if the signature for the user this campaign will be sent from will be appended to the email (direct emails only) **Boolean**
+`track` | Set to `true` if SalesSeek should track statistics on this campaign **Boolean**
+`name`    | The user provided title for the campaign **String**
+`subject` | The subject line for the campaign **String**
+`to_group` | Object containing detailed information about the group associated with this campaign **Object**
+`to_group.id` | ID for the group the campaign will be sent to **String**
+`to_group.name` | Name for the group the campaign will be sent to **String**
+
+<div class="wrap">
+  <p class="flash info">
+    Values for the request body can be obtained by performing a <a href='#get-campaign'> GET Request </a> on the campaign ID 
+  </p>
+</div>
+
+## Set Campaign Live
+
+Sets a campaign to live and ready for sending.
+
+`POST https://salesseek.salesseek.net/api/campaigns?send`
+
+### Request Query Parameters
+
+(none)
+
+### Request Body Parameters
+
+Parameter |  Description
+--------- | ------- 
+`campaign_type` | The type of the campaign (`direct`, `campaign`) **Enum (String)**
+`content` | HTML content for this email **String**
+`status`  | Current status of the campaign (`draft`, `ready`, `scheduled`, `sent`) **Enum (String)**
+`from_user`| Object containing detailed information about the user the campaign will be sent from **Object**
+`from_user.id` | ID of the SalesSeek user the email will be sent from **String**
+`from_user.name` | Name of the SalesSeek user the email will be sent from **String**
+`from_user.email_address` | Email address of the SalesSeek user the email will be sent from **String**
+`from_user.email_signature` | Signature for the SalesSeek user the email will be sent from **String**
+`include_signature` | Set to `true` if the signature for the user this campaign will be sent from will be appended to the email (direct emails only) **Boolean**
+`track` | Set to `true` if SalesSeek should track statistics on this campaign **Boolean**
+`name`    | The user provided title for the campaign **String**
+`subject` | The subject line for the campaign **String**
+`to_group` | Object containing detailed information about the group associated with this campaign **Object**
+`to_group.id` | ID for the group the campaign will be sent to **String**
+`to_group.name` | Name for the group the campaign will be sent to **String**
+
+<div class="wrap">
+  <p class="flash info">
+    Values for the request body can be obtained by performing a <a href='#get-campaign'> GET Request </a> on the campaign ID 
+  </p>
+</div>

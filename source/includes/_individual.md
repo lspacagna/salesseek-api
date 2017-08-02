@@ -214,4 +214,8 @@ Parameter |  Description
 --------- | ------- 
 `search_string` | Searches for all Organizations containing this string.
 
-<aside class="notice">The set of information returned is reduced to maintain search performance.</aside>
+<div class="wrap">
+  <p class="flash info">
+    The set of information returned is reduced to maintain search performance.
+  </p>
+</div>

@@ -66,6 +66,8 @@ Returns the unique organization matching the `organization_id`
 
 `GET https://{CLIENT_ID}.salesseek.net/api/organizations/{organization_id}`
 
+### Request Query Parameters
+
 Parameter |  Description
 --------- | ------- 
 `organization_id`      | The ID for the organization you'd like to retrieve **String**
@@ -155,7 +157,12 @@ Parameter |  Description
 `start` | The row number to start to retrieve data. (0 for start)
 `order_by` | Results are ordered by the provided field name followed by &desc or &asc
 
-<aside class="notice">The response header contain the total number of records.</aside>
+
+<div class="wrap">
+  <p class="flash info">
+    The response header contains the total number of records.
+  </p>
+</div>
 
 ### Response Header Parameters
 
@@ -186,4 +193,8 @@ Parameter |  Description
 --------- | ------- 
 `search_string` | Searches for all Organizations containing this string.
 
-<aside class="notice">The set of information returned is reduced to maintain search performance.</aside>
+<div class="wrap">
+  <p class="flash info">
+    The set of information returned is reduced to maintain search performance.
+  </p>
+</div>

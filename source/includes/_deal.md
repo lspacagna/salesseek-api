@@ -187,7 +187,7 @@ Parameter |  Description
 
 ### Request Body
 
-The only fields updated are the one passed on the request body JSON. You can pass any [attribute](#organization-attributes) to update. 
+The only fields updated are the one passed on the request body JSON. You can pass any [attribute](#deal-attributes) to update. 
 
 
 
@@ -236,7 +236,11 @@ Parameter |  Description
 `start` | The row number to start to retrieve data. (0 for start)
 `order_by` | Results are ordered by the provided field name followed by &desc or &asc
 
-<aside class="notice">The response header contains the total number of records.</aside>
+<div class="wrap">
+  <p class="flash info">
+    The response header contains the total number of records. 
+  </p>
+</div>
 
 ### Response Header Parameters
 

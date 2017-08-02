@@ -169,7 +169,11 @@ Parameter |  Description
 `start` | The row number to start to retrieve data. (0 for start)
 `order_by` | Results are ordered by the provided field name followed by `%20desc` or `%20asc`
 
-<aside class="notice">The response header contain the total number of records.</aside>
+<div class="wrap">
+  <p class="flash info">
+    The response header contain the total number of records.
+  </p>
+</div>
 
 ### Response Header Parameters
 
@@ -200,4 +204,8 @@ Parameter |  Description
 --------- | ------- 
 `search_string` | Searches for all Organizations containing this string.
 
-<aside class="notice">The set of information returned is reduced to maintain search performance.</aside>
+<div class="wrap">
+  <p class="flash info">
+    The set of information returned is reduced to maintain search performance.
+  </p>
+</div>
