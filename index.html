@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>SalesSeek API</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -199,9 +199,33 @@
     <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print.css" rel="stylesheet" media="print" />
       <script src="javascripts/all.js"></script>
+
+    <!-- Icon -->
+
+    <!-- Default icon -->
+    <link href="images/favicon/favicon.ico" rel="icon" type="image/x-icon" />
+
+    <!-- General icons -->
+    <link rel="icon" type="image/png" href="../images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="../images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../images/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../images/favicon/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="../images/favicon/favicon-192x192.png" sizes="192x192">
+
+    <!-- Icons in apple touch -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../images/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../images/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../images/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../images/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../images/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../images/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon-180x180.png">
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[]">
+    <div class='banner'> </div>
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -209,13 +233,11 @@
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo.png" class="logo" alt="Logo" />
-        <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
-        </div>
+      <div class='logo-wrapper'>
+        <a href='#'>
+          <img src="images/logo.png" class="logo" alt="Logo" />
+        </a>
+      </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
@@ -226,162 +248,242 @@
           </li>
           <li>
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Kittens">Get All Kittens</a>
+                    <a href="#authentication-attributes" class="toc-h2 toc-link" data-title="Authentication">Authentication Attributes</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Kittens">Get a Specific Kitten</a>
+                    <a href="#login" class="toc-h2 toc-link" data-title="Authentication">Login</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Kittens">Delete a Specific Kitten</a>
+                    <a href="#logout" class="toc-h2 toc-link" data-title="Authentication">Logout</a>
+                  </li>
+                  <li>
+                    <a href="#request-password-reset" class="toc-h2 toc-link" data-title="Authentication">Request Password Reset</a>
+                  </li>
+                  <li>
+                    <a href="#complete-password-reset" class="toc-h2 toc-link" data-title="Authentication">Complete Password Reset</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#organization-api" class="toc-h1 toc-link" data-title="Organization API">Organization API</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#organization-attributes" class="toc-h2 toc-link" data-title="Organization API">Organization Attributes</a>
+                  </li>
+                  <li>
+                    <a href="#get-organization" class="toc-h2 toc-link" data-title="Organization API">Get Organization</a>
+                  </li>
+                  <li>
+                    <a href="#create-organization" class="toc-h2 toc-link" data-title="Organization API">Create Organization</a>
+                  </li>
+                  <li>
+                    <a href="#update-organization" class="toc-h2 toc-link" data-title="Organization API">Update Organization</a>
+                  </li>
+                  <li>
+                    <a href="#delete-organization" class="toc-h2 toc-link" data-title="Organization API">Delete Organization</a>
+                  </li>
+                  <li>
+                    <a href="#list-organizations" class="toc-h2 toc-link" data-title="Organization API">List Organizations</a>
+                  </li>
+                  <li>
+                    <a href="#search-organizations" class="toc-h2 toc-link" data-title="Organization API">Search Organizations</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#individual-api" class="toc-h1 toc-link" data-title="Individual API">Individual API</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#individual-attributes" class="toc-h2 toc-link" data-title="Individual API">Individual Attributes</a>
+                  </li>
+                  <li>
+                    <a href="#get-individual" class="toc-h2 toc-link" data-title="Individual API">Get Individual</a>
+                  </li>
+                  <li>
+                    <a href="#create-individual" class="toc-h2 toc-link" data-title="Individual API">Create Individual</a>
+                  </li>
+                  <li>
+                    <a href="#update-individual" class="toc-h2 toc-link" data-title="Individual API">Update Individual</a>
+                  </li>
+                  <li>
+                    <a href="#delete-individual" class="toc-h2 toc-link" data-title="Individual API">Delete Individual</a>
+                  </li>
+                  <li>
+                    <a href="#list-individuals" class="toc-h2 toc-link" data-title="Individual API">List Individuals</a>
+                  </li>
+                  <li>
+                    <a href="#search-individuals" class="toc-h2 toc-link" data-title="Individual API">Search Individuals</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#deal-api" class="toc-h1 toc-link" data-title="Deal API">Deal API</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#deal-attributes" class="toc-h2 toc-link" data-title="Deal API">Deal Attributes</a>
+                  </li>
+                  <li>
+                    <a href="#get-deal" class="toc-h2 toc-link" data-title="Deal API">Get Deal</a>
+                  </li>
+                  <li>
+                    <a href="#create-deal" class="toc-h2 toc-link" data-title="Deal API">Create Deal</a>
+                  </li>
+                  <li>
+                    <a href="#update-deal" class="toc-h2 toc-link" data-title="Deal API">Update Deal</a>
+                  </li>
+                  <li>
+                    <a href="#delete-deal" class="toc-h2 toc-link" data-title="Deal API">Delete Deal</a>
+                  </li>
+                  <li>
+                    <a href="#list-deals" class="toc-h2 toc-link" data-title="Deal API">List Deals</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#task-api" class="toc-h1 toc-link" data-title="Task API">Task API</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#task-attributes" class="toc-h2 toc-link" data-title="Task API">Task Attributes</a>
+                  </li>
+                  <li>
+                    <a href="#get-task" class="toc-h2 toc-link" data-title="Task API">Get Task</a>
+                  </li>
+                  <li>
+                    <a href="#create-task" class="toc-h2 toc-link" data-title="Task API">Create Task</a>
+                  </li>
+                  <li>
+                    <a href="#update-task" class="toc-h2 toc-link" data-title="Task API">Update Task</a>
+                  </li>
+                  <li>
+                    <a href="#delete-task" class="toc-h2 toc-link" data-title="Task API">Delete Task</a>
+                  </li>
+                  <li>
+                    <a href="#list-tasks" class="toc-h2 toc-link" data-title="Task API">List Tasks</a>
+                  </li>
+                  <li>
+                    <a href="#search-tasks" class="toc-h2 toc-link" data-title="Task API">Search Tasks</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#campaign-api" class="toc-h1 toc-link" data-title="Campaign API">Campaign API</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#campaign-attributes" class="toc-h2 toc-link" data-title="Campaign API">Campaign Attributes</a>
+                  </li>
+                  <li>
+                    <a href="#get-campaign" class="toc-h2 toc-link" data-title="Campaign API">Get Campaign</a>
+                  </li>
+                  <li>
+                    <a href="#create-campaign" class="toc-h2 toc-link" data-title="Campaign API">Create Campaign</a>
+                  </li>
+                  <li>
+                    <a href="#update-campaign" class="toc-h2 toc-link" data-title="Campaign API">Update Campaign</a>
+                  </li>
+                  <li>
+                    <a href="#delete-campaign" class="toc-h2 toc-link" data-title="Campaign API">Delete Campaign</a>
+                  </li>
+                  <li>
+                    <a href="#list-campaigns" class="toc-h2 toc-link" data-title="Campaign API">List Campaigns</a>
+                  </li>
+                  <li>
+                    <a href="#send-campaign-test" class="toc-h2 toc-link" data-title="Campaign API">Send Campaign Test</a>
+                  </li>
+                  <li>
+                    <a href="#set-campaign-live" class="toc-h2 toc-link" data-title="Campaign API">Set Campaign Live</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#filter-api" class="toc-h1 toc-link" data-title="Filter API">Filter API</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#filter-attributes" class="toc-h2 toc-link" data-title="Filter API">Filter Attributes</a>
+                  </li>
+                  <li>
+                    <a href="#get-filter" class="toc-h2 toc-link" data-title="Filter API">Get Filter</a>
+                  </li>
+                  <li>
+                    <a href="#create-filter" class="toc-h2 toc-link" data-title="Filter API">Create Filter</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#group-api" class="toc-h1 toc-link" data-title="Group API">Group API</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#group-attributes" class="toc-h2 toc-link" data-title="Group API">Group Attributes</a>
+                  </li>
+              </ul>
           </li>
       </div>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
+            <li><a href='https://www.salesseek.com'>SalesSeek Website</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<p>Welcome to the SalesSeek API! You can use our API to access all our API endpoints, such as the <a href="#deal-api">Deal API</a> to look up deal values, or the <a href="#individual-api">Individual API</a> to look up email addresses. </p>
 
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p>The API is organized around <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer">REST</a>. All requests should be made over SSL. All request and response bodies, including errors, are encoded in JSON.</p>
 
-<p>This example API documentation page was created with <a href="https://github.com/tripit/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
+<p>URIs for SalesSeek&#39;s REST API resource have the following structure:</p>
+
+<p><code>https://{CLIENT_ID}.salesseek.net/api/{RESOURCE}?{KEY1}={VALUE1}&amp;{KEY2}={VALUE2}</code></p>
+
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>CLIENT_ID</code></td>
+<td>The unique ID for your SalesSeek account. You can find this as the sub-domain when accessing your account.</td>
+</tr>
+<tr>
+<td><code>RESOURCE</code></td>
+<td>Specific resource type to be requested.</td>
+</tr>
+<tr>
+<td><code>KEYx</code></td>
+<td>Parameter identifier matching one resource&#39;s parameter</td>
+</tr>
+<tr>
+<td><code>VALUEx</code></td>
+<td>Value asociated to <code>KEYx</code></td>
+</tr>
+</tbody></table>
 <h1 id='authentication'>Authentication</h1>
+<p>SalesSeek uses cookies as the authentication method. Cookies are encrypted by the server in the HTTPS Response after login.</p>
+
+<p>SalesSeek expects the cookie to be included in all API requests to the server after login. For this reason the first step should be Login and then any sequence of requests to the API can follow.</p>
+<h2 id='authentication-attributes'>Authentication Attributes</h2>
 <blockquote>
-<p>To authorize, use this code:</p>
+<p>The JSON encoded response looks like this.</p>
 </blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
-
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a938196a-152d-40f3-ab3d-404385143a4b"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example Login"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"is_admin"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"email_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@salesseek.co.uk"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"913fa210-edf2-49c3-86a2-ec8f063d92ea"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"modified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-04-27T15:57:34.916670"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-13T10:41:37.403733"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ical_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/users/a938196a-152d-40f3-ab3d-404385143a4b/icalendar_feed?token=308e39c8-584f-402c-b5d2-4b9214be8424"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"password_reset_required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"notification_settings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"instant_email_notifications"</span><span class="p">:</span><span class="w"> </span><span class="s2">"False"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"evening_email_notification"</span><span class="p">:</span><span class="w"> </span><span class="s2">"False"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"morning_email_notification"</span><span class="p">:</span><span class="w"> </span><span class="s2">"False"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"new_lead_email_notification"</span><span class="p">:</span><span class="w"> </span><span class="s2">"False"</span><span class="w">
   </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -389,38 +491,73 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td><code>id</code></td>
+<td>The unique identifier for the user logging in <strong>string</strong></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>The name of the user logging in <strong>string</strong></td>
+</tr>
+<tr>
+<td><code>is_admin</code></td>
+<td>Set to <code>true</code> if this user is an admin <strong>boolean</strong></td>
+</tr>
+<tr>
+<td><code>email_address</code></td>
+<td>The user email address <strong>string</strong></td>
+</tr>
+<tr>
+<td><code>email_address</code></td>
+<td>The user email address <strong>string</strong></td>
+</tr>
+<tr>
+<td><code>client_id</code></td>
+<td><em>TO DO</em></td>
+</tr>
+<tr>
+<td><code>modified</code></td>
+<td>User last modified timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>created</code></td>
+<td>User creation timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>ical_url</code></td>
+<td>URL for the user iCal connection <strong>string (URL)</strong></td>
+</tr>
+<tr>
+<td><code>password_reset_required</code></td>
+<td>Set to <code>true</code> if this user will be required to reset their password when loggin in. <strong>boolean</strong></td>
+</tr>
+<tr>
+<td><code>notification_settings</code></td>
+<td>Object contianing users email notification settings <strong>object</strong></td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
+<h2 id='login'>Login</h2>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>When logging in you must add the following to the reqest header:</p>
+</blockquote>
+<pre class="highlight http tab-http"><code><span class="err">Content-Type: application/x-www-form-urlencoded
+</span></code></pre>
+<blockquote>
+<p>A sample request body to login as example user would be:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@salesseek.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"V84gFHyAckt%b@bNRy$fW"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+<blockquote>
+<p>If login is successful, the following cookie will be present in the response header:</p>
+</blockquote>
+<pre class="highlight http tab-http"><code><span class="err">Set-Cookie: salesseek=54fe7b67-a08a-4467-b95b-8689084b1f89; Path=/
+</span></code></pre>
+<p>To login, send your email address and password to the endpoint below. If login is successful a cookie will be returned in the response header. This cookie should be used in all future calls to the API. </p>
+<h3 id='request-url'>Request URL</h3>
+<p><code>POST https://{CLIENT_ID}.salesseek.net/api/login</code></p>
+<h3 id='request-body-parameters'>Request Body Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -428,75 +565,2240 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td><code>email_address</code></td>
+<td>Your email address used to access your account. <strong>string</strong></td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>The password used to access your account. <strong>string</strong></td>
 </tr>
 </tbody></table>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
 
-<p>The Kittn API uses the following error codes:</p>
-
+<div class="wrap">
+  <p class="flash warn">
+    You must set the following Content-Type in the request header: <br>
+    <code>Content-Type: application/x-www-form-urlencoded</code>
+  </p>
+</div>
+<h2 id='logout'>Logout</h2>
+<p>Executes the logout process for the currently authenticated SalesSeek user</p>
+<h3 id='request-url-2'>Request URL</h3>
+<p><code>DELETE https://{CLIENT_ID}.salesseek.net/api/logout</code></p>
+<h2 id='request-password-reset'>Request Password Reset</h2>
+<blockquote>
+<p>A sample request body to request a user password reset would be:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"email_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@salesseek.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"callback_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.salesseek.net/#reset"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>If a user has forgoten their password for their SalesSeek account make a call to this API to reset their password. After providing their email address SalesSeek will send link via email to validate this person wanted to change their password. The token sent in this email is requried to reset a password.</p>
+<h3 id='request-url-3'>Request URL</h3>
+<p><code>POST https://{CLIENT_ID}.salesseek.net/api/forgotten</code></p>
+<h3 id='request-body-parameters-2'>Request Body Parameters</h3>
 <table><thead>
 <tr>
-<th>Error Code</th>
-<th>Meaning</th>
+<th>Parameter</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>400</td>
-<td>Bad Request -- Your request sucks</td>
+<td><code>email_address</code></td>
+<td>Your email address for the user that would like to reset their password. <strong>string</strong></td>
 </tr>
 <tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong</td>
+<td><code>callback_url</code></td>
+<td>The next web page to open after reset <strong>string</strong></td>
+</tr>
+</tbody></table>
+<h2 id='complete-password-reset'>Complete Password Reset</h2>
+<blockquote>
+<p>A sample request body to complete the reset of a user password would be:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a938196a-152d-40f3-ab3d-404385143a4b"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"76ef98545e738a51"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I_will_remember_this_new_password"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Once the password reset email has been received, the token in the email must be used to reset the user password.</p>
+<h3 id='request-url-4'>Request URL</h3>
+<p><code>POST https://{CLIENT_ID}.salesseek.net/api/reset</code></p>
+<h3 id='request-body-parameters-3'>Request Body Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>user_id</code></td>
+<td>The ID for the user to have the password reset. <strong>string</strong></td>
 </tr>
 <tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only</td>
+<td><code>token</code></td>
+<td>Unique token provided in reset confirmation email <strong>string</strong></td>
 </tr>
 <tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found</td>
+<td><code>password</code></td>
+<td>New password to be assigned to account <strong>string</strong></td>
+</tr>
+</tbody></table>
+
+<div class="wrap">
+  <p class="flash warn">
+    The token in the request confirmation email must be used to reset the user password.
+  </p>
+</div>
+<h1 id='organization-api'>Organization API</h1><h2 id='organization-attributes'>Organization Attributes</h2>
+<blockquote>
+<p>The JSON encoded response looks like this.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"84087907-6bf4-437a-aa52-200eb40aa5d2"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Chiswick Marketing"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"abbreviation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CHM"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-28T08:53:04.914564"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"modified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-28T08:53:04.914564"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"creator_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7a7cb0c5-6222-4c70-8327-217e49f39e1e"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"last_modified_by_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7a7cb0c5-6222-4c70-8327-217e49f39e1e"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"owner_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7a7cb0c5-6222-4c70-8327-217e49f39e1e"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"last_viewed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-07-28T13:34:53.010019"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"communication"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"locations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"creator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"comments"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is a comment"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"related_file_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"is_favorite"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"custom_fields"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"06bda654-4ca9-4e74-b616-8d3bb53706f0"</span><span class="p">:</span><span class="w"> </span><span class="s2">"63effe75-b52b-4c92-a523-713c2f0e8be9"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td>The unique identifier for this organization <strong>String</strong></td>
 </tr>
 <tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method</td>
+<td><code>name</code></td>
+<td>The user provided name for the organization <strong>String</strong></td>
 </tr>
 <tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json</td>
+<td><code>abbreviation</code></td>
+<td>A system generated abbreviation, derived from the organization name <strong>String</strong></td>
 </tr>
 <tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers</td>
+<td><code>created</code></td>
+<td>Organization creation timestamp <strong>Timestamp (ISO 8601)</strong></td>
 </tr>
 <tr>
-<td>418</td>
-<td>I&#39;m a teapot</td>
+<td><code>modified</code></td>
+<td>Organization last modified timestamp <strong>Timestamp (ISO 8601)</strong></td>
 </tr>
 <tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+<td><code>creator_id</code></td>
+<td>The unique ID for the SalesSeek user that created this organization <strong>String</strong></td>
 </tr>
 <tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+<td><code>last_modified_by_id</code></td>
+<td>The unique ID for the SalesSeek user that last modified this organization <strong>String</strong></td>
 </tr>
 <tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+<td><code>owner_id</code></td>
+<td>The unique ID for the SalesSeek user that has ownership of this organization <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>last_viewed</code></td>
+<td>Organization last viewed timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>communication</code></td>
+<td>An array containing the different communication methods associated with this organization <strong>Array (Object)</strong></td>
+</tr>
+<tr>
+<td><code>locations</code></td>
+<td>An array containing the different locations associated with this organization <strong>Array (Object)</strong></td>
+</tr>
+<tr>
+<td><code>creator</code></td>
+<td>Object containing detailed information about the organization creator <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>owner</code></td>
+<td>Object containing detailed information about the organization owner <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>comments</code></td>
+<td>User provided comments associated with this organization <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>User provided tags associated with this organization <strong>Array (Object)</strong></td>
+</tr>
+<tr>
+<td><code>related_file_ids</code></td>
+<td>Array of Related File IDs associated with this organization <strong>Array (String)</strong></td>
+</tr>
+<tr>
+<td><code>is_favorite</code></td>
+<td>Is this marked as a favorite? <strong>Boolean</strong></td>
+</tr>
+<tr>
+<td><code>custom_fields</code></td>
+<td>Custom Fields and their values <strong>Object</strong></td>
+</tr>
+</tbody></table>
+<h2 id='get-organization'>Get Organization</h2>
+<p>Returns the unique organization matching the <code>organization_id</code></p>
+<h3 id='request-url'>Request URL</h3>
+<p><code>GET https://{CLIENT_ID}.salesseek.net/api/organizations/{organization_id}</code></p>
+<h3 id='request-query-parameters'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>organization_id</code></td>
+<td>The ID for the organization you&#39;d like to retrieve <strong>String</strong></td>
+</tr>
+</tbody></table>
+<h2 id='create-organization'>Create Organization</h2>
+<p>Creates a new organization and then returns the newly created organization.</p>
+<h3 id='request-url-2'>Request URL</h3>
+<p><code>POST https://{CLIENT_ID}.salesseek.net/api/organizations</code></p>
+<h2 id='update-organization'>Update Organization</h2>
+<blockquote>
+<p>A sample request body to change the organization name would be:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Chiswick Marketing Ltd."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Updates values of organization by <code>organization_id</code>. The resulting organization is returned. </p>
+<h3 id='request-url-3'>Request URL</h3>
+<p><code>PATCH https://{CLIENT_ID}.salesseek.net/api/organizations/{organization_id}</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td>The ID for the organization you&#39;d like to update <strong>String</strong></td>
+</tr>
+</tbody></table>
+<h3 id='request-body'>Request Body</h3>
+<p>The only fields updated are the one passed on the request body JSON. You can pass any <a href="#organization-attributes">attribute</a> to update. </p>
+<h2 id='delete-organization'>Delete Organization</h2>
+<p>Deletes the organization matching the <code>organization_id</code></p>
+<h3 id='request-url-4'>Request URL</h3>
+<p><code>DELETE https://{CLIENT_ID}.salesseek.net/api/organizations/{organization_id}</code></p>
+<h3 id='request-query-parameters-2'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>organization_id</code></td>
+<td>The unique ID for the organization to be deleted.</td>
+</tr>
+</tbody></table>
+<h2 id='list-organizations'>List Organizations</h2>
+<blockquote>
+<p>An example request to get the first 50 organizations in your SalesSeek (when ordered alphabetically by name) would be:</p>
+</blockquote>
+<pre class="highlight http tab-http"><code><span class="err">GET https://example.salesseek.net/api/organizations?rows=50&amp;start=0&amp;order_by="name asc"
+</span></code></pre>
+<blockquote>
+<p>The reponse header contains the following information:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Records-Rows: 50
+Records-Start: 0
+Records-Total: 2000
+</code></pre>
+<p>Returns a list of organizations from your SalesSeek account.</p>
+<h3 id='request-url-5'>Request URL</h3>
+<p><code>GET https://{CLIENT_ID}.salesseek.net/api/organizations</code></p>
+<h3 id='request-query-parameters-3'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>rows</code></td>
+<td>The maximum number of organizations to be returned.</td>
+</tr>
+<tr>
+<td><code>start</code></td>
+<td>The row number to start to retrieve data. (0 for start)</td>
+</tr>
+<tr>
+<td><code>order_by</code></td>
+<td>Results are ordered by the provided field name followed by &amp;desc or &amp;asc</td>
+</tr>
+</tbody></table>
+
+<div class="wrap">
+  <p class="flash info">
+    The response header contains the total number of records.
+  </p>
+</div>
+<h3 id='response-header-parameters'>Response Header Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>Records-Rows</code></td>
+<td>The number of rows returned in this request</td>
+</tr>
+<tr>
+<td><code>Records-Start</code></td>
+<td>The start number of rows in this request (out of total)</td>
+</tr>
+<tr>
+<td><code>Records-Total</code></td>
+<td>The total number of rows available</td>
+</tr>
+</tbody></table>
+<h2 id='search-organizations'>Search Organizations</h2>
+<blockquote>
+<p>An example request for organizations where the name contains &#39;example&#39;</p>
+</blockquote>
+<pre class="highlight plaintext"><code>https://example.salesseek.net/api/organizations?search=example
+</code></pre>
+<p>Provides the the subset of organizations where the Organization name matches the <code>search_string</code>. </p>
+<h3 id='request-url-6'>Request URL</h3>
+<p><code>GET https://{CLIENT_ID}.salesseek.net/api/organizations?search={search_string}</code></p>
+<h3 id='request-query-parameters-4'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>search_string</code></td>
+<td>Searches for all Organizations containing this string.</td>
+</tr>
+</tbody></table>
+
+<div class="wrap">
+  <p class="flash info">
+    The set of information returned is reduced to maintain search performance.
+  </p>
+</div>
+<h1 id='individual-api'>Individual API</h1><h2 id='individual-attributes'>Individual Attributes</h2>
+<blockquote>
+<p>The JSON encoded response looks like this.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"e6b52466-69d8-41c5-b8c5-ab00de5865ac"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"photo_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.example.com/man.png"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Aaron"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Henlow"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"full_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Aaron Henlow"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Associate"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"organization_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Riffroute"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"organization_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3d4cd1a4-1a01-445c-84a7-b4d98643b4ce"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"organization"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="s2">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-06-23T11:23:59.997891"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"modified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-01-23T14:16:04.309723"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"creator_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"247f5cd0-f6b7-42d3-8b01-47b1e1941fa9"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"last_modified_by_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"247f5cd0-f6b7-42d3-8b01-47b1e1941fa9"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"owner_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"247f5cd0-f6b7-42d3-8b01-47b1e1941fa9"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"last_viewed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-07-28T14:53:15.350053"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"communication"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"locations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"creator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"comments"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"related_file_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"is_favorite"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"custom_fields"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"a649e75e-cec4-49ad-bd75-0a249270065c"</span><span class="p">:</span><span class="w"> </span><span class="s2">"35000"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"aa00d7c8-3ab1-4315-929f-341d99e0f62d"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01/20/2017"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"6163e374-97fa-4f81-b132-5f622ed24a1b"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"3c7db37f-66a0-4dfb-85cd-f51a5a9d509b"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4b0a7982-1471-499d-bbcb-6022dade415e"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"unsubscribed_all"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"source_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"500c679d-b859-4d51-8026-93ad946a5e45"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"became_lead_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-06-23T11:24:00.043888"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"source"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">},</span><span class="w"> 
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td>The unique identifier for this individual <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>photo_url</code></td>
+<td>URL for the individual profile photo <strong>URL</strong></td>
+</tr>
+<tr>
+<td><code>first_name</code></td>
+<td>Individual first name <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>last_name</code></td>
+<td>Individual last name <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>full_name</code></td>
+<td>Individual first name concatenated with last name <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>role</code></td>
+<td>Individual&#39;s Job Role <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>organization_name</code></td>
+<td>The name for the organization this individual is linked to <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>organization_id</code></td>
+<td>The unique ID for the organization this individual is linked to <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>organization</code></td>
+<td>Object containing detailed information about organization this individual is linked to <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>created</code></td>
+<td>Individual creation timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>modified</code></td>
+<td>Individual last modified timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>creator_id</code></td>
+<td>The unique ID for the SalesSeek user that created this individual <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>last_modified_by_id</code></td>
+<td>The unique ID for the SalesSeek user that last modified this individual <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>owner_id</code></td>
+<td>The unique ID for the SalesSeek user that has ownership of this individual <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>last_viewed</code></td>
+<td>Individual last viewed timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>communication</code></td>
+<td>An array containing the different communication methods associated with this individual <strong>Array (Object)</strong></td>
+</tr>
+<tr>
+<td><code>locations</code></td>
+<td>An array containing the different locations associated with this individual <strong>Array (Object)</strong></td>
+</tr>
+<tr>
+<td><code>creator</code></td>
+<td>Object containing detailed information about the individual creator <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>owner</code></td>
+<td>Object containing detailed information about the individual owner <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>comments</code></td>
+<td>User provided comments associated with this individual <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>User provided tags associated with this organization <strong>Array (Object)</strong></td>
+</tr>
+<tr>
+<td><code>related_file_ids</code></td>
+<td>Array of Related File IDs associated with this individual <strong>Array (String)</strong></td>
+</tr>
+<tr>
+<td><code>is_favorite</code></td>
+<td>Is this marked as a favorite? <strong>Boolean</strong></td>
+</tr>
+<tr>
+<td><code>custom_fields</code></td>
+<td>Custom Fields and their values <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>unsubscribed_all</code></td>
+<td>Has this individual unsubscribed from all email campaigns? <strong>Boolean</strong></td>
+</tr>
+<tr>
+<td><code>source_id</code></td>
+<td>The ID for the associated lead source <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>became_lead_date</code></td>
+<td>Timestamp of the user becoming a lead <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>source</code></td>
+<td>Detailed information about the associated lead source <strong>Object</strong></td>
+</tr>
+</tbody></table>
+<h2 id='get-individual'>Get Individual</h2>
+<p>Returns the individual matching the <code>individual_id</code></p>
+<h3 id='request-url'>Request URL</h3>
+<p><code>GET https://{CLIENT_ID}.salesseek.net/api/individuals/{individual_id}</code></p>
+<h3 id='request-query-parameters'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>individual_id</code></td>
+<td>The unique ID for the individual to be retrieved.</td>
+</tr>
+</tbody></table>
+<h2 id='create-individual'>Create Individual</h2>
+<p>Creates a new Individual and returns the resulting Individual.</p>
+<h3 id='request-url-2'>Request URL</h3>
+<p><code>POST https://{CLIENT_ID}.salesseek.net/api/individuals/</code></p>
+<h2 id='update-individual'>Update Individual</h2>
+<blockquote>
+<p>A sample request body to change the individual last name would be:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Seek"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Updates an Individual by <code>individual_id</code> and returns the resulting Individual. </p>
+<h3 id='request-url-3'>Request URL</h3>
+<p><code>POST https://{CLIENT_ID}.salesseek.net/api/individuals/{individual_id}</code></p>
+<h3 id='request-query-parameters-2'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>individual_id</code></td>
+<td>The unique ID for the individual to be updated.</td>
+</tr>
+</tbody></table>
+<h3 id='request-body'>Request Body</h3>
+<p>The only fields updated are the one passed on the request body JSON. You can pass any <a href="#individual-attributes">attribute</a> to update. </p>
+<h2 id='delete-individual'>Delete Individual</h2>
+<p>Deletes the individual matching the <code>individual_id</code></p>
+<h3 id='request-url-4'>Request URL</h3>
+<p><code>DELETE https://{CLIENT_ID}.salesseek.net/api/individuals/{individual_id}</code></p>
+<h3 id='request-query-parameters-3'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>individual_id</code></td>
+<td>The unique ID for the individual to be updated.</td>
+</tr>
+</tbody></table>
+<h2 id='list-individuals'>List Individuals</h2>
+<blockquote>
+<p>An example request to get the first 50 individuals in your SalesSeek (when ordered by last modified) would be:</p>
+</blockquote>
+<pre class="highlight http tab-http"><code><span class="err">GET https://example.salesseek.net/api/individuals?rows=50&amp;start=0&amp;order_by=modified%20desc
+</span></code></pre>
+<blockquote>
+<p>The reponse header contains the following information:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Records-Rows: 50
+Records-Start: 0
+Records-Total: 2000
+</code></pre>
+<p>Returns the entire list of individuals from your SalesSeek account. </p>
+<h3 id='request-url-5'>Request URL</h3>
+<p><code>GET https://{CLIENT_ID}.salesseek.net/api/individuals</code></p>
+<h3 id='request-query-parameters-4'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>rows</code></td>
+<td>The maximum number of organizations to be returned.</td>
+</tr>
+<tr>
+<td><code>start</code></td>
+<td>The row number to start to retrieve data. (0 for start)</td>
+</tr>
+<tr>
+<td><code>order_by</code></td>
+<td>Results are ordered by the provided field name followed by desc or asc</td>
+</tr>
+</tbody></table>
+<h3 id='response-header-parameters'>Response Header Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>Records-Rows</code></td>
+<td>The number of rows returned in this request</td>
+</tr>
+<tr>
+<td><code>Records-Start</code></td>
+<td>The start number of rows in this request (out of total)</td>
+</tr>
+<tr>
+<td><code>Records-Total</code></td>
+<td>The total number of rows available</td>
+</tr>
+</tbody></table>
+<h2 id='search-individuals'>Search Individuals</h2>
+<blockquote>
+<p>An example request for individuals where the name contains &#39;Seek&#39;</p>
+</blockquote>
+<pre class="highlight plaintext"><code>https://example.salesseek.net/api/organizations?search=seek
+</code></pre>
+<p>Provides the the subset of indidivuals where the individual name matches the <code>search_string</code>. </p>
+<h3 id='request-url-6'>Request URL</h3>
+<p><code>GET https://{CLIENT_ID}.salesseek.net/api/individuals?search={search_string}</code></p>
+<h3 id='request-query-parameters-5'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>search_string</code></td>
+<td>Searches for all Organizations containing this string.</td>
+</tr>
+</tbody></table>
+
+<div class="wrap">
+  <p class="flash info">
+    The set of information returned is reduced to maintain search performance.
+  </p>
+</div>
+<h1 id='deal-api'>Deal API</h1><h2 id='deal-attributes'>Deal Attributes</h2>
+<blockquote>
+<p>The JSON encoded response looks like this.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"08956ba9-ed0c-4bdd-9b8f-29efeb1d254d"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015 Building Works"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"abbreviation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PWL"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"organization_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"db5b165f-24aa-4c49-bbb7-a19d87a6a901"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"funnel_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6cfc3549-c674-4ba6-8f02-3043d0beb174"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"phase_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Contacted"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"phase_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bf2005c2-bcf0-4978-8c49-af8d41bdb225"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"owner_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"39ee847e-3391-4d34-9114-e26fc5bbe7d2"</span><span class="w">
+  </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"none"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">2225</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"weighted_value"</span><span class="p">:</span><span class="w"> </span><span class="mf">222.5</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GBP"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"bubble_representation_value"</span><span class="p">:</span><span class="w"> </span><span class="mi">2225</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"is_favorite"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"phase_last_changed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-07-04T10:36:27.503306"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"expected_close_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-02-15T00:00:00"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"creator_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"247f5cd0-f6b7-42d3-8b01-47b1e1941fa9"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+  </span><span class="s2">"comments"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-06-23T11:40:43.770201"</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"modified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-07-04T10:36:27.407967"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"last_modified_by_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"247f5cd0-f6b7-42d3-8b01-47b1e1941fa9"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"last_viewed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-07-31T09:53:21.713977"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"latest_activity_in_days"</span><span class="p">:</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"related_file_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+  </span><span class="s2">"generated_files"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+  </span><span class="s2">"funnel"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6cfc3549-c674-4ba6-8f02-3043d0beb174"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-06-23T10:44:18.093750"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"modified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-07-29T14:38:47.784098"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_modified_by_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"247f5cd0-f6b7-42d3-8b01-47b1e1941fa9"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"bubble_representation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"deal_value"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"creator_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"247f5cd0-f6b7-42d3-8b01-47b1e1941fa9"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Product"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"order"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"owner_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"247f5cd0-f6b7-42d3-8b01-47b1e1941fa9"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"phase"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bf2005c2-bcf0-4978-8c49-af8d41bdb225"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-06-23T10:44:18.099864"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"modified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-06-07T11:47:51.508875"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_modified_by_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"247f5cd0-f6b7-42d3-8b01-47b1e1941fa9"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"creator_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"247f5cd0-f6b7-42d3-8b01-47b1e1941fa9"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"funnel_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6cfc3549-c674-4ba6-8f02-3043d0beb174"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Contacted"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"hint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Someone who has shown some interest, e.g. registered on your website. Must have email and/or phone contact details."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"default_weight"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"order"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"buckets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">2050</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Installation"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bf96647a-d6d5-455e-83f2-9d09e7fde25c"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Services"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"299a2ae6-4d52-4dfa-b7fe-fe7a3931bb65"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"custom_fields"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"1e681f65-59b0-4509-a7da-a0bf34d4b9e7"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09/22/2016"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"creator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"organization"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+   </span><span class="err">...</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td>The unique identifier for this deal <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>The user provided name for the deal <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>abbreviation</code></td>
+<td>3 letter abbreviation derived from the deal name <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>organization_id</code></td>
+<td>ID for the assocciated organization <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>funnel_id</code></td>
+<td>ID for the funnel this deal is assigned to <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>phase_name</code></td>
+<td>Name for the phase this deal is assigned to <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>phase_id</code></td>
+<td>ID for the phase this deal is assigned to <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>owner_id</code></td>
+<td>ID the the owner of this deal <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>weight</code></td>
+<td>Weight value for deal. Weights are assigned to phases in the funnel. Used for forecast calculations. <strong>Double</strong></td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>Deal forecast status. (None, None Upside, Committed Downside, Committed) <strong>Enum (String)</strong></td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td>Deal monetary value. Sum of all deal bucket values. <strong>Double</strong></td>
+</tr>
+<tr>
+<td><code>weighted_value</code></td>
+<td><code>value</code> multiplied by <code>weight</code>. Used in forecasating. <strong>Double</strong></td>
+</tr>
+<tr>
+<td><code>currency</code></td>
+<td>Abbreviation for the currency for all revenue buckets <strong>Enum (String)</strong></td>
+</tr>
+<tr>
+<td><code>bubble_representation_value</code></td>
+<td>Value used to determine deal bubble size <strong>Double</strong></td>
+</tr>
+<tr>
+<td><code>is_favorite</code></td>
+<td>Is this deal a favorite? <strong>Boolean</strong></td>
+</tr>
+<tr>
+<td><code>phase_last_changed</code></td>
+<td>Timestamp of when the deal phase was last changed. Used for UI activity colouring <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>expected_close_date</code></td>
+<td>User provided expected close date <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>creator_id</code></td>
+<td>The ID for the user that created this deal <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>User provided tags associated with this deal <strong>Array (Object)</strong></td>
+</tr>
+<tr>
+<td><code>comments</code></td>
+<td>User provided comments associated with this deal <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>created</code></td>
+<td>Deal creation timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>modified</code></td>
+<td>Deal last modified timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>last_modified_by_id</code></td>
+<td>ID of the user that last modifed this deal <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>last_viewed</code></td>
+<td>Timestamp of the last time this deal was viewed <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>latest_activity_in_days</code></td>
+<td>Number of days since the last activity on deal <strong>Int</strong></td>
+</tr>
+<tr>
+<td><code>related_file_ids</code></td>
+<td>Array of related file IDs associated with this deal <strong>Array (String)</strong></td>
+</tr>
+<tr>
+<td><code>generated_files</code></td>
+<td>Array of gelated file IDs associated with this deal <strong>Array (String)</strong></td>
+</tr>
+<tr>
+<td><code>funnel</code></td>
+<td>Object containing detailed information about the funnel the deal is associated to <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>funnel.id</code></td>
+<td>ID for the associated funnel</td>
+</tr>
+<tr>
+<td><code>funnel.created</code></td>
+<td>Funnel creation timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>funnel.modified</code></td>
+<td>Funnel last modified timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>funnel.last_modified_by_id</code></td>
+<td>ID of the user that last modifed this funnel <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>funnel.bubble_representation</code></td>
+<td>The value from deal used to generate bubble size <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>funnel.creator_id</code></td>
+<td>The ID for the user that created this deal <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>funnel.name</code></td>
+<td>The user provided name for the funnel <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>funnel.order</code></td>
+<td>When using multi-funnel the position this funnel should be shown <strong>Int</strong></td>
+</tr>
+<tr>
+<td><code>funnel.owner_id</code></td>
+<td>ID the the owner of this funnel <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>phase</code></td>
+<td>Object containing detailed information about the phase the deal is associated to <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>phase.id</code></td>
+<td>ID for the associated funnel</td>
+</tr>
+<tr>
+<td><code>phase.created</code></td>
+<td>Phase creation timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>phase.modified</code></td>
+<td>Phase last modified timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>phase.last_modified_by_id</code></td>
+<td>ID of the user that last modifed this phase <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>phase.creator_id</code></td>
+<td>The ID for the user that created this phase <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>phase.funnel_id</code></td>
+<td>The ID for the funnel the phase is a member of <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>phase.name</code></td>
+<td>The user provided name for the phase <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>phase.hint</code></td>
+<td>User provided detail for the criteria for a deal to enter this phase <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>default_weight</code></td>
+<td>The default weight provided to deals when entering this phase <strong>Double</strong></td>
+</tr>
+<tr>
+<td><code>order</code></td>
+<td>The position this phase should be shown in the UI <strong>Int</strong></td>
+</tr>
+<tr>
+<td><code>buckets</code></td>
+<td>Array of objects containg deal bucket values <strong>Objects</strong></td>
+</tr>
+<tr>
+<td><code>buckets.value</code></td>
+<td>The value applied to this bucket <strong>Double</strong></td>
+</tr>
+<tr>
+<td><code>buckets.name</code></td>
+<td>The user provided name for this bucket <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>buckets.id</code></td>
+<td>The unique identifier for this bucket <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>custom_fields</code></td>
+<td>Custom Fields and their values <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>creator</code></td>
+<td>Object containing detailed information about the deal creator <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>owner</code></td>
+<td>Object containing detailed information about the deal owner <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>organization</code></td>
+<td>Object containing detailed information about the organization this deal is related to <strong>Object</strong></td>
+</tr>
+</tbody></table>
+<h2 id='get-deal'>Get Deal</h2>
+<p>Returns the deal matching the <code>deal_id</code></p>
+<h3 id='request-url'>Request URL</h3>
+<p><code>GET https://{CLIENT_ID}.salesseek.net/api/opportunities/{deal_id}</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td>The ID for the deal you&#39;d like to retrieve <strong>String</strong></td>
+</tr>
+</tbody></table>
+<h2 id='create-deal'>Create Deal</h2>
+<p>Creates a new deal and then returns the newly created deal.</p>
+<h3 id='request-url-2'>Request URL</h3>
+<p><code>POST https://{CLIENT_ID}.salesseek.net/api/opportunities/</code></p>
+<h2 id='update-deal'>Update Deal</h2>
+<blockquote>
+<p>A sample request body to change the deal phase</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"phase_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"299a2ae6-4d52-4dfa-b7fe-fe7a3931bb65"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Updates values of deal by <code>deal_id</code>. The resulting deal is returned. </p>
+<h3 id='request-url-3'>Request URL</h3>
+<p><code>PATCH https://{CLIENT_ID}.salesseek.net/api/opportunities/{deal_id}</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td>The ID for the deal you&#39;d like to update <strong>String</strong></td>
+</tr>
+</tbody></table>
+<h3 id='request-body'>Request Body</h3>
+<p>The only fields updated are the one passed on the request body JSON. You can pass any <a href="#deal-attributes">attribute</a> to update. </p>
+<h2 id='delete-deal'>Delete Deal</h2>
+<p>Deletes the deal matching the <code>deal_id</code></p>
+<h3 id='request-url-4'>Request URL</h3>
+<p><code>DELETE https://{CLIENT_ID}.salesseek.net/api/opportunities/{deal_id}</code></p>
+<h3 id='request-query-parameters'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>deal_id</code></td>
+<td>The unique ID for the deal to be deleted.</td>
+</tr>
+</tbody></table>
+<h2 id='list-deals'>List Deals</h2>
+<blockquote>
+<p>An example request to get the first 50 deals in your SalesSeek (when ordered alphabetically by name) would be:</p>
+</blockquote>
+<pre class="highlight http tab-http"><code><span class="err">GET https://example.salesseek.net/api/opportunities?rows=50&amp;start=0&amp;order_by="name asc"
+</span></code></pre>
+<blockquote>
+<p>The reponse header contains the following information:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Records-Rows: 50
+Records-Start: 0
+Records-Total: 2000
+</code></pre>
+<p>Returns a list of deals from your SalesSeek account.</p>
+<h3 id='request-url-5'>Request URL</h3>
+<p><code>GET https://{CLIENT_ID}.salesseek.net/api/opportunities</code></p>
+<h3 id='request-query-parameters-2'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>rows</code></td>
+<td>The maximum number of deals to be returned.</td>
+</tr>
+<tr>
+<td><code>start</code></td>
+<td>The row number to start to retrieve data. (0 for start)</td>
+</tr>
+<tr>
+<td><code>order_by</code></td>
+<td>Results are ordered by the provided field name followed by &amp;desc or &amp;asc</td>
+</tr>
+</tbody></table>
+
+<div class="wrap">
+  <p class="flash info">
+    The response header contains the total number of records. 
+  </p>
+</div>
+<h3 id='response-header-parameters'>Response Header Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>Records-Rows</code></td>
+<td>The number of rows returned in this request</td>
+</tr>
+<tr>
+<td><code>Records-Start</code></td>
+<td>The start number of rows in this request (out of total)</td>
+</tr>
+<tr>
+<td><code>Records-Total</code></td>
+<td>The total number of rows available</td>
+</tr>
+</tbody></table>
+<h1 id='task-api'>Task API</h1><h2 id='task-attributes'>Task Attributes</h2>
+<blockquote>
+<p>The JSON encoded response looks like this.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b59b3772-4889-4e96-9b90-df5d0817ca44"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#Sales Retry? Old RD Customer went to OT for Bone Daddies Ltd T/A Shackfuyu"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"due_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-23T11:13:15.938419"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"assignee_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1445cf43-06c5-4821-9e92-7b5810840a92"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"owner_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1445cf43-06c5-4821-9e92-7b5810840a92"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-23T11:13:15.938419"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"creator_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1445cf43-06c5-4821-9e92-7b5810840a92"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"modified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-07-07T11:37:18.351486"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"last_modified_by_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1445cf43-06c5-4821-9e92-7b5810840a92"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"related_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"organization"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"related_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d10a4ea4-b329-4ffb-a786-d37987e3fc79"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"completed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"complete_date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"related"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d10a4ea4-b329-4ffb-a786-d37987e3fc79"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bone Daddies Ltd T/A Shackfuyu"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"organizations"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"creator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"assignee"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="err">...</span><span class="w">   
+  </span><span class="p">},</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td>The unique identifier for this task <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>text</code></td>
+<td>User provided task detail text <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>due_date</code></td>
+<td>Timestamp for when the task is due <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>assignee_id</code></td>
+<td>The unique ID for the SalesSeek user that the task is currently assigned to <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>owner_id</code></td>
+<td>The unique ID for the SalesSeek user that has ownership of this task <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>created</code></td>
+<td>Task creation timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>creator_id</code></td>
+<td>The unique ID for the SalesSeek user that created this task <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>modified</code></td>
+<td>Task last modified timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>last_modified_by_id</code></td>
+<td>The unique ID for the SalesSeek user that last modified this task <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>related_type</code></td>
+<td>The type of record in SalesSeek that the task is related to (Organization, Individual, Deal) <strong>Enum</strong></td>
+</tr>
+<tr>
+<td><code>related_id</code></td>
+<td>The ID for the record that the task is reated to <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>completed</code></td>
+<td>Is the task marked as completed? <strong>Boolean</strong></td>
+</tr>
+<tr>
+<td><code>complete_date</code></td>
+<td>Timestamp for when the task was completed <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>related</code></td>
+<td>Object containing detailed information about the record the task is related to <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>related.id</code></td>
+<td>The ID for the record that the task is related to <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>related.name</code></td>
+<td>The name of the record that the task is related to <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>related.type</code></td>
+<td>The type of record in SalesSeek that the task is related to (Organization, Individual, Deal) <strong>Enum</strong></td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>User provided tags associated with this task <strong>Array (Object)</strong></td>
+</tr>
+<tr>
+<td><code>creator</code></td>
+<td>Object containing detailed information about the task creator <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>owner</code></td>
+<td>Object containing detailed information about the task owner <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>assignee</code></td>
+<td>Object containing detailed information about the task assignee <strong>Object</strong></td>
+</tr>
+</tbody></table>
+<h2 id='get-task'>Get Task</h2>
+<p>Returns the task matching the <code>task_id</code></p>
+<h3 id='request-url'>Request URL</h3>
+<p><code>GET https://{CLIENT_ID}.salesseek.net/api/tasks/{task_id}</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>task_id</code></td>
+<td>The ID for the task you&#39;d like to retrieve <strong>String</strong></td>
+</tr>
+</tbody></table>
+<h2 id='create-task'>Create Task</h2>
+<blockquote>
+<p>An example request body to create a new task that is associated to an opportunity and has a due date in 1 week.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"assignee_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1445cf43-06c5-4821-9e92-7b5810840a92"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"due_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jul 26, 2017 11:00"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"related_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5f592311-4e8c-400d-b535-d4738adb7e93"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"related_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"opportunity"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Follow up in one week"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Creates a new task and then returns the newly created task.</p>
+<h3 id='request-url-2'>Request URL</h3>
+<p><code>POST https://{CLIENT_ID}.salesseek.net/api/tasks</code></p>
+<h2 id='update-task'>Update Task</h2>
+<blockquote>
+<p>A example request body to change the task due date would be:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"due_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jul 28, 2017 11:00"</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Updates values of task by <code>task_id</code>. The resulting task is returned. </p>
+<h3 id='request-url-3'>Request URL</h3>
+<p><code>PATCH https://{CLIENT_ID}.salesseek.net/api/tasks/{task_id}</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>task_id</code></td>
+<td>The ID for the task you&#39;d like to update <strong>String</strong></td>
+</tr>
+</tbody></table>
+<h2 id='delete-task'>Delete Task</h2>
+<p>Deletes the task matching the <code>task_id</code></p>
+<h3 id='request-url-4'>Request URL</h3>
+<p><code>DELETE https://{CLIENT_ID}.salesseek.net/api/tasks/{task_id}</code></p>
+<h3 id='request-query-parameters'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>task_id</code></td>
+<td>The unique ID for the task to be deleted.</td>
+</tr>
+</tbody></table>
+<h2 id='list-tasks'>List Tasks</h2>
+<blockquote>
+<p>An example request to get the first 50 tasks in your SalesSeek account (when ordered by due date) would be:</p>
+</blockquote>
+<pre class="highlight http tab-http"><code><span class="err">GET https://example.salesseek.net/api/tasks?rows=50&amp;start=0&amp;order_by=due_date%20asc
+</span></code></pre>
+<blockquote>
+<p>The reponse header contains the following information:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Records-Rows: 50
+Records-Start: 0
+Records-Total: 2000
+</code></pre>
+<p>Returns a list of tasks from your SalesSeek account.</p>
+<h3 id='request-url-5'>Request URL</h3>
+<p><code>GET https://{CLIENT_ID}.salesseek.net/api/tasks</code></p>
+<h3 id='request-query-parameters-2'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>rows</code></td>
+<td>The maximum number of organizations to be returned.</td>
+</tr>
+<tr>
+<td><code>start</code></td>
+<td>The row number to start to retrieve data. (0 for start)</td>
+</tr>
+<tr>
+<td><code>order_by</code></td>
+<td>Results are ordered by the provided field name followed by <code>%20desc</code> or <code>%20asc</code></td>
+</tr>
+</tbody></table>
+
+<div class="wrap">
+  <p class="flash info">
+    The response header contain the total number of records.
+  </p>
+</div>
+<h3 id='response-header-parameters'>Response Header Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>Records-Rows</code></td>
+<td>The number of rows returned in this request</td>
+</tr>
+<tr>
+<td><code>Records-Start</code></td>
+<td>The start number of rows in this request (out of total)</td>
+</tr>
+<tr>
+<td><code>Records-Total</code></td>
+<td>The total number of rows available</td>
+</tr>
+</tbody></table>
+<h2 id='search-tasks'>Search Tasks</h2>
+<blockquote>
+<p>An example request for tasks where the name contains &#39;example&#39;</p>
+</blockquote>
+<pre class="highlight plaintext"><code>https://example.salesseek.net/api/tasks?search=test
+</code></pre>
+<p>Provides the the subset of tasks where the tasks name matches the <code>search_string</code>. </p>
+<h3 id='request-url-6'>Request URL</h3>
+<p><code>GET https://{CLIENT_ID}.salesseek.net/api/tasks?search={search_string}</code></p>
+<h3 id='request-query-parameters-3'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>search_string</code></td>
+<td>Searches for all Organizations containing this string.</td>
+</tr>
+</tbody></table>
+
+<div class="wrap">
+  <p class="flash info">
+    The set of information returned is reduced to maintain search performance.
+  </p>
+</div>
+<h1 id='campaign-api'>Campaign API</h1><h2 id='campaign-attributes'>Campaign Attributes</h2>
+<blockquote>
+<p>The JSON encoded response looks like this.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0a6a5701-99c9-4a80-ad78-c5g05c9497bc"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Free Webinar today at 3pm"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"draft"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"subject"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Free Webinar today at 3pm"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"campaign_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"campaign"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"to_group_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"99c90-a6a5701-4a80-ad78-c5g05c9497bc"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"to_group"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"sent"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"used_in_automations"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"used_in_live_automations"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"include_signature"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"campaign_schedule_id"</span><span class="p">:</span><span class="w"> </span><span class="err">a</span><span class="mi">1053</span><span class="err">ecf-ef</span><span class="mi">72-4</span><span class="err">f</span><span class="mi">5</span><span class="err">f</span><span class="mi">-8</span><span class="err">b</span><span class="mi">74-56</span><span class="err">ce</span><span class="mi">1</span><span class="err">b</span><span class="mi">7</span><span class="err">b</span><span class="mi">401</span><span class="err">e</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"campaign_schedule"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a1053ecf-ef72-4f5f-8b74-56ce1b7b401e"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UTC"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"utc_offset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-60"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"when"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-09-29T12:00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"when_utc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-09-29T11:00:00"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"track"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"owner_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1445cf43-06c5-4821-9e92-7b5810840a92"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"creator_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a4c510ac-5f3b-4a2a-b3bd-ef0dc1ae1680"</span><span class="w">
+  </span><span class="s2">"last_modified_by_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a4c510ac-5f3b-4a2a-b3bd-ef0dc1ae1680"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-05-23T08:56:14.036080"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"modified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-07-31T11:13:07.689772"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"from_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a4c510ac-5f3b-4a2a-b3bd-ef0dc1ae1680"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"from_user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"creator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"email_status_stats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"sent"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"queued"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"in_progress"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"failed"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cancelled"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"email_event_stats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"undelivered_rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"unsubscribed_rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"click"</span><span class="p">:</span><span class="w"> </span><span class="mi">74</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"queued"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"delivered"</span><span class="p">:</span><span class="w"> </span><span class="mi">15536</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"soft_bounce"</span><span class="p">:</span><span class="w"> </span><span class="mi">460</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"reject"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"soft_bounce_rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"spam"</span><span class="p">:</span><span class="w"> </span><span class="mi">627</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"spam_rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"send"</span><span class="p">:</span><span class="w"> </span><span class="mi">16347</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"unsubscribed_list"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"unsubscribed_all_rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"bounce_rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"click_rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"open_rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"hard_bounce"</span><span class="p">:</span><span class="w"> </span><span class="mi">333</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"delivered_rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">95</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"send_rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"hard_bounce_rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"open"</span><span class="p">:</span><span class="w"> </span><span class="mi">1678</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"undelivered"</span><span class="p">:</span><span class="w"> </span><span class="mi">811</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"unsubscribed_list_rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"bounce"</span><span class="p">:</span><span class="w"> </span><span class="mi">793</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"unsubscribed"</span><span class="p">:</span><span class="w"> </span><span class="mi">136</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"reject_rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"unsubscribed_all"</span><span class="p">:</span><span class="w"> </span><span class="mi">136</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;!DOCTYPE html&gt;&lt;h1&gt;Example HTML Email&lt;/h1&gt;&lt;/html&gt;"</span><span class="p">,</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td>The unique identifier for this campaign <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>The user provided title for the campaign <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>Current status of the campaign (<code>draft</code>, <code>ready</code>, <code>scheduled</code>, <code>sent</code>) <strong>Enum (String)</strong></td>
+</tr>
+<tr>
+<td><code>subject</code></td>
+<td>The subject line for the campaign <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>campaign_type</code></td>
+<td>The type of the campaign (<code>direct</code>, <code>campaign</code>) <strong>Enum (String)</strong></td>
+</tr>
+<tr>
+<td><code>to_group_id</code></td>
+<td>The ID for the group the campaign is to be sent to <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>to_group</code></td>
+<td>Object containing detailed information about the group associated with this campaign <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>sent</code></td>
+<td>Timestamp for when the campaign was sent <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>used_in_automations</code></td>
+<td>Set to <code>true</code> if this campaign is currently accociated with an automation <strong>Boolean</strong></td>
+</tr>
+<tr>
+<td><code>used_in_live_automations</code></td>
+<td>Set to <code>true</code> if this campaign is currently accociated with an automation which is currently set to live <strong>Boolean</strong></td>
+</tr>
+<tr>
+<td><code>include_signature</code></td>
+<td>Set to <code>true</code> if the signature for the user this campaign will be sent from will be appended to the email (direct emails only) <strong>Boolean</strong></td>
+</tr>
+<tr>
+<td><code>campaign_schedule_id</code></td>
+<td>Unique identifier for the campaign schedule <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>campaign_schedule</code></td>
+<td>Object containing detailed information about the schedule assigned to this campaign <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>campaign_schedule.id</code></td>
+<td>Unique identifier for the campaign schedule <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>campaign_schedule.timezone</code></td>
+<td>Three character representation of the timezone for this schedule. <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>campaign_schedule.utc_offset</code></td>
+<td>The UTC offset from schedule in minutes <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>campaign_schedule.when</code></td>
+<td>Timestamp for when this campaign should be sent <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>campaign_schedule.when_utc</code></td>
+<td>Timestamp for when this campaign should be sent in UTC <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>track</code></td>
+<td>Set to <code>true</code> if SalesSeek should track statistics on this campaign <strong>Boolean</strong></td>
+</tr>
+<tr>
+<td><code>owner_id</code></td>
+<td>Object containing detailed information about the campaign owner <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>creator_id</code></td>
+<td>Object containing detailed information about the campaign creator <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>last_modified_by_id</code></td>
+<td>The ID for the SalesSeek user that last modified this campaign <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>created</code></td>
+<td>Campaign creation timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>modified</code></td>
+<td>Campaign last modified timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>from_user_id</code></td>
+<td>ID of the user the campaign will be sent from <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>from_user</code></td>
+<td>Object containing detailed information about the user the campaign will be sent from <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>creator</code></td>
+<td>Object containing detailed information about the campaign creator <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>owner</code></td>
+<td>Object containing detailed information about the campaign owner <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>email_status_stats</code></td>
+<td>Object containing email status statistics <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>email_status_stats.sent</code></td>
+<td>Number of sent emails in campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_status_stats.queued</code></td>
+<td>Number of emails queued in campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_status_stats.in_progress</code></td>
+<td>Number of emails in progress in campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_status_stats.failed</code></td>
+<td>Number of emails failed in campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_status_stats.cancelled</code></td>
+<td>Number of emails queued in campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats</code></td>
+<td>Object containing email event statistics <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.delivered</code></td>
+<td>Number of delivered emails in campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.open</code></td>
+<td>Number of delivered opened in campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.undelivered_rate</code></td>
+<td>Rate of un-delivered emails in campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.queued</code></td>
+<td>Number of emails queued in campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.click</code></td>
+<td>Number of clicked emails in campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.click_rate</code></td>
+<td>Rate of clicked emails in campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.hard_bounce_rate</code></td>
+<td>Rate of hard bounces in campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.delivered_rate</code></td>
+<td>Rate of delivered emails in campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.soft_bounce_rate</code></td>
+<td>Rate of soft bounces in campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.bounce_rate</code></td>
+<td>Rate of bounces in campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.hard_bounce</code></td>
+<td>Rate of hard bounces in campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.send</code></td>
+<td>Number of emails sent in campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.unsubscribed</code></td>
+<td>Number of unsubscribes from this campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.bounce</code></td>
+<td>Number of bounces in campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.spam</code></td>
+<td>Number of emails marked as spam in campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.open_rate</code></td>
+<td>Rate of emails opened in campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.unsubscribed_all_rate</code></td>
+<td>Rate of unsubscribes from all email campaigns <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.spam</code></td>
+<td>Rate of emails marked as spam in this campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.reject</code></td>
+<td>Number of emails rejected in this campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.send_rate</code></td>
+<td>Rate of emails sent in this campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.undelivered</code></td>
+<td>Rate of emails not delivered in this campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.soft_bounce</code></td>
+<td>Number of soft bounces in this campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.unsubscribed_rate</code></td>
+<td>Rate of unsubscribes in this campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.reject_rate</code></td>
+<td>Rate of rejections in this campaign <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>email_event_stats.unsubscribed_all</code></td>
+<td>Number of individuals who have unsubscibed from all email campaigns <strong>Int</strong></td>
+</tr>
+<tr>
+<td><code>content</code></td>
+<td>HTML content for this email <strong>String</strong></td>
+</tr>
+</tbody></table>
+<h2 id='get-campaign'>Get Campaign</h2>
+<p>Returns the unique organization matching the <code>campaign_id</code></p>
+<h3 id='request-url'>Request URL</h3>
+<p><code>GET https://{CLIENT_ID}.salesseek.net/api/campaigns/{campaign_id}</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>campaign_id</code></td>
+<td>The ID for the campaign you&#39;d like to retrieve <strong>String</strong></td>
+</tr>
+</tbody></table>
+<h2 id='create-campaign'>Create Campaign</h2>
+<p>Creates a new campaign and then returns the newly created campaign.</p>
+<h3 id='request-url-2'>Request URL</h3>
+<p><code>POST https://{CLIENT_ID}.salesseek.net/api/campaigns</code></p>
+<h2 id='update-campaign'>Update Campaign</h2>
+<blockquote>
+<p>A sample request body to update the campaign subject.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"subject"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Free Webinar @5pm"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Updates values of a campaign by <code>campaign_id</code>. The resulting campaign is returned.</p>
+<h3 id='request-url-3'>Request URL</h3>
+<p><code>PATCH https://{CLIENT_ID}.salesseek.net/api/campaigns/{campaign_id}</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>campaign_id</code></td>
+<td>The ID for the campaign you&#39;d like to update <strong>String</strong></td>
+</tr>
+</tbody></table>
+<h3 id='request-body'>Request Body</h3>
+<p>The only fields updated are the one passed on the request body JSON. You can pass any <a href="#campaign-attributes">attribute</a> to update. </p>
+<h2 id='delete-campaign'>Delete Campaign</h2>
+<p>Deletes the campaign matching the <code>campaign_id</code></p>
+<h3 id='request-url-4'>Request URL</h3>
+<p><code>DELETE https://{CLIENT_ID}.salesseek.net/api/campaigns/{campaign_id}</code></p>
+<h3 id='request-query-parameters'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>campaign_id</code></td>
+<td>The unique ID for the campaign to be deleted.</td>
+</tr>
+</tbody></table>
+<h2 id='list-campaigns'>List Campaigns</h2>
+<blockquote>
+<p>An example request to get the first 50 <em>unsent</em> campaigns in your SalesSeek account (when ordered by modfied date) would be:</p>
+</blockquote>
+<pre class="highlight http tab-http"><code><span class="err">GET https://example.salesseek.net/api/campaigns?rows=50&amp;start=0&amp;order_by=modified%20desc&amp;status=ready,draft
+</span></code></pre>
+<blockquote>
+<p>The reponse header contains the following information:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Records-Rows: 50
+Records-Start: 0
+Records-Total: 2000
+</code></pre>
+<p>Returns a list of campaigns from your SalesSeek account.</p>
+<h3 id='request-url-5'>Request URL</h3>
+<p><code>GET https://{CLIENT_ID}.salesseek.net/api/campaigns</code></p>
+<h3 id='request-query-parameters-2'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>rows</code></td>
+<td>The maximum number of organizations to be returned.</td>
+</tr>
+<tr>
+<td><code>start</code></td>
+<td>The row number to start to retrieve data. (0 for start)</td>
+</tr>
+<tr>
+<td><code>order_by</code></td>
+<td>Results are ordered by the provided field name followed by &amp;desc or &amp;asc</td>
+</tr>
+</tbody></table>
+
+<div class="wrap">
+  <p class="flash info">
+    The response header contain the total number of records.
+  </p>
+</div>
+<h3 id='response-header-parameters'>Response Header Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>Records-Rows</code></td>
+<td>The number of rows returned in this request</td>
+</tr>
+<tr>
+<td><code>Records-Start</code></td>
+<td>The start number of rows in this request (out of total)</td>
+</tr>
+<tr>
+<td><code>Records-Total</code></td>
+<td>The total number of rows available</td>
+</tr>
+</tbody></table>
+<h2 id='send-campaign-test'>Send Campaign Test</h2>
+<blockquote>
+<p>An example request to send a test of a campaign to <em>example@salesseek.com</em> would be made to:</p>
+</blockquote>
+<pre class="highlight http tab-http"><code><span class="err">POST https://{CLIENT_ID}.salesseek.net/api/campaigns?test=example@salesseek.com
+</span></code></pre>
+<blockquote>
+<p>An example request body would be:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"campaign_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"direct"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;!DOCTYPE html&gt;</span><span class="se">\n</span><span class="s2">&lt;html&gt;</span><span class="se">\n</span><span class="s2">&lt;head&gt;</span><span class="se">\n</span><span class="s2">&lt;/head&gt;</span><span class="se">\n</span><span class="s2">&lt;body&gt;</span><span class="se">\n</span><span class="s2">&lt;p&gt;Example Email&lt;/p&gt;</span><span class="se">\n</span><span class="s2">&lt;/body&gt;</span><span class="se">\n</span><span class="s2">&lt;/html&gt;"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"draft"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"from_user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a938196a-1d2d-40f3-ab3d-804985143a4b"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SalesSeek Example"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@salesseek.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email_signature"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;h2&gt;Email Signature&lt;/h2&gt;"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"include_signature"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"track"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example Email"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"subject"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example Email"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"to_group"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"68b2647d-bf9d-4f6f-9cbc-0d1f21687ae0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Email Group"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>This enpoint will respond with <code>null</code>.</p>
+</blockquote>
+
+<p>Sends a test email of the campaign content to chosen SalesSeek users. </p>
+<h3 id='request-url-6'>Request URL</h3>
+<p><code>POST https://{CLIENT_ID}.salesseek.net/api/campaigns?test={user_email}</code></p>
+<h3 id='request-query-parameters-3'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>user_email</code></td>
+<td>The maximum number of organizations to be returned.</td>
+</tr>
+</tbody></table>
+<h3 id='request-body-parameters'>Request Body Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>campaign_type</code></td>
+<td>The type of the campaign (<code>direct</code>, <code>campaign</code>) <strong>Enum (String)</strong></td>
+</tr>
+<tr>
+<td><code>content</code></td>
+<td>HTML content for this email <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>Current status of the campaign (<code>draft</code>, <code>ready</code>, <code>scheduled</code>, <code>sent</code>) <strong>Enum (String)</strong></td>
+</tr>
+<tr>
+<td><code>from_user</code></td>
+<td>Object containing detailed information about the user the campaign will be sent from <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>from_user.id</code></td>
+<td>ID of the SalesSeek user the email will be sent from <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>from_user.name</code></td>
+<td>Name of the SalesSeek user the email will be sent from <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>from_user.email_address</code></td>
+<td>Email address of the SalesSeek user the email will be sent from <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>from_user.email_signature</code></td>
+<td>Signature for the SalesSeek user the email will be sent from <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>include_signature</code></td>
+<td>Set to <code>true</code> if the signature for the user this campaign will be sent from will be appended to the email (direct emails only) <strong>Boolean</strong></td>
+</tr>
+<tr>
+<td><code>track</code></td>
+<td>Set to <code>true</code> if SalesSeek should track statistics on this campaign <strong>Boolean</strong></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>The user provided title for the campaign <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>subject</code></td>
+<td>The subject line for the campaign <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>to_group</code></td>
+<td>Object containing detailed information about the group associated with this campaign <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>to_group.id</code></td>
+<td>ID for the group the campaign will be sent to <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>to_group.name</code></td>
+<td>Name for the group the campaign will be sent to <strong>String</strong></td>
+</tr>
+</tbody></table>
+
+<div class="wrap">
+  <p class="flash info">
+    Values for the request body can be obtained by performing a <a href='#get-campaign'> GET Request </a> on the campaign ID 
+  </p>
+</div>
+<h2 id='set-campaign-live'>Set Campaign Live</h2>
+<p>Sets a campaign to live and ready for sending.</p>
+
+<p><code>POST https://salesseek.salesseek.net/api/campaigns?send</code></p>
+<h3 id='request-query-parameters-4'>Request Query Parameters</h3>
+<p>(none)</p>
+<h3 id='request-body-parameters-2'>Request Body Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>campaign_type</code></td>
+<td>The type of the campaign (<code>direct</code>, <code>campaign</code>) <strong>Enum (String)</strong></td>
+</tr>
+<tr>
+<td><code>content</code></td>
+<td>HTML content for this email <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>Current status of the campaign (<code>draft</code>, <code>ready</code>, <code>scheduled</code>, <code>sent</code>) <strong>Enum (String)</strong></td>
+</tr>
+<tr>
+<td><code>from_user</code></td>
+<td>Object containing detailed information about the user the campaign will be sent from <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>from_user.id</code></td>
+<td>ID of the SalesSeek user the email will be sent from <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>from_user.name</code></td>
+<td>Name of the SalesSeek user the email will be sent from <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>from_user.email_address</code></td>
+<td>Email address of the SalesSeek user the email will be sent from <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>from_user.email_signature</code></td>
+<td>Signature for the SalesSeek user the email will be sent from <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>include_signature</code></td>
+<td>Set to <code>true</code> if the signature for the user this campaign will be sent from will be appended to the email (direct emails only) <strong>Boolean</strong></td>
+</tr>
+<tr>
+<td><code>track</code></td>
+<td>Set to <code>true</code> if SalesSeek should track statistics on this campaign <strong>Boolean</strong></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>The user provided title for the campaign <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>subject</code></td>
+<td>The subject line for the campaign <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>to_group</code></td>
+<td>Object containing detailed information about the group associated with this campaign <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>to_group.id</code></td>
+<td>ID for the group the campaign will be sent to <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>to_group.name</code></td>
+<td>Name for the group the campaign will be sent to <strong>String</strong></td>
+</tr>
+</tbody></table>
+
+<div class="wrap">
+  <p class="flash info">
+    Values for the request body can be obtained by performing a <a href='#get-campaign'> GET Request </a> on the campaign ID 
+  </p>
+</div>
+<h1 id='filter-api'>Filter API</h1>
+<p>Filters allow you to segment your records within SalesSeek. You can use any field, including custom fields, as a value to filter against. </p>
+
+<div class="wrap">
+  <p class="flash info">
+    Filters are designed to be applied to [groups]() to allow you to view records.
+  </p>
+</div>
+
+<div class="wrap">
+  <p class="flash info">
+    The SalesSeek API does allow updating, deleting, or listing of filters. To update a filter, create a new filter with the amended values.
+  </p>
+</div>
+
+<div class="wrap">
+  <p class="flash warn">
+    Filters that are not associated with a group will be cleaned up periodically.
+  </p>
+</div>
+<h2 id='filter-attributes'>Filter Attributes</h2>
+<blockquote>
+<p>The JSON encoded response for filtering individual records owned by &#39;Example User&#39; that have opened either the &#39;Free Webinar&#39; or &#39;Free Trial&#39; email.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ef7e7b1c-a007-4eeb-aed8-c54657fddd8f"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"filter_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"individuals"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"field"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owner_id"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"operator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"equal"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example Users"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a938196a-152d-40f3-ab3d-804985143a4b"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"field"</span><span class="p">:</span><span class="w"> </span><span class="s2">"campaign_stats_open"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"operator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"any"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"campaign"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Free Webinar"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"41c4f28f-4e07-4cce-aaa8-0e2afac82577"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"field"</span><span class="p">:</span><span class="w"> </span><span class="s2">"campaign_stats_open"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"operator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"any"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"campaign"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Free Trial"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"774ed7f4-5c72-465a-82a2-5c47cf0db863"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td>The unique identifier for this filter <strong>string</strong></td>
+</tr>
+<tr>
+<td><code>filter_type</code></td>
+<td>The type of records to be filtered (indidivuals, opportunities, organizations, tasks) <strong>Enum (string)</strong></td>
+</tr>
+<tr>
+<td><code>rules</code></td>
+<td>Array containing rules used for this filter <strong>Array</strong></td>
+</tr>
+<tr>
+<td><code>rules[x].field</code></td>
+<td>The name of the field that is used in this filter <strong>string</strong></td>
+</tr>
+<tr>
+<td><code>rules[x].operator</code></td>
+<td>The operator used in this filter <strong>string</strong></td>
+</tr>
+<tr>
+<td><code>rules[x].values</code></td>
+<td>Object containing the values used to apply to this filter <strong>object</strong></td>
+</tr>
+<tr>
+<td><code>rules[x].values.name</code></td>
+<td>Name of the values to be applied to this filter <strong>object</strong></td>
+</tr>
+<tr>
+<td><code>rules[x].values.id</code></td>
+<td>ID of the values to be applied to this filter <strong>object</strong></td>
+</tr>
+</tbody></table>
+
+<p>Filters can use <code>AND</code> and <code>OR</code> rules. <code>AND</code> rules are determined by the rule objects being in separate arrays in the <code>rules</code> array. <code>OR</code> values are multiple objects in the same array. </p>
+
+<p>The provided example would have the following appearance in the SalesSeek app.</p>
+
+<p><img src="images/filter-example.png" title="Filter Example" alt="Filter Example" /></p>
+<h2 id='get-filter'>Get Filter</h2>
+<p>Returns the filter matching the <code>filter_id</code></p>
+<h3 id='request-url'>Request URL</h3>
+<p><code>GET https://{CLIENT_ID}.salesseek.net/api/{record_type}/filters/{filter_id}</code></p>
+<h3 id='request-query-parameters'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>record_type</code></td>
+<td>The record type that the filter applies to (individuals, organizations, opportunities, tasks) <strong>string</strong></td>
+</tr>
+<tr>
+<td><code>filter_id</code></td>
+<td>The ID for the filter you&#39;d like to retrieve <strong>string</strong></td>
+</tr>
+</tbody></table>
+<h2 id='create-filter'>Create Filter</h2>
+<p>Creates a new filter and then returns the newly created filter.</p>
+<h3 id='request-url-2'>Request URL</h3>
+<p><code>POST https://{CLIENT_ID}.salesseek.net/api/{record_type}/filters/</code></p>
+<h1 id='group-api'>Group API</h1>
+<p>The Group API recturns the metadata for each group. </p>
+
+<div class="wrap">
+  <p class="flash info">
+    The Group API does not return the records associated with each group. To get the associated records use the get the `filter_id` from this API and use this value in the [Group Pages API]().
+  </p>
+</div>
+
+<div class="wrap">
+  <p class="flash warn">
+    The Group API funcionality differs depending on if the group is a smart or a static group. For an explanation of the different types of groups see the [help center article]().
+  </p>
+</div>
+<h2 id='group-attributes'>Group Attributes</h2>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td>The unique identifier for this filter <strong>string</strong></td>
+</tr>
+<tr>
+<td><code>filter_type</code></td>
+<td>The type of records to be filtered (indidivuals, opportunities, organizations, tasks) <strong>Enum (string)</strong></td>
+</tr>
+<tr>
+<td><code>rules</code></td>
+<td>Array containing rules used for this filter <strong>Array</strong></td>
+</tr>
+<tr>
+<td><code>rules[x].field</code></td>
+<td>The name of the field that is used in this filter <strong>string</strong></td>
+</tr>
+<tr>
+<td><code>rules[x].operator</code></td>
+<td>The operator used in this filter <strong>string</strong></td>
+</tr>
+<tr>
+<td><code>rules[x].values</code></td>
+<td>Object containing the values used to apply to this filter <strong>object</strong></td>
+</tr>
+<tr>
+<td><code>rules[x].values.name</code></td>
+<td>Name of the values to be applied to this filter <strong>object</strong></td>
+</tr>
+<tr>
+<td><code>rules[x].values.id</code></td>
+<td>ID of the values to be applied to this filter <strong>object</strong></td>
 </tr>
 </tbody></table>
 
       </div>
       <div class="dark-box">
-          <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
-          </div>
       </div>
     </div>
   </body>
