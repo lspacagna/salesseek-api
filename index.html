@@ -368,35 +368,6 @@
               </ul>
           </li>
           <li>
-            <a href="#campaign-api" class="toc-h1 toc-link" data-title="Campaign API">Campaign API</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#campaign-attributes" class="toc-h2 toc-link" data-title="Campaign API">Campaign Attributes</a>
-                  </li>
-                  <li>
-                    <a href="#get-campaign" class="toc-h2 toc-link" data-title="Campaign API">Get Campaign</a>
-                  </li>
-                  <li>
-                    <a href="#create-campaign" class="toc-h2 toc-link" data-title="Campaign API">Create Campaign</a>
-                  </li>
-                  <li>
-                    <a href="#update-campaign" class="toc-h2 toc-link" data-title="Campaign API">Update Campaign</a>
-                  </li>
-                  <li>
-                    <a href="#delete-campaign" class="toc-h2 toc-link" data-title="Campaign API">Delete Campaign</a>
-                  </li>
-                  <li>
-                    <a href="#list-campaigns" class="toc-h2 toc-link" data-title="Campaign API">List Campaigns</a>
-                  </li>
-                  <li>
-                    <a href="#send-campaign-test" class="toc-h2 toc-link" data-title="Campaign API">Send Campaign Test</a>
-                  </li>
-                  <li>
-                    <a href="#set-campaign-live" class="toc-h2 toc-link" data-title="Campaign API">Set Campaign Live</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
             <a href="#filter-api" class="toc-h1 toc-link" data-title="Filter API">Filter API</a>
               <ul class="toc-list-h2">
                   <li>
@@ -433,6 +404,46 @@
                   </li>
                   <li>
                     <a href="#add-record-to-static-group" class="toc-h2 toc-link" data-title="Group API">Add Record to Static Group</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#group-pages-api" class="toc-h1 toc-link" data-title="Group Pages API">Group Pages API</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#group-pages-attributes" class="toc-h2 toc-link" data-title="Group Pages API">Group Pages Attributes</a>
+                  </li>
+                  <li>
+                    <a href="#get-group-page" class="toc-h2 toc-link" data-title="Group Pages API">Get Group Page</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#campaign-api" class="toc-h1 toc-link" data-title="Campaign API">Campaign API</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#campaign-attributes" class="toc-h2 toc-link" data-title="Campaign API">Campaign Attributes</a>
+                  </li>
+                  <li>
+                    <a href="#get-campaign" class="toc-h2 toc-link" data-title="Campaign API">Get Campaign</a>
+                  </li>
+                  <li>
+                    <a href="#create-campaign" class="toc-h2 toc-link" data-title="Campaign API">Create Campaign</a>
+                  </li>
+                  <li>
+                    <a href="#update-campaign" class="toc-h2 toc-link" data-title="Campaign API">Update Campaign</a>
+                  </li>
+                  <li>
+                    <a href="#delete-campaign" class="toc-h2 toc-link" data-title="Campaign API">Delete Campaign</a>
+                  </li>
+                  <li>
+                    <a href="#list-campaigns" class="toc-h2 toc-link" data-title="Campaign API">List Campaigns</a>
+                  </li>
+                  <li>
+                    <a href="#send-campaign-test" class="toc-h2 toc-link" data-title="Campaign API">Send Campaign Test</a>
+                  </li>
+                  <li>
+                    <a href="#set-campaign-live" class="toc-h2 toc-link" data-title="Campaign API">Set Campaign Live</a>
                   </li>
               </ul>
           </li>
@@ -1971,6 +1982,583 @@ Records-Total: 2000
     The set of information returned is reduced to maintain search performance.
   </p>
 </div>
+<h1 id='filter-api'>Filter API</h1>
+<p>Filters allow you to segment your records within SalesSeek. You can use any field, including custom fields, as a value to filter against. </p>
+
+<div class="wrap">
+  <p class="flash info">
+    Filters are designed to be applied to [groups]() to allow you to view records.
+  </p>
+</div>
+
+<div class="wrap">
+  <p class="flash info">
+    The SalesSeek API does allow updating, deleting, or listing of filters. To update a filter, create a new filter with the amended values.
+  </p>
+</div>
+
+<div class="wrap">
+  <p class="flash warn">
+    Filters that are not associated with a group will be cleaned up periodically.
+  </p>
+</div>
+<h2 id='filter-attributes'>Filter Attributes</h2>
+<blockquote>
+<p>The JSON encoded response for filtering individual records owned by &#39;Example User&#39; that have opened either the &#39;Free Webinar&#39; or &#39;Free Trial&#39; email.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ef7e7b1c-a007-4eeb-aed8-c54657fddd8f"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"filter_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"individuals"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"field"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owner_id"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"operator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"equal"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example Users"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a938196a-152d-40f3-ab3d-804985143a4b"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"field"</span><span class="p">:</span><span class="w"> </span><span class="s2">"campaign_stats_open"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"operator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"any"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"campaign"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Free Webinar"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"41c4f28f-4e07-4cce-aaa8-0e2afac82577"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"field"</span><span class="p">:</span><span class="w"> </span><span class="s2">"campaign_stats_open"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"operator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"any"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"campaign"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Free Trial"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"774ed7f4-5c72-465a-82a2-5c47cf0db863"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td>The unique identifier for this filter <strong>string</strong></td>
+</tr>
+<tr>
+<td><code>filter_type</code></td>
+<td>The type of records to be filtered (indidivuals, opportunities, organizations, tasks) <strong>Enum (string)</strong></td>
+</tr>
+<tr>
+<td><code>rules</code></td>
+<td>Array containing rules used for this filter <strong>Array</strong></td>
+</tr>
+<tr>
+<td><code>rules[x].field</code></td>
+<td>The name of the field that is used in this filter <strong>string</strong></td>
+</tr>
+<tr>
+<td><code>rules[x].operator</code></td>
+<td>The operator used in this filter <strong>string</strong></td>
+</tr>
+<tr>
+<td><code>rules[x].values</code></td>
+<td>Object containing the values used to apply to this filter <strong>object</strong></td>
+</tr>
+<tr>
+<td><code>rules[x].values.name</code></td>
+<td>Name of the values to be applied to this filter <strong>object</strong></td>
+</tr>
+<tr>
+<td><code>rules[x].values.id</code></td>
+<td>ID of the values to be applied to this filter <strong>object</strong></td>
+</tr>
+</tbody></table>
+
+<p>Filters can use <code>AND</code> and <code>OR</code> rules. <code>AND</code> rules are determined by the rule objects being in separate arrays in the <code>rules</code> array. <code>OR</code> values are multiple objects in the same array. </p>
+
+<p>The provided example would have the following appearance in the SalesSeek app.</p>
+
+<p><img src="images/filter-example.png" title="Filter Example" alt="Filter Example" /></p>
+<h2 id='get-filter'>Get Filter</h2>
+<p>Returns the filter matching the <code>filter_id</code></p>
+<h3 id='request-url'>Request URL</h3>
+<p><code>GET https://{CLIENT_ID}.salesseek.net/api/{record_type}/filters/{filter_id}</code></p>
+<h3 id='request-query-parameters'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>record_type</code></td>
+<td>The record type that the filter applies to (individuals, organizations, opportunities, tasks) <strong>string</strong></td>
+</tr>
+<tr>
+<td><code>filter_id</code></td>
+<td>The ID for the filter you&#39;d like to retrieve <strong>string</strong></td>
+</tr>
+</tbody></table>
+<h2 id='create-filter'>Create Filter</h2>
+<p>Creates a new filter and then returns the newly created filter.</p>
+<h3 id='request-url-2'>Request URL</h3>
+<p><code>POST https://{CLIENT_ID}.salesseek.net/api/{record_type}/filters/</code></p>
+<h1 id='group-api'>Group API</h1>
+<p>The Group API returns only the metadata for each group. </p>
+
+<div class="wrap">
+  <p class="flash info">
+    The Group API does not return the records associated with each group. To get the associated records use the get the <code>filter_id</code> from this endpoint and use this value in the [Group Pages API]().
+  </p>
+</div>
+
+<div class="wrap">
+  <p class="flash warn">
+    The Group API funcionality differs depending on if the group is a smart or a static group. For an explanation of the different types of groups see the <a href="">help center article</a>.
+  </p>
+</div>
+<h2 id='group-attributes'>Group Attributes</h2>
+<blockquote>
+<p>A sample smart group response would look like this.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9c254f26-2217-4d21-b7b5-49591fde0a2f"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"🇬🇧 UK Users"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"group_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"smart"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"element_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"individuals"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"comments"</span><span class="p">:</span><span class="w"> </span><span class="s2">"All current users of the SalesSeek system. "</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"mailing_list"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-06-13T16:01:07.192856"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"modified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-06-13T17:46:27.194513"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"owner_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"69c5bc2a-c8e5-4d11-a102-6ec0fb410d1b"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"creator_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"69c5bc2a-c8e5-4d11-a102-6ec0fb410d1b"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_modified_by_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"69c5bc2a-c8e5-4d11-a102-6ec0fb410d1b"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"creator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"filter_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9d60827c-89da-4e31-8b62-0258f3adbd59"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"columns"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"photo_url"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_name"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_name"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"organization.name"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"phone"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"sortable_name"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"order_by"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cost_basis"</span><span class="p">:</span><span class="w"> </span><span class="s2">"total"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cost"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"target"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td>The unique identifier for this group <strong>string</strong></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>User provided name for the group <strong>string</strong></td>
+</tr>
+<tr>
+<td><code>group_type</code></td>
+<td>The type of group (static, smart) <strong>Enum (string)</strong></td>
+</tr>
+<tr>
+<td><code>element_type</code></td>
+<td>The type of record this group can contain (individuals, organizations, opportunities, tasks)<strong>Enum (string)</strong></td>
+</tr>
+<tr>
+<td><code>locked</code></td>
+<td>Set to <code>true</code> if editing this group has been locked (usually the result of the group being used in an automation) <strong>boolean</strong></td>
+</tr>
+<tr>
+<td><code>comments</code></td>
+<td>User provided comments associated with the group <strong>string</strong></td>
+</tr>
+<tr>
+<td><code>mailing_list</code></td>
+<td>Set to <code>true</code> if this group is a mailing list (only applicable on static groups) <strong>boolean</strong></td>
+</tr>
+<tr>
+<td><code>created</code></td>
+<td>Group creation timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>modified</code></td>
+<td>Group last modified timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>owner_id</code></td>
+<td>ID for the group owner <strong>string</strong></td>
+</tr>
+<tr>
+<td><code>creator_id</code></td>
+<td>ID for the group creator <strong>string</strong></td>
+</tr>
+<tr>
+<td><code>last_modified_by_id</code></td>
+<td>ID for the user that last modified the group <strong>string</strong></td>
+</tr>
+<tr>
+<td><code>creator</code></td>
+<td>Object containing detailed information about the group creator <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>owner</code></td>
+<td>Object containing detailed information about the group owner <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>filter_id</code></td>
+<td>The ID for the group <a href="#filter-api">filter</a> <strong>string</strong></td>
+</tr>
+<tr>
+<td><code>filter</code></td>
+<td>Object containing detailed information about the group filter <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>columns</code></td>
+<td>Array of column names to be shown in this group <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>creator</code></td>
+<td>Object containing detailed information about the group creator <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>order_by</code></td>
+<td>TODO</td>
+</tr>
+<tr>
+<td><code>cost_basis</code></td>
+<td>TODO</td>
+</tr>
+<tr>
+<td><code>cost</code></td>
+<td>TODO</td>
+</tr>
+<tr>
+<td><code>target</code></td>
+<td>TODO</td>
+</tr>
+</tbody></table>
+<h2 id='get-group'>Get Group</h2>
+<p>Returns the group matching the <code>group_id</code></p>
+<h3 id='request-url'>Request URL</h3>
+<p><code>GET https://{CLIENT_ID}.salesseek.net/api/groups/{group_id}</code></p>
+<h3 id='request-query-parameters'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>group_id</code></td>
+<td>The ID for the group you&#39;d like to retrieve <strong>string</strong></td>
+</tr>
+</tbody></table>
+<h2 id='create-group'>Create Group</h2>
+<blockquote>
+<p>An example request body to create a smart group called &#39;🇺🇸 US Customers&#39; would be:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"🇺🇸 US Customers"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"group_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"smart"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"element_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"individuals"</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>When the group is created it will contain all individual records. You need to apply a <a href="#filter-api">filter</a> to this group to filter to customers from the US.</p>
+
+<p>By default group owner will be assigned to the user creating the group. You can pass a <code>owner</code> object to set the group owner to a different user.</p>
+</blockquote>
+
+<p>Creates a new group and then returns the newly created group.</p>
+<h3 id='request-url-2'>Request URL</h3>
+<p><code>POST https://{CLIENT_ID}.salesseek.net/api/{record_type}/filters/</code></p>
+<h3 id='request-body-parameters'>Request Body Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>name</code></td>
+<td>Provided name for the group <strong>string</strong></td>
+</tr>
+<tr>
+<td><code>group_type</code></td>
+<td>The type of group (static, smart) <strong>Enum (string)</strong></td>
+</tr>
+<tr>
+<td><code>element_type</code></td>
+<td>The type of record this group can contain (individuals, organizations, opportunities, tasks) <strong>Enum (string)</strong></td>
+</tr>
+</tbody></table>
+<h2 id='update-group'>Update Group</h2>
+<blockquote>
+<p>An example request body to change the group owner would be:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"owner_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"40575ca1-381c-4542-a556-e3c2d81ef67e"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>An example request body to set a filter to smart group would be:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"filter_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0c8b0614-db0d-4b90-ace2-b2eabea66788"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Updates values of group by <code>group_id</code>. The resulting group is returned. </p>
+<h3 id='request-url-3'>Request URL</h3>
+<p><code>PATCH https://{CLIENT_ID}.salesseek.net/api/groups/{group_id}</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>group_id</code></td>
+<td>The ID for the group you&#39;d like to update <strong>String</strong></td>
+</tr>
+</tbody></table>
+<h3 id='request-body'>Request Body</h3>
+<p>The only fields updated are the one passed on the request body JSON. You can pass any <a href="#group-attributes">attribute</a> to update. </p>
+<h2 id='delete-group'>Delete Group</h2>
+<p>Deletes the group matching the <code>group_id</code></p>
+<h3 id='request-url-4'>Request URL</h3>
+<p><code>DELETE https://{CLIENT_ID}.salesseek.net/api/groups/{group_id}</code></p>
+<h3 id='request-query-parameters-2'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>group_id</code></td>
+<td>The unique ID for the group to be deleted.</td>
+</tr>
+</tbody></table>
+<h2 id='list-groups'>List Groups</h2>
+<blockquote>
+<p>An example request to get all individual groups would be: </p>
+</blockquote>
+<pre class="highlight http tab-http"><code><span class="err">GET https://example.salesseek.net/api/groups?start=0&amp;rows=-1&amp;element_type=individuals
+</span></code></pre>
+<p>Returns a list of groups from your SalesSeek account.</p>
+<h3 id='request-url-5'>Request URL</h3>
+<p><code>GET https://{CLIENT_ID}.salesseek.net/api/groups</code></p>
+<h3 id='request-query-parameters-3'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>element_type</code></td>
+<td>Filter by groups containing certain record types (organizations, opportunities, individuals).</td>
+</tr>
+<tr>
+<td><code>rows</code></td>
+<td>The maximum number of organizations to be returned</td>
+</tr>
+<tr>
+<td><code>start</code></td>
+<td>The row number to start to retrieve data. (0 for start)</td>
+</tr>
+<tr>
+<td><code>order_by</code></td>
+<td>Results are ordered by the provided field name followed by &amp;desc or &amp;asc</td>
+</tr>
+</tbody></table>
+
+<div class="wrap">
+  <p class="flash info">
+    If <code>element_type</code> is not provided individual and opportunity groups are returned.
+  </p>
+</div>
+<h2 id='add-record-to-static-group'>Add Record to Static Group</h2>
+<blockquote>
+<p>An example request to add a record to a group would be. </p>
+</blockquote>
+<pre class="highlight http tab-http"><code><span class="err">PUT https://example.salesseek.net/api/groups/13663429-0f49-4e83-836c-7ecd6d58adf5/items/4bb55a82-ee66-4752-bc47-ce7edd05ddb1
+</span></code></pre>
+<p>Adds a record to a static group.</p>
+
+<p><code>PUT https://{CLIENT_ID}.salesseek.net/api/groups/{group_id}/items/{record_id}</code> </p>
+<h3 id='request-query-parameters-4'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>group_id</code></td>
+<td>The unique ID for the group to be deleted</td>
+</tr>
+<tr>
+<td><code>record_id</code></td>
+<td>The ID for the record to be added to this group</td>
+</tr>
+</tbody></table>
+
+<div class="wrap">
+  <p class="flash warn">
+    Records can only be added to static groups. Filters should be applied to smart groups to add records to smart groups.
+  </p>
+</div>
+<h1 id='group-pages-api'>Group Pages API</h1>
+<p>The Group Pages API should be used in conjunction with the <a href="#group-api">Group API</a>. The Group API contains the metadata for each group. The Group Pages API is used to return records associated with a group in a paginated form.</p>
+<h2 id='group-pages-attributes'>Group Pages Attributes</h2>
+<blockquote>
+<p>A sample Group Pages response on an organization group would look like:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"columns"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"photo_url"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"first_name"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"last_name"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"organization.name"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"rows"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dc1aba21-37ad-4feb-8dca-3d7ce4ec29fe"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"cells"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"Anna"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"Walker"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"Woking Leal"</span><span class="p">,</span><span class="w">
+                </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Work"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dangerdanger@mailinator.com"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="p">[]</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a303df0a-8caf-499c-83d8-e8455a5978b9"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"cells"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"David"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"Romero"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"Linkbuzz"</span><span class="p">,</span><span class="w">
+                </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Work"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"david.romero@suremail.info"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Work"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6-(186)598-3830"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w"> 
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"order_by"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"full_name"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"asc"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"totals"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>columns</code></td>
+<td>Array containing the column names in the returned data <strong>Array (string)</strong></td>
+</tr>
+<tr>
+<td><code>rows</code></td>
+<td>Array containing the rows of data returned as objects <strong>Array (object)</strong></td>
+</tr>
+<tr>
+<td><code>order_by</code></td>
+<td>Array of the values the returned data is ordered by <strong>Array (string)</strong></td>
+</tr>
+<tr>
+<td><code>totals</code></td>
+<td>TODO</td>
+</tr>
+</tbody></table>
+<h2 id='get-group-page'>Get Group Page</h2>
+<blockquote>
+<p>A sample request for a maximum of 50 records from a group could look like: </p>
+</blockquote>
+<pre class="highlight http tab-http"><code><span class="err">GET https://example.salesseek.net/api/group_pages?item_type=individuals&amp;group_id=5f1e7c37-2a27-4dab-b834-7f0054303555&amp;rows=50&amp;columns=photo_url,first_name,last_name,organization.name,email,phone,source&amp;order_by=full_name%20asc
+</span></code></pre>
+<p>Returns the requested number of records from <code>group_id</code></p>
+
+<p><code>GET https://https://{CLIENT_ID}.salesseek.net/api/group_pages</code></p>
+<h3 id='request-query-parameters'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>item_type</code></td>
+<td>The type of record to return in this group page (individuals, organizations, opportunities, tasks)</td>
+</tr>
+<tr>
+<td><code>group_id</code></td>
+<td>The ID for the group to retrieve records from</td>
+</tr>
+<tr>
+<td><code>rows</code></td>
+<td>The maximum number of organizations to be returned</td>
+</tr>
+<tr>
+<td><code>start</code></td>
+<td>The row number to start to retrieve data. (0 for start)</td>
+</tr>
+<tr>
+<td><code>order_by</code></td>
+<td>Results are ordered by the provided field name followed by &amp;desc or &amp;asc</td>
+</tr>
+</tbody></table>
 <h1 id='campaign-api'>Campaign API</h1><h2 id='campaign-attributes'>Campaign Attributes</h2>
 <blockquote>
 <p>The JSON encoded response looks like this.</p>
@@ -2626,441 +3214,6 @@ Records-Total: 2000
 <div class="wrap">
   <p class="flash info">
     Values for the request body can be obtained by performing a <a href='#get-campaign'> GET Request </a> on the campaign ID 
-  </p>
-</div>
-<h1 id='filter-api'>Filter API</h1>
-<p>Filters allow you to segment your records within SalesSeek. You can use any field, including custom fields, as a value to filter against. </p>
-
-<div class="wrap">
-  <p class="flash info">
-    Filters are designed to be applied to [groups]() to allow you to view records.
-  </p>
-</div>
-
-<div class="wrap">
-  <p class="flash info">
-    The SalesSeek API does allow updating, deleting, or listing of filters. To update a filter, create a new filter with the amended values.
-  </p>
-</div>
-
-<div class="wrap">
-  <p class="flash warn">
-    Filters that are not associated with a group will be cleaned up periodically.
-  </p>
-</div>
-<h2 id='filter-attributes'>Filter Attributes</h2>
-<blockquote>
-<p>The JSON encoded response for filtering individual records owned by &#39;Example User&#39; that have opened either the &#39;Free Webinar&#39; or &#39;Free Trial&#39; email.</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ef7e7b1c-a007-4eeb-aed8-c54657fddd8f"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"filter_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"individuals"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"field"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owner_id"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"operator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"equal"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example Users"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a938196a-152d-40f3-ab3d-804985143a4b"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"field"</span><span class="p">:</span><span class="w"> </span><span class="s2">"campaign_stats_open"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"operator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"any"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"campaign"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Free Webinar"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"41c4f28f-4e07-4cce-aaa8-0e2afac82577"</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"field"</span><span class="p">:</span><span class="w"> </span><span class="s2">"campaign_stats_open"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"operator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"any"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"campaign"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Free Trial"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"774ed7f4-5c72-465a-82a2-5c47cf0db863"</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>id</code></td>
-<td>The unique identifier for this filter <strong>string</strong></td>
-</tr>
-<tr>
-<td><code>filter_type</code></td>
-<td>The type of records to be filtered (indidivuals, opportunities, organizations, tasks) <strong>Enum (string)</strong></td>
-</tr>
-<tr>
-<td><code>rules</code></td>
-<td>Array containing rules used for this filter <strong>Array</strong></td>
-</tr>
-<tr>
-<td><code>rules[x].field</code></td>
-<td>The name of the field that is used in this filter <strong>string</strong></td>
-</tr>
-<tr>
-<td><code>rules[x].operator</code></td>
-<td>The operator used in this filter <strong>string</strong></td>
-</tr>
-<tr>
-<td><code>rules[x].values</code></td>
-<td>Object containing the values used to apply to this filter <strong>object</strong></td>
-</tr>
-<tr>
-<td><code>rules[x].values.name</code></td>
-<td>Name of the values to be applied to this filter <strong>object</strong></td>
-</tr>
-<tr>
-<td><code>rules[x].values.id</code></td>
-<td>ID of the values to be applied to this filter <strong>object</strong></td>
-</tr>
-</tbody></table>
-
-<p>Filters can use <code>AND</code> and <code>OR</code> rules. <code>AND</code> rules are determined by the rule objects being in separate arrays in the <code>rules</code> array. <code>OR</code> values are multiple objects in the same array. </p>
-
-<p>The provided example would have the following appearance in the SalesSeek app.</p>
-
-<p><img src="images/filter-example.png" title="Filter Example" alt="Filter Example" /></p>
-<h2 id='get-filter'>Get Filter</h2>
-<p>Returns the filter matching the <code>filter_id</code></p>
-<h3 id='request-url'>Request URL</h3>
-<p><code>GET https://{CLIENT_ID}.salesseek.net/api/{record_type}/filters/{filter_id}</code></p>
-<h3 id='request-query-parameters'>Request Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>record_type</code></td>
-<td>The record type that the filter applies to (individuals, organizations, opportunities, tasks) <strong>string</strong></td>
-</tr>
-<tr>
-<td><code>filter_id</code></td>
-<td>The ID for the filter you&#39;d like to retrieve <strong>string</strong></td>
-</tr>
-</tbody></table>
-<h2 id='create-filter'>Create Filter</h2>
-<p>Creates a new filter and then returns the newly created filter.</p>
-<h3 id='request-url-2'>Request URL</h3>
-<p><code>POST https://{CLIENT_ID}.salesseek.net/api/{record_type}/filters/</code></p>
-<h1 id='group-api'>Group API</h1>
-<p>The Group API returns only the metadata for each group. </p>
-
-<div class="wrap">
-  <p class="flash info">
-    The Group API does not return the records associated with each group. To get the associated records use the get the <code>filter_id</code> from this endpoint and use this value in the [Group Pages API]().
-  </p>
-</div>
-
-<div class="wrap">
-  <p class="flash warn">
-    The Group API funcionality differs depending on if the group is a smart or a static group. For an explanation of the different types of groups see the <a href="">help center article</a>.
-  </p>
-</div>
-<h2 id='group-attributes'>Group Attributes</h2>
-<blockquote>
-<p>A sample smart group response would look like this.</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9c254f26-2217-4d21-b7b5-49591fde0a2f"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"🇬🇧 UK Users"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"group_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"smart"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"element_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"individuals"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"comments"</span><span class="p">:</span><span class="w"> </span><span class="s2">"All current users of the SalesSeek system. "</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"mailing_list"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-06-13T16:01:07.192856"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"modified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-06-13T17:46:27.194513"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"owner_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"69c5bc2a-c8e5-4d11-a102-6ec0fb410d1b"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"creator_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"69c5bc2a-c8e5-4d11-a102-6ec0fb410d1b"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"last_modified_by_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"69c5bc2a-c8e5-4d11-a102-6ec0fb410d1b"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="err">...</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"creator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="err">...</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"filter_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9d60827c-89da-4e31-8b62-0258f3adbd59"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="err">...</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"order_by"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cost_basis"</span><span class="p">:</span><span class="w"> </span><span class="s2">"total"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cost"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"target"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>id</code></td>
-<td>The unique identifier for this group <strong>string</strong></td>
-</tr>
-<tr>
-<td><code>name</code></td>
-<td>User provided name for the group <strong>string</strong></td>
-</tr>
-<tr>
-<td><code>group_type</code></td>
-<td>The type of group (static, smart) <strong>Enum (string)</strong></td>
-</tr>
-<tr>
-<td><code>element_type</code></td>
-<td>The type of record this group can contain (individuals, organizations, opportunities, tasks)<strong>Enum (string)</strong></td>
-</tr>
-<tr>
-<td><code>locked</code></td>
-<td>Set to <code>true</code> if editing this group has been locked (usually the result of the group being used in an automation) <strong>boolean</strong></td>
-</tr>
-<tr>
-<td><code>comments</code></td>
-<td>User provided comments associated with the group <strong>string</strong></td>
-</tr>
-<tr>
-<td><code>mailing_list</code></td>
-<td>Set to <code>true</code> if this group is a mailing list (only applicable on static groups) <strong>boolean</strong></td>
-</tr>
-<tr>
-<td><code>created</code></td>
-<td>Group creation timestamp <strong>Timestamp (ISO 8601)</strong></td>
-</tr>
-<tr>
-<td><code>modified</code></td>
-<td>Group last modified timestamp <strong>Timestamp (ISO 8601)</strong></td>
-</tr>
-<tr>
-<td><code>owner_id</code></td>
-<td>ID for the group owner <strong>string</strong></td>
-</tr>
-<tr>
-<td><code>creator_id</code></td>
-<td>ID for the group creator <strong>string</strong></td>
-</tr>
-<tr>
-<td><code>last_modified_by_id</code></td>
-<td>ID for the user that last modified the group <strong>string</strong></td>
-</tr>
-<tr>
-<td><code>creator</code></td>
-<td>Object containing detailed information about the group creator <strong>Object</strong></td>
-</tr>
-<tr>
-<td><code>owner</code></td>
-<td>Object containing detailed information about the group owner <strong>Object</strong></td>
-</tr>
-<tr>
-<td><code>filter_id</code></td>
-<td>The ID for the group <a href="#filter-api">filter</a> <strong>string</strong></td>
-</tr>
-<tr>
-<td><code>order_by</code></td>
-<td>TODO</td>
-</tr>
-<tr>
-<td><code>cost_basis</code></td>
-<td>TODO</td>
-</tr>
-<tr>
-<td><code>cost</code></td>
-<td>TODO</td>
-</tr>
-<tr>
-<td><code>target</code></td>
-<td>TODO</td>
-</tr>
-</tbody></table>
-<h2 id='get-group'>Get Group</h2>
-<p>Returns the group matching the <code>group_id</code></p>
-<h3 id='request-url'>Request URL</h3>
-<p><code>GET https://{CLIENT_ID}.salesseek.net/api/groups/{group_id}</code></p>
-<h3 id='request-query-parameters'>Request Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>group_id</code></td>
-<td>The ID for the group you&#39;d like to retrieve <strong>string</strong></td>
-</tr>
-</tbody></table>
-<h2 id='create-group'>Create Group</h2>
-<blockquote>
-<p>An example request body to create a smart group called &#39;🇺🇸 US Customers&#39; would be:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"🇺🇸 US Customers"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"group_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"smart"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"element_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"individuals"</span><span class="p">,</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<blockquote>
-<p>When the group is created it will contain all individual records. You need to apply a <a href="#filter-api">filter</a> to this group to filter to customers from the US.</p>
-
-<p>By default group owner will be assigned to the user creating the group. You can pass a <code>owner</code> object to set the group owner to a different user.</p>
-</blockquote>
-
-<p>Creates a new group and then returns the newly created group.</p>
-<h3 id='request-url-2'>Request URL</h3>
-<p><code>POST https://{CLIENT_ID}.salesseek.net/api/{record_type}/filters/</code></p>
-<h3 id='request-body-parameters'>Request Body Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>name</code></td>
-<td>Provided name for the group <strong>string</strong></td>
-</tr>
-<tr>
-<td><code>group_type</code></td>
-<td>The type of group (static, smart) <strong>Enum (string)</strong></td>
-</tr>
-<tr>
-<td><code>element_type</code></td>
-<td>The type of record this group can contain (individuals, organizations, opportunities, tasks) <strong>Enum (string)</strong></td>
-</tr>
-</tbody></table>
-<h2 id='update-group'>Update Group</h2>
-<blockquote>
-<p>An example request body to change the group owner would be:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"owner_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"40575ca1-381c-4542-a556-e3c2d81ef67e"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<blockquote>
-<p>An example request body to set a filter to smart group would be:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"filter_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0c8b0614-db0d-4b90-ace2-b2eabea66788"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>Updates values of group by <code>group_id</code>. The resulting group is returned. </p>
-<h3 id='request-url-3'>Request URL</h3>
-<p><code>PATCH https://{CLIENT_ID}.salesseek.net/api/groups/{group_id}</code></p>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>group_id</code></td>
-<td>The ID for the group you&#39;d like to update <strong>String</strong></td>
-</tr>
-</tbody></table>
-<h3 id='request-body'>Request Body</h3>
-<p>The only fields updated are the one passed on the request body JSON. You can pass any <a href="#group-attributes">attribute</a> to update. </p>
-<h2 id='delete-group'>Delete Group</h2>
-<p>Deletes the group matching the <code>group_id</code></p>
-<h3 id='request-url-4'>Request URL</h3>
-<p><code>DELETE https://{CLIENT_ID}.salesseek.net/api/groups/{group_id}</code></p>
-<h3 id='request-query-parameters-2'>Request Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>group_id</code></td>
-<td>The unique ID for the group to be deleted.</td>
-</tr>
-</tbody></table>
-<h2 id='list-groups'>List Groups</h2>
-<blockquote>
-<p>An example request to get all individual groups would be: </p>
-</blockquote>
-<pre class="highlight http tab-http"><code><span class="err">GET https://example.salesseek.net/api/groups?start=0&amp;rows=-1&amp;element_type=individuals
-</span></code></pre>
-<p>Returns a list of groups from your SalesSeek account.</p>
-<h3 id='request-url-5'>Request URL</h3>
-<p><code>GET https://{CLIENT_ID}.salesseek.net/api/groups</code></p>
-<h3 id='request-query-parameters-3'>Request Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>element_type</code></td>
-<td>Filter by groups containing certain record types (organizations, opportunities, individuals).</td>
-</tr>
-<tr>
-<td><code>rows</code></td>
-<td>The maximum number of organizations to be returned</td>
-</tr>
-<tr>
-<td><code>start</code></td>
-<td>The row number to start to retrieve data. (0 for start)</td>
-</tr>
-<tr>
-<td><code>order_by</code></td>
-<td>Results are ordered by the provided field name followed by &amp;desc or &amp;asc</td>
-</tr>
-</tbody></table>
-
-<div class="wrap">
-  <p class="flash info">
-    If <code>element_type</code> is not provided individual and opportunity groups are returned.
-  </p>
-</div>
-<h2 id='add-record-to-static-group'>Add Record to Static Group</h2>
-<blockquote>
-<p>An example request to add a record to a group would be. </p>
-</blockquote>
-<pre class="highlight http tab-http"><code><span class="err">PUT https://example.salesseek.net/api/groups/13663429-0f49-4e83-836c-7ecd6d58adf5/items/4bb55a82-ee66-4752-bc47-ce7edd05ddb1
-</span></code></pre>
-<p>Adds a record to a static group.</p>
-
-<p><code>PUT https://{CLIENT_ID}.salesseek.net/api/groups/{group_id}/items/{record_id}</code> </p>
-<h3 id='request-query-parameters-4'>Request Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>group_id</code></td>
-<td>The unique ID for the group to be deleted</td>
-</tr>
-<tr>
-<td><code>record_id</code></td>
-<td>The ID for the record to be added to this group</td>
-</tr>
-</tbody></table>
-
-<div class="wrap">
-  <p class="flash warn">
-    Records can only be added to static groups. Filters should be applied to smart groups to add records to smart groups.
   </p>
 </div>
 
