@@ -42,6 +42,15 @@ The Group API returns only the metadata for each group.
 	"filter": {
 		...
 	},
+	"columns": [
+    "photo_url",
+    "first_name",
+    "last_name",
+    "organization.name",
+    "email",
+    "phone",
+    "sortable_name"
+  ],
 	"order_by": null,
 	"cost_basis": "total",
 	"cost": 0,
@@ -66,6 +75,9 @@ Parameter |  Description
 `creator` | Object containing detailed information about the group creator **Object**
 `owner` | Object containing detailed information about the group owner **Object**
 `filter_id` | The ID for the group [filter](#filter-api) **string**
+`filter` | Object containing detailed information about the group filter **Object**
+`columns` | Array of column names to be shown in this group **Object**
+`creator` | Object containing detailed information about the group creator **Object**
 `order_by` | TODO
 `cost_basis` | TODO
 `cost` | TODO
