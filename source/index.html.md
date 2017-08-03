@@ -20,6 +20,7 @@ includes:
   - group
   - group-pages
   - campaigns
+  - activities
 
 search: true
 ---
