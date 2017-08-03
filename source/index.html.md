@@ -16,10 +16,10 @@ includes:
   - individual
   - deal
   - task
-  - campaigns
   - filter
   - group
   - group-pages
+  - campaigns
 
 search: true
 ---
