@@ -447,6 +447,17 @@
                   </li>
               </ul>
           </li>
+          <li>
+            <a href="#activities-api" class="toc-h1 toc-link" data-title="Activities API">Activities API</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#activities-attributes" class="toc-h2 toc-link" data-title="Activities API">Activities Attributes</a>
+                  </li>
+                  <li>
+                    <a href="#activity-types" class="toc-h2 toc-link" data-title="Activities API">Activity Types</a>
+                  </li>
+              </ul>
+          </li>
       </div>
         <ul class="toc-footer">
             <li><a href='https://www.salesseek.com'>SalesSeek Website</a></li>
@@ -3216,6 +3227,272 @@ Records-Total: 2000
     Values for the request body can be obtained by performing a <a href='#get-campaign'> GET Request </a> on the campaign ID 
   </p>
 </div>
+<h1 id='activities-api'>Activities API</h1><h2 id='activities-attributes'>Activities Attributes</h2>
+<blockquote>
+<p>An example response body for an activity note would look like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ef59f293-9838-4043-b0f4-9b0a6f467d73"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"activity_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"note"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"target_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"individuals"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"owner_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8da68e42-baef-42b2-9c72-4a00b5e20082"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"creator_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8da68e42-baef-42b2-9c72-4a00b5e20082"</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"creator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-03T10:42:41.843271"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"modified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-03T10:42:41.843271"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_modified_by_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8da68e42-baef-42b2-9c72-4a00b5e20082"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"individual_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"079f2797-df8d-4141-b10b-7c26553132e9"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"individual_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Chelsea Wallace"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"opportunity_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"opportunity_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"organization_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"organization_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;Agreed payment plan&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"target_date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"communication"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"communication_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"real_created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-03T10:42:41.843271"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"user_created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-03T10:42:41.843271"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"target_is_parent"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td>The unique identifier for this activity <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>activity_type</code></td>
+<td>The type of activity <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>target_type</code></td>
+<td>The record type the activity relates to (organization, opportunity, individual) <strong>Enum (string)</strong></td>
+</tr>
+<tr>
+<td><code>owner_id</code></td>
+<td>The ID for the SalesSeek user that has ownership of this activity <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>owner</code></td>
+<td>Object containing detailed information about the activity owner <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>creator_id</code></td>
+<td>The unique ID for the SalesSeek user that created this activity <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>creator</code></td>
+<td>Object containing detailed information about the activity creator <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>Array of tags associated with this activity <strong>Array</strong></td>
+</tr>
+<tr>
+<td><code>created</code></td>
+<td>Activity creation timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>modified</code></td>
+<td>Activity last modified timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>last_modified_by_id</code></td>
+<td>The unique ID for the SalesSeek user that last modified this activity <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>individual_id</code></td>
+<td>The ID for the <a href="#individual-api">individual</a> record this activity is associated to - <code>null</code> if not associated with an individual <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>individual_name</code></td>
+<td>The name of the <a href="#individual-api">individual</a> record that this activity is associated to - <code>null</code> if not associated with an individual <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>opportunity_id</code></td>
+<td>The ID for the <a href="#deal-api">deal</a> record this activity is associated to - <code>null</code> if not associated with a deal <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>opportunity_name</code></td>
+<td>The name of the <a href="#deal-api">deal</a> record that this activity is associated to - <code>null</code> if not associated with a deal <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>organization_id</code></td>
+<td>The ID for the <a href="#organization-api">organization</a> record this activity is associated to - <code>null</code> if not associated with an organization <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>organization_name</code></td>
+<td>The name of the <a href="#organization-api">organization</a> record that this activity is associated to - <code>null</code> if not associated with an organization <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>note</code></td>
+<td>The activity note contents in HTML - <code>null</code> if activity not a note <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>params</code></td>
+<td>Object containing detailed informaiton about the activity - <code>null</code> if activity is not a phase move. <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>params.to_id</code></td>
+<td>ID for the phase that the deal has been moved to (shown if activity was a phase move) <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>params.to</code></td>
+<td>Name for the phase that the deal has been moved to (shown if activity was a phase move) <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>params.from_id</code></td>
+<td>ID for the phase that the deal was moved from (shown if activity was a phase move) <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>params.from</code></td>
+<td>Name for the phase that the deal was moved from (shown if activity was a phase move) <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>params.to_funnel_id</code></td>
+<td>The ID for the funnel that the deal was moved to (shown if activity was a phase move) <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>params.to_funnel</code></td>
+<td>The name for the funnel that the deal was moved to (shown if activity was a phase move) <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>params.from_funnel_id</code></td>
+<td>The ID for the funnel that the deal was moved from (shown if activity was a phase move) <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>params.from_funnel</code></td>
+<td>The name for the funnel that the deal was moved from (shown if activity was a phase move) <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>params.who</code></td>
+<td>Name of the user who performed the activity (shown if activity was a phase move) <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>params.campaign_id</code></td>
+<td>The ID for the campaign where the activity originates (shown if activity was related to a campaign) <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>params.campaign_name</code></td>
+<td>The name for the campaign where the activity originates (shown if activity was related to a campaign) <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>params.campaign_type</code></td>
+<td>The type of email campaign (direct, campaign) (shown if activity was related to a campaign) <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>params.url</code></td>
+<td>The URL that was clicked in the campaign email (shown if activity was related to a campaign link being clicked) <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>params.subject</code></td>
+<td>The email subject (shown if activity was an archived email) <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>params.completed_by</code></td>
+<td>The name of the user that completed the task (shown if activity was a completed task) <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>params.description</code></td>
+<td>Descripion of completed tasks (shown if activity was a comlpleted task) <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>&quot;target_date</code></td>
+<td>Timestamp for the activity target date <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>communication</code></td>
+<td>TODO</td>
+</tr>
+<tr>
+<td><code>communication_id</code></td>
+<td>TODO</td>
+</tr>
+<tr>
+<td><code>real_created</code></td>
+<td>TODO</td>
+</tr>
+<tr>
+<td><code>user_created</code></td>
+<td>TODO</td>
+</tr>
+<tr>
+<td><code>target_is_parent</code></td>
+<td>TODO</td>
+</tr>
+</tbody></table>
+<h2 id='activity-types'>Activity Types</h2>
+<table><thead>
+<tr>
+<th>Types</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>auto:organization_import</code></td>
+<td>An <a href="#organization-api">organization</a> was imported</td>
+</tr>
+<tr>
+<td><code>auto:individual_import</code></td>
+<td>An <a href="#individual-api">individual</a> was imported</td>
+</tr>
+<tr>
+<td><code>auto:opportunity_import</code></td>
+<td>A <a href="#deal-api">deal</a> was imported</td>
+</tr>
+<tr>
+<td><code>auto:organization_creation</code></td>
+<td>An <a href="#organization-api">organization</a> was created</td>
+</tr>
+<tr>
+<td><code>auto:individual_creation</code></td>
+<td>An <a href="#individual-api">individual</a> was created</td>
+</tr>
+<tr>
+<td><code>auto:opportunity_creation</code></td>
+<td>A <a href="#deal-api">deal</a> was created</td>
+</tr>
+<tr>
+<td><code>archive:email</code></td>
+<td>An email was archived</td>
+</tr>
+<tr>
+<td><code>archive:mailshot_sent</code></td>
+<td>A <a href="#campaign-api">campaign</a> was sent</td>
+</tr>
+<tr>
+<td><code>archive:mailshot_opened</code></td>
+<td>A <a href="#campaign-api">campaign</a> was opened</td>
+</tr>
+<tr>
+<td><code>automation:archive:mailshot_url_clicked</code></td>
+<td>A link in a <a href="#campaign-api">campaign</a> was clicked</td>
+</tr>
+<tr>
+<td><code>auto:call</code></td>
+<td>A call was logged</td>
+</tr>
+<tr>
+<td><code>task:completed</code></td>
+<td>A task was complted</td>
+</tr>
+</tbody></table>
 
       </div>
       <div class="dark-box">
