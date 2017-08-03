@@ -16,9 +16,9 @@ includes:
   - individual
   - deal
   - task
-  - campaigns 
   - filter
   - group
+  - campaigns 
 
 search: true
 ---
