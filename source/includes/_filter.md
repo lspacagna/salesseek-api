@@ -67,14 +67,14 @@ Filters allow you to segment your records within SalesSeek. You can use any fiel
 
 Parameter |  Description
 --------- | ------- 
-`id`      | The unique identifier for this filter **string**
-`filter_type` | The type of records to be filtered (indidivuals, opportunities, organizations, tasks) **Enum (string)**
+`id`      | The unique identifier for this filter **String**
+`filter_type` | The type of records to be filtered (indidivuals, opportunities, organizations, tasks) **Enum (String)**
 `rules` | Array containing rules used for this filter **Array**
-`rules[x].field` | The name of the field that is used in this filter **string**
-`rules[x].operator` | The operator used in this filter **string**
-`rules[x].values` | Object containing the values used to apply to this filter **object**
-`rules[x].values.name` | Name of the values to be applied to this filter **object**
-`rules[x].values.id` | ID of the values to be applied to this filter **object**
+`rules[x].field` | The name of the field that is used in this filter **String**
+`rules[x].operator` | The operator used in this filter **String**
+`rules[x].values` | Object containing the values used to apply to this filter **Object**
+`rules[x].values.name` | Name of the values to be applied to this filter **Object**
+`rules[x].values.id` | ID of the values to be applied to this filter **Object**
 
 Filters can use `AND` and `OR` rules. `AND` rules are determined by the rule objects being in separate arrays in the `rules` array. `OR` values are multiple objects in the same array. 
 
@@ -94,8 +94,8 @@ Returns the filter matching the `filter_id`
 
 Parameter |  Description
 --------- | ------- 
-`record_type` | The record type that the filter applies to (individuals, organizations, opportunities, tasks) **string**
-`filter_id` | The ID for the filter you'd like to retrieve **string**
+`record_type` | The record type that the filter applies to (individuals, organizations, opportunities, tasks) 
+`filter_id` | The ID for the filter you'd like to retrieve
 
 
 ## Create Filter

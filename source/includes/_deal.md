@@ -153,7 +153,7 @@ Returns the deal matching the `deal_id`
 
 Parameter |  Description
 --------- | ------- 
-`id`      | The ID for the deal you'd like to retrieve **String**
+`id`      | The ID for the deal you'd like to retrieve
 
 
 ## Create Deal
@@ -183,7 +183,7 @@ Updates values of deal by `deal_id`. The resulting deal is returned.
 
 Parameter |  Description
 --------- | ------- 
-`id`      | The ID for the deal you'd like to update **String**
+`id`      | The ID for the deal you'd like to update
 
 ### Request Body
 

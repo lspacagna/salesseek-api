@@ -31,17 +31,17 @@ SalesSeek expects the cookie to be included in all API requests to the server af
 
 Parameter |  Description
 --------- | ------- 
-`id`      | The unique identifier for the user logging in **string**
-`name`    | The name of the user logging in **string**
-`is_admin` | Set to `true` if this user is an admin **boolean**
-`email_address` | The user email address **string**
-`email_address` | The user email address **string**
+`id`      | The unique identifier for the user logging in **String**
+`name`    | The name of the user logging in **String**
+`is_admin` | Set to `true` if this user is an admin **Boolean**
+`email_address` | The user email address **String**
+`email_address` | The user email address **String**
 `client_id` | _TO DO_
 `modified`| User last modified timestamp **Timestamp (ISO 8601)**
 `created` | User creation timestamp **Timestamp (ISO 8601)**
-`ical_url` | URL for the user iCal connection **string (URL)**
-`password_reset_required` | Set to `true` if this user will be required to reset their password when loggin in. **boolean**
-`notification_settings` | Object contianing users email notification settings **object**
+`ical_url` | URL for the user iCal connection **String (URL)**
+`password_reset_required` | Set to `true` if this user will be required to reset their password when loggin in. **Boolean**
+`notification_settings` | Object contianing users email notification settings **Object**
 
 
 ## Login
@@ -78,8 +78,8 @@ To login, send your email address and password to the endpoint below. If login i
 
 Parameter |  Description
 --------- | ------- 
-`email_address` | Your email address used to access your account. **string**
-`password` | The password used to access your account. **string**
+`email_address` | Your email address used to access your account. **String**
+`password` | The password used to access your account. **String**
 
 <div class="wrap">
   <p class="flash warn">
@@ -118,8 +118,8 @@ If a user has forgoten their password for their SalesSeek account make a call to
 
 Parameter |  Description
 --------- | ------- 
-`email_address` | Your email address for the user that would like to reset their password. **string**
-`callback_url` | The next web page to open after reset **string**
+`email_address` | Your email address for the user that would like to reset their password. **String**
+`callback_url` | The next web page to open after reset **String**
 
 ## Complete Password Reset
 
@@ -143,9 +143,9 @@ Once the password reset email has been received, the token in the email must be 
 
 Parameter |  Description
 --------- | ------- 
-`user_id` | The ID for the user to have the password reset. **string**
-`token` | Unique token provided in reset confirmation email **string**
-`password` | New password to be assigned to account **string**
+`user_id` | The ID for the user to have the password reset. **String**
+`token` | Unique token provided in reset confirmation email **String**
+`password` | New password to be assigned to account **String**
 
 <div class="wrap">
   <p class="flash warn">

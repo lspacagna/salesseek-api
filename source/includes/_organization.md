@@ -70,7 +70,7 @@ Returns the unique organization matching the `organization_id`
 
 Parameter |  Description
 --------- | ------- 
-`organization_id`      | The ID for the organization you'd like to retrieve **String**
+`organization_id`      | The ID for the organization you'd like to retrieve
 
 
 
@@ -103,7 +103,7 @@ Updates values of organization by `organization_id`. The resulting organization 
 
 Parameter |  Description
 --------- | ------- 
-`id`      | The ID for the organization you'd like to update **String**
+`id`      | The ID for the organization you'd like to update
 
 ### Request Body
 

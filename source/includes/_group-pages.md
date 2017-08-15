@@ -8,66 +8,66 @@ The Group Pages API should be used in conjunction with the [Group API](#group-ap
 
 ```json
 {
-	"columns": [
-		"photo_url",
-		"first_name",
-		"last_name",
-		"organization.name",
-		"email",
-		"phone"
-	],
-	"rows": [
-		{
-			"id": "dc1aba21-37ad-4feb-8dca-3d7ce4ec29fe",
-			"cells": [
-				"",
-				"Anna",
-				"Walker",
-				"Woking Leal",
-				[
-					{
-						"name": "Work",
-						"value": "dangerdanger@mailinator.com"
-					}
-				],
-				[]
-			]
-		},
-		{
-			"id": "a303df0a-8caf-499c-83d8-e8455a5978b9",
-			"cells": [
-				"",
-				"David",
-				"Romero",
-				"Linkbuzz",
-				[
-					{
-						"name": "Work",
-						"value": "david.romero@suremail.info"
-					}
-				],
-				[
-					{
-						"name": "Work",
-						"value": "6-(186)598-3830"
-					}
-				]
-			]
-		}, 
-	],
-	"order_by": [
-		"full_name",
-		"asc"
-	],
-	"totals": null,
+  "columns": [
+    "photo_url",
+    "first_name",
+    "last_name",
+    "organization.name",
+    "email",
+    "phone"
+  ],
+  "rows": [
+    {
+      "id": "dc1aba21-37ad-4feb-8dca-3d7ce4ec29fe",
+      "cells": [
+        "",
+        "Anna",
+        "Walker",
+        "Woking Leal",
+        [
+          {
+            "name": "Work",
+            "value": "dangerdanger@mailinator.com"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "id": "a303df0a-8caf-499c-83d8-e8455a5978b9",
+      "cells": [
+        "",
+        "David",
+        "Romero",
+        "Linkbuzz",
+        [
+          {
+            "name": "Work",
+            "value": "david.romero@suremail.info"
+          }
+        ],
+        [
+          {
+            "name": "Work",
+            "value": "6-(186)598-3830"
+          }
+        ]
+      ]
+    }
+  ],
+  "order_by": [
+    "full_name",
+    "asc"
+  ],
+  "totals": null
 }
 ```
 
 Parameter |  Description
 --------- | ------- 
-`columns` | Array containing the column names in the returned data **Array (string)**
-`rows` 	  | Array containing the rows of data returned as objects **Array (object)**
-`order_by` | Array of the values the returned data is ordered by **Array (string)**
+`columns` | Array containing the column names in the returned data **Array (String)**
+`rows` 	  | Array containing the rows of data returned as objects **Array (Object)**
+`order_by` | Array of the values the returned data is ordered by **Array (String)**
 `totals` | TODO
 
 
