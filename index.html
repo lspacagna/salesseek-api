@@ -408,13 +408,13 @@
               </ul>
           </li>
           <li>
-            <a href="#group-pages-api" class="toc-h1 toc-link" data-title="Group Pages API">Group Pages API</a>
+            <a href="#group-page-api" class="toc-h1 toc-link" data-title="Group Page API">Group Page API</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#group-pages-attributes" class="toc-h2 toc-link" data-title="Group Pages API">Group Pages Attributes</a>
+                    <a href="#group-page-attributes" class="toc-h2 toc-link" data-title="Group Page API">Group Page Attributes</a>
                   </li>
                   <li>
-                    <a href="#get-group-page" class="toc-h2 toc-link" data-title="Group Pages API">Get Group Page</a>
+                    <a href="#get-group-page" class="toc-h2 toc-link" data-title="Group Page API">Get Group Page</a>
                   </li>
               </ul>
           </li>
@@ -448,13 +448,71 @@
               </ul>
           </li>
           <li>
-            <a href="#activities-api" class="toc-h1 toc-link" data-title="Activities API">Activities API</a>
+            <a href="#activity-api" class="toc-h1 toc-link" data-title="Activity API">Activity API</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#activities-attributes" class="toc-h2 toc-link" data-title="Activities API">Activities Attributes</a>
+                    <a href="#activity-attributes" class="toc-h2 toc-link" data-title="Activity API">Activity Attributes</a>
                   </li>
                   <li>
-                    <a href="#activity-types" class="toc-h2 toc-link" data-title="Activities API">Activity Types</a>
+                    <a href="#activity-types" class="toc-h2 toc-link" data-title="Activity API">Activity Types</a>
+                  </li>
+                  <li>
+                    <a href="#get-activity" class="toc-h2 toc-link" data-title="Activity API">Get Activity</a>
+                  </li>
+                  <li>
+                    <a href="#create-activity" class="toc-h2 toc-link" data-title="Activity API">Create Activity</a>
+                  </li>
+                  <li>
+                    <a href="#update-activity" class="toc-h2 toc-link" data-title="Activity API">Update Activity</a>
+                  </li>
+                  <li>
+                    <a href="#delete-activity" class="toc-h2 toc-link" data-title="Activity API">Delete Activity</a>
+                  </li>
+                  <li>
+                    <a href="#list-activities" class="toc-h2 toc-link" data-title="Activity API">List Activities</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#tag-api" class="toc-h1 toc-link" data-title="Tag API">Tag API</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#tag-attributes" class="toc-h2 toc-link" data-title="Tag API">Tag Attributes</a>
+                  </li>
+                  <li>
+                    <a href="#create-tag" class="toc-h2 toc-link" data-title="Tag API">Create Tag</a>
+                  </li>
+                  <li>
+                    <a href="#update-tag" class="toc-h2 toc-link" data-title="Tag API">Update Tag</a>
+                  </li>
+                  <li>
+                    <a href="#delete-tag" class="toc-h2 toc-link" data-title="Tag API">Delete Tag</a>
+                  </li>
+                  <li>
+                    <a href="#list-tags" class="toc-h2 toc-link" data-title="Tag API">List Tags</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#custom-field-api" class="toc-h1 toc-link" data-title="Custom Field API">Custom Field API</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#custom-field-attributes" class="toc-h2 toc-link" data-title="Custom Field API">Custom Field Attributes</a>
+                  </li>
+                  <li>
+                    <a href="#get-custom-field" class="toc-h2 toc-link" data-title="Custom Field API">Get Custom Field</a>
+                  </li>
+                  <li>
+                    <a href="#create-custom-field" class="toc-h2 toc-link" data-title="Custom Field API">Create Custom Field</a>
+                  </li>
+                  <li>
+                    <a href="#update-custom-field" class="toc-h2 toc-link" data-title="Custom Field API">Update Custom Field</a>
+                  </li>
+                  <li>
+                    <a href="#delete-custom-field" class="toc-h2 toc-link" data-title="Custom Field API">Delete Custom Field</a>
+                  </li>
+                  <li>
+                    <a href="#list-custom-fields" class="toc-h2 toc-link" data-title="Custom Field API">List Custom Fields</a>
                   </li>
               </ul>
           </li>
@@ -532,27 +590,27 @@
 </thead><tbody>
 <tr>
 <td><code>id</code></td>
-<td>The unique identifier for the user logging in <strong>string</strong></td>
+<td>The unique identifier for the user logging in <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>name</code></td>
-<td>The name of the user logging in <strong>string</strong></td>
+<td>The name of the user logging in <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>is_admin</code></td>
-<td>Set to <code>true</code> if this user is an admin <strong>boolean</strong></td>
+<td>Set to <code>true</code> if this user is an admin <strong>Boolean</strong></td>
 </tr>
 <tr>
 <td><code>email_address</code></td>
-<td>The user email address <strong>string</strong></td>
+<td>The user email address <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>email_address</code></td>
-<td>The user email address <strong>string</strong></td>
+<td>The user email address <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>client_id</code></td>
-<td><em>TO DO</em></td>
+<td>TODO</td>
 </tr>
 <tr>
 <td><code>modified</code></td>
@@ -564,15 +622,15 @@
 </tr>
 <tr>
 <td><code>ical_url</code></td>
-<td>URL for the user iCal connection <strong>string (URL)</strong></td>
+<td>URL for the user iCal connection <strong>String (URL)</strong></td>
 </tr>
 <tr>
 <td><code>password_reset_required</code></td>
-<td>Set to <code>true</code> if this user will be required to reset their password when loggin in. <strong>boolean</strong></td>
+<td>Set to <code>true</code> if this user will be required to reset their password when loggin in. <strong>Boolean</strong></td>
 </tr>
 <tr>
 <td><code>notification_settings</code></td>
-<td>Object contianing users email notification settings <strong>object</strong></td>
+<td>Object contianing users email notification settings <strong>Object</strong></td>
 </tr>
 </tbody></table>
 <h2 id='login'>Login</h2>
@@ -606,11 +664,11 @@
 </thead><tbody>
 <tr>
 <td><code>email_address</code></td>
-<td>Your email address used to access your account. <strong>string</strong></td>
+<td>Your email address used to access your account. <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>password</code></td>
-<td>The password used to access your account. <strong>string</strong></td>
+<td>The password used to access your account. <strong>String</strong></td>
 </tr>
 </tbody></table>
 
@@ -645,11 +703,11 @@
 </thead><tbody>
 <tr>
 <td><code>email_address</code></td>
-<td>Your email address for the user that would like to reset their password. <strong>string</strong></td>
+<td>Your email address for the user that would like to reset their password. <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>callback_url</code></td>
-<td>The next web page to open after reset <strong>string</strong></td>
+<td>The next web page to open after reset <strong>String</strong></td>
 </tr>
 </tbody></table>
 <h2 id='complete-password-reset'>Complete Password Reset</h2>
@@ -674,15 +732,15 @@
 </thead><tbody>
 <tr>
 <td><code>user_id</code></td>
-<td>The ID for the user to have the password reset. <strong>string</strong></td>
+<td>The ID for the user to have the password reset. <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>token</code></td>
-<td>Unique token provided in reset confirmation email <strong>string</strong></td>
+<td>Unique token provided in reset confirmation email <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>password</code></td>
-<td>New password to be assigned to account <strong>string</strong></td>
+<td>New password to be assigned to account <strong>String</strong></td>
 </tr>
 </tbody></table>
 
@@ -816,7 +874,7 @@
 </thead><tbody>
 <tr>
 <td><code>organization_id</code></td>
-<td>The ID for the organization you&#39;d like to retrieve <strong>String</strong></td>
+<td>The ID for the organization you&#39;d like to retrieve</td>
 </tr>
 </tbody></table>
 <h2 id='create-organization'>Create Organization</h2>
@@ -843,7 +901,7 @@
 </thead><tbody>
 <tr>
 <td><code>id</code></td>
-<td>The ID for the organization you&#39;d like to update <strong>String</strong></td>
+<td>The ID for the organization you&#39;d like to update</td>
 </tr>
 </tbody></table>
 <h3 id='request-body'>Request Body</h3>
@@ -1595,7 +1653,7 @@ Records-Total: 2000
 </thead><tbody>
 <tr>
 <td><code>id</code></td>
-<td>The ID for the deal you&#39;d like to retrieve <strong>String</strong></td>
+<td>The ID for the deal you&#39;d like to retrieve</td>
 </tr>
 </tbody></table>
 <h2 id='create-deal'>Create Deal</h2>
@@ -1622,7 +1680,7 @@ Records-Total: 2000
 </thead><tbody>
 <tr>
 <td><code>id</code></td>
-<td>The ID for the deal you&#39;d like to update <strong>String</strong></td>
+<td>The ID for the deal you&#39;d like to update</td>
 </tr>
 </tbody></table>
 <h3 id='request-body'>Request Body</h3>
@@ -2064,11 +2122,11 @@ Records-Total: 2000
 </thead><tbody>
 <tr>
 <td><code>id</code></td>
-<td>The unique identifier for this filter <strong>string</strong></td>
+<td>The unique identifier for this filter <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>filter_type</code></td>
-<td>The type of records to be filtered (indidivuals, opportunities, organizations, tasks) <strong>Enum (string)</strong></td>
+<td>The type of records to be filtered (indidivuals, opportunities, organizations, tasks) <strong>Enum (String)</strong></td>
 </tr>
 <tr>
 <td><code>rules</code></td>
@@ -2076,23 +2134,23 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>rules[x].field</code></td>
-<td>The name of the field that is used in this filter <strong>string</strong></td>
+<td>The name of the field that is used in this filter <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>rules[x].operator</code></td>
-<td>The operator used in this filter <strong>string</strong></td>
+<td>The operator used in this filter <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>rules[x].values</code></td>
-<td>Object containing the values used to apply to this filter <strong>object</strong></td>
+<td>Object containing the values used to apply to this filter <strong>Object</strong></td>
 </tr>
 <tr>
 <td><code>rules[x].values.name</code></td>
-<td>Name of the values to be applied to this filter <strong>object</strong></td>
+<td>Name of the values to be applied to this filter <strong>Object</strong></td>
 </tr>
 <tr>
 <td><code>rules[x].values.id</code></td>
-<td>ID of the values to be applied to this filter <strong>object</strong></td>
+<td>ID of the values to be applied to this filter <strong>Object</strong></td>
 </tr>
 </tbody></table>
 
@@ -2114,11 +2172,11 @@ Records-Total: 2000
 </thead><tbody>
 <tr>
 <td><code>record_type</code></td>
-<td>The record type that the filter applies to (individuals, organizations, opportunities, tasks) <strong>string</strong></td>
+<td>The record type that the filter applies to (individuals, organizations, opportunities, tasks)</td>
 </tr>
 <tr>
 <td><code>filter_id</code></td>
-<td>The ID for the filter you&#39;d like to retrieve <strong>string</strong></td>
+<td>The ID for the filter you&#39;d like to retrieve</td>
 </tr>
 </tbody></table>
 <h2 id='create-filter'>Create Filter</h2>
@@ -2189,19 +2247,19 @@ Records-Total: 2000
 </thead><tbody>
 <tr>
 <td><code>id</code></td>
-<td>The unique identifier for this group <strong>string</strong></td>
+<td>The unique identifier for this group <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>name</code></td>
-<td>User provided name for the group <strong>string</strong></td>
+<td>User provided name for the group <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>group_type</code></td>
-<td>The type of group (static, smart) <strong>Enum (string)</strong></td>
+<td>The type of group (static, smart) <strong>Enum (String)</strong></td>
 </tr>
 <tr>
 <td><code>element_type</code></td>
-<td>The type of record this group can contain (individuals, organizations, opportunities, tasks)<strong>Enum (string)</strong></td>
+<td>The type of record this group can contain (individuals, organizations, opportunities, tasks)<strong>Enum (String)</strong></td>
 </tr>
 <tr>
 <td><code>locked</code></td>
@@ -2209,7 +2267,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>comments</code></td>
-<td>User provided comments associated with the group <strong>string</strong></td>
+<td>User provided comments associated with the group <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>mailing_list</code></td>
@@ -2225,15 +2283,15 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>owner_id</code></td>
-<td>ID for the group owner <strong>string</strong></td>
+<td>ID for the group owner <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>creator_id</code></td>
-<td>ID for the group creator <strong>string</strong></td>
+<td>ID for the group creator <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>last_modified_by_id</code></td>
-<td>ID for the user that last modified the group <strong>string</strong></td>
+<td>ID for the user that last modified the group <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>creator</code></td>
@@ -2245,7 +2303,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>filter_id</code></td>
-<td>The ID for the group <a href="#filter-api">filter</a> <strong>string</strong></td>
+<td>The ID for the group <a href="#filter-api">filter</a> <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>filter</code></td>
@@ -2289,7 +2347,7 @@ Records-Total: 2000
 </thead><tbody>
 <tr>
 <td><code>group_id</code></td>
-<td>The ID for the group you&#39;d like to retrieve <strong>string</strong></td>
+<td>The ID for the group you&#39;d like to retrieve</td>
 </tr>
 </tbody></table>
 <h2 id='create-group'>Create Group</h2>
@@ -2320,15 +2378,15 @@ Records-Total: 2000
 </thead><tbody>
 <tr>
 <td><code>name</code></td>
-<td>Provided name for the group <strong>string</strong></td>
+<td>Provided name for the group <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>group_type</code></td>
-<td>The type of group (static, smart) <strong>Enum (string)</strong></td>
+<td>The type of group (static, smart) <strong>Enum (String)</strong></td>
 </tr>
 <tr>
 <td><code>element_type</code></td>
-<td>The type of record this group can contain (individuals, organizations, opportunities, tasks) <strong>Enum (string)</strong></td>
+<td>The type of record this group can contain (individuals, organizations, opportunities, tasks) <strong>Enum (String)</strong></td>
 </tr>
 </tbody></table>
 <h2 id='update-group'>Update Group</h2>
@@ -2449,65 +2507,65 @@ Records-Total: 2000
     Records can only be added to static groups. Filters should be applied to smart groups to add records to smart groups.
   </p>
 </div>
-<h1 id='group-pages-api'>Group Pages API</h1>
+<h1 id='group-page-api'>Group Page API</h1>
 <p>The Group Pages API should be used in conjunction with the <a href="#group-api">Group API</a>. The Group API contains the metadata for each group. The Group Pages API is used to return records associated with a group in a paginated form.</p>
-<h2 id='group-pages-attributes'>Group Pages Attributes</h2>
+<h2 id='group-page-attributes'>Group Page Attributes</h2>
 <blockquote>
 <p>A sample Group Pages response on an organization group would look like:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"columns"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="s2">"photo_url"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"organization.name"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"email"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"phone"</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"rows"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dc1aba21-37ad-4feb-8dca-3d7ce4ec29fe"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"cells"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                </span><span class="s2">""</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"Anna"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"Walker"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"Woking Leal"</span><span class="p">,</span><span class="w">
-                </span><span class="p">[</span><span class="w">
-                    </span><span class="p">{</span><span class="w">
-                        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Work"</span><span class="p">,</span><span class="w">
-                        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dangerdanger@mailinator.com"</span><span class="w">
-                    </span><span class="p">}</span><span class="w">
-                </span><span class="p">],</span><span class="w">
-                </span><span class="p">[]</span><span class="w">
-            </span><span class="p">]</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a303df0a-8caf-499c-83d8-e8455a5978b9"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"cells"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                </span><span class="s2">""</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"David"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"Romero"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"Linkbuzz"</span><span class="p">,</span><span class="w">
-                </span><span class="p">[</span><span class="w">
-                    </span><span class="p">{</span><span class="w">
-                        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Work"</span><span class="p">,</span><span class="w">
-                        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"david.romero@suremail.info"</span><span class="w">
-                    </span><span class="p">}</span><span class="w">
-                </span><span class="p">],</span><span class="w">
-                </span><span class="p">[</span><span class="w">
-                    </span><span class="p">{</span><span class="w">
-                        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Work"</span><span class="p">,</span><span class="w">
-                        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6-(186)598-3830"</span><span class="w">
-                    </span><span class="p">}</span><span class="w">
-                </span><span class="p">]</span><span class="w">
-            </span><span class="p">]</span><span class="w">
-        </span><span class="p">},</span><span class="w"> 
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"order_by"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="s2">"full_name"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"asc"</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"totals"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"columns"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"photo_url"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_name"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_name"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"organization.name"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"phone"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"rows"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dc1aba21-37ad-4feb-8dca-3d7ce4ec29fe"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"cells"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Anna"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Walker"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Woking Leal"</span><span class="p">,</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Work"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dangerdanger@mailinator.com"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="p">[]</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a303df0a-8caf-499c-83d8-e8455a5978b9"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"cells"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"David"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Romero"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Linkbuzz"</span><span class="p">,</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Work"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"david.romero@suremail.info"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Work"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6-(186)598-3830"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"order_by"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"full_name"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"asc"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"totals"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <table><thead>
@@ -2518,15 +2576,15 @@ Records-Total: 2000
 </thead><tbody>
 <tr>
 <td><code>columns</code></td>
-<td>Array containing the column names in the returned data <strong>Array (string)</strong></td>
+<td>Array containing the column names in the returned data <strong>Array (String)</strong></td>
 </tr>
 <tr>
 <td><code>rows</code></td>
-<td>Array containing the rows of data returned as objects <strong>Array (object)</strong></td>
+<td>Array containing the rows of data returned as objects <strong>Array (Object)</strong></td>
 </tr>
 <tr>
 <td><code>order_by</code></td>
-<td>Array of the values the returned data is ordered by <strong>Array (string)</strong></td>
+<td>Array of the values the returned data is ordered by <strong>Array (String)</strong></td>
 </tr>
 <tr>
 <td><code>totals</code></td>
@@ -3227,7 +3285,7 @@ Records-Total: 2000
     Values for the request body can be obtained by performing a <a href='#get-campaign'> GET Request </a> on the campaign ID 
   </p>
 </div>
-<h1 id='activities-api'>Activities API</h1><h2 id='activities-attributes'>Activities Attributes</h2>
+<h1 id='activity-api'>Activity API</h1><h2 id='activity-attributes'>Activity Attributes</h2>
 <blockquote>
 <p>An example response body for an activity note would look like this:</p>
 </blockquote>
@@ -3262,8 +3320,96 @@ Records-Total: 2000
     </span><span class="s2">"communication_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="s2">"real_created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-03T10:42:41.843271"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"user_created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-03T10:42:41.843271"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"target_is_parent"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"target_is_parent"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">   
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>An example response body for a sent direct email campaign to an individual would look like:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a3365acc-831c-45ec-b83d-f5d2b31dbc24"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"activity_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"automation:archive:mailshot_sent"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"target_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"individuals"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"owner_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"69c5bc2a-c8e5-4d11-a102-6ec0fb410d1b"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"creator_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"69c5bc2a-c8e5-4d11-a102-6ec0fb410d1b"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"creator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-14T12:10:59.048847"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"modified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-14T12:10:59.048847"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_modified_by_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"69c5bc2a-c8e5-4d11-a102-6ec0fb410d1b"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"individual_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"285ae016-58d4-4dbc-bff3-339c2b4540ff"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"individual_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gregory John"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"opportunity_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"opportunity_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"organization_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"organization_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SalesSeek sent Welcome Email to Gregory John"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"mailshot_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"91c2c7f6-71d2-4d57-909d-66bc6a978023"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"campaign_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"91c2c7f6-71d2-4d57-909d-66bc6a978023"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"mailshot_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Welcome Email"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"campaign_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"direct"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"campaign_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Welcome Email"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"target_date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"communication"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"communication_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"real_created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-14T12:10:59.048847"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"user_created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-14T12:10:59.048847"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"target_is_parent"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
 
+</span></code></pre>
+<blockquote>
+<p>An example response body for a deal phase move would look like:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a300284d-b708-4d50-8d42-e2e8ab4cceeb"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"activity_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"auto:opportunity_movement"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"target_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"opportunities"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"owner_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"69c5bc2a-c8e5-4d11-a102-6ec0fb410d1b"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"creator_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"69c5bc2a-c8e5-4d11-a102-6ec0fb410d1b"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"creator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-14T13:27:23.254368"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"modified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-14T13:27:23.254368"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_modified_by_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"69c5bc2a-c8e5-4d11-a102-6ec0fb410d1b"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"individual_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"individual_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"opportunity_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"81e96bca-abdc-4753-8763-fc642afb3c99"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"opportunity_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Aptui"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"organization_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"organization_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SalesSeek moved Aptui from Engaged to Won"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"from_funnel_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7d40c1e6-1e66-4dac-bd4b-0e29184c6dcd"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"to_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c8a2a4c1-420b-4d7e-99d9-3f54eb503f2b"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lost"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Engaged"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"from_funnel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Online"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"who"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dale Goulding"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"from_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c4329a4a-44fe-4948-9c90-46a589266643"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"target_date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"communication"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"communication_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"real_created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-14T13:27:23.254368"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"user_created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-14T13:27:23.254368"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"target_is_parent"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <table><thead>
@@ -3278,7 +3424,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>activity_type</code></td>
-<td>The type of activity <strong>String</strong></td>
+<td>The <a href="#activity-types">type of activity</a>  <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>target_type</code></td>
@@ -3413,7 +3559,7 @@ Records-Total: 2000
 <td>Descripion of completed tasks (shown if activity was a comlpleted task) <strong>String</strong></td>
 </tr>
 <tr>
-<td><code>&quot;target_date</code></td>
+<td><code>target_date</code></td>
 <td>Timestamp for the activity target date <strong>Timestamp (ISO 8601)</strong></td>
 </tr>
 <tr>
@@ -3485,12 +3631,588 @@ Records-Total: 2000
 <td>A link in a <a href="#campaign-api">campaign</a> was clicked</td>
 </tr>
 <tr>
+<td><code>automation:archive:mailshot_sent</code></td>
+<td>A <a href="#campaign-api">campaign</a> was sent</td>
+</tr>
+<tr>
 <td><code>auto:call</code></td>
 <td>A call was logged</td>
 </tr>
 <tr>
 <td><code>task:completed</code></td>
 <td>A task was complted</td>
+</tr>
+</tbody></table>
+<h2 id='get-activity'>Get Activity</h2>
+<p>Returns the unique organization matching the <code>activity_id</code></p>
+<h3 id='request-url'>Request URL</h3>
+<p><code>GET https://{CLIENT_ID}.salesseek.net/api/activities/{activity_id}</code></p>
+<h3 id='request-query-parameters'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>activity_id</code></td>
+<td>The ID for the activity you&#39;d like to retrieve <strong>String</strong></td>
+</tr>
+</tbody></table>
+<h2 id='create-activity'>Create Activity</h2>
+<blockquote>
+<p>A sample request body to add an activity note would look like:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;Called today and agreed on deal terms.&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"target_date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"activity_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"note"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"item_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"opportunities"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"item_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0d98b2fa-c4c8-4d56-9cda-17b62b198f4f"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Creates a new activity record and then returns the newly created activity.</p>
+<h3 id='request-url-2'>Request URL</h3>
+<p><code>POST https://{CLIENT_ID}.salesseek.net/api/activities</code></p>
+<h2 id='update-activity'>Update Activity</h2>
+<blockquote>
+<p>A sample request body to change the activity note text would be:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;Called yesterday and agreed on deal terms.&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Updates values of activity by <code>activity_id</code>. The resulting activity is returned. </p>
+<h3 id='request-url-3'>Request URL</h3>
+<p><code>PATCH https://{CLIENT_ID}.salesseek.net/api/activities/{activity_id}</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>activity_id</code></td>
+<td>The ID for the activity you&#39;d like to update <strong>String</strong></td>
+</tr>
+</tbody></table>
+<h3 id='request-body'>Request Body</h3>
+<p>The only fields updated are the one passed on the request body JSON. You can pass any <a href="#activity-attributes">attribute</a> to update. </p>
+<h2 id='delete-activity'>Delete Activity</h2>
+<p>Deletes the activity matching the <code>activity_id</code></p>
+<h3 id='request-url-4'>Request URL</h3>
+<p><code>DELETE https://{CLIENT_ID}.salesseek.net/api/activities/{activity_id}</code></p>
+<h3 id='request-query-parameters-2'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>activity_id</code></td>
+<td>The unique ID for the organization to be deleted.</td>
+</tr>
+</tbody></table>
+<h2 id='list-activities'>List Activities</h2>
+<blockquote>
+<p>An example request to get the first 50 activites for a particular opportunity, ordered by creation date descending, with all activity types returned.</p>
+</blockquote>
+<pre class="highlight http tab-http"><code><span class="err">GET https://example.salesseek.net/api/activities?start=0&amp;rows=50&amp;order_by=created%20desc&amp;notes=true&amp;communications=true&amp;contact_updates=true&amp;deals=true&amp;campaign_emails=true&amp;automation_emails=true&amp;include_ind_related=true&amp;include_org_related=true&amp;include_deal_related=true&amp;item_type=opportunities&amp;item_id=0d98b2fa-c4c8-4d56-9cda-17b62b198f4f
+</span></code></pre>
+<blockquote>
+<p>The reponse header contains the following information:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Records-Rows: 50
+Records-Start: 0
+Records-Total: 2000
+</code></pre>
+<p>Returns a list of activities.</p>
+<h3 id='request-url-5'>Request URL</h3>
+<p><code>GET https://{CLIENT_ID}.salesseek.net/api/activities</code></p>
+<h3 id='request-query-parameters-3'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>rows</code></td>
+<td>The maximum number of organizations to be returned.</td>
+</tr>
+<tr>
+<td><code>start</code></td>
+<td>The row number to start to retrieve data. (0 for start)</td>
+</tr>
+<tr>
+<td><code>order_by</code></td>
+<td>Results are ordered by the provided field name followed by &amp;desc or &amp;asc</td>
+</tr>
+<tr>
+<td><code>notes</code></td>
+<td>Set to true to request activity notes (<code>true</code> or <code>false</code>)</td>
+</tr>
+<tr>
+<td><code>communications</code></td>
+<td>Set to <code>true</code> to request all communication activity (<code>true</code> or <code>false</code>)</td>
+</tr>
+<tr>
+<td><code>contact_updates</code></td>
+<td>Set to <code>true</code> to request all contact update activity (<code>true</code> or <code>false</code>)</td>
+</tr>
+<tr>
+<td><code>deals</code></td>
+<td>Set to <code>true</code> to request all deal activity (<code>true</code> or <code>false</code>)</td>
+</tr>
+<tr>
+<td><code>campaign_emails</code></td>
+<td>Set to <code>true</code> to request all campaign email activity (<code>true</code> or <code>false</code>)</td>
+</tr>
+<tr>
+<td><code>automation_emails</code></td>
+<td>Set to <code>true</code> to request all automation email activity (<code>true</code> or <code>false</code>)</td>
+</tr>
+<tr>
+<td><code>include_ind_related</code></td>
+<td>Set to <code>true</code> to request all activities from related individuals (<code>true</code> or <code>false</code>)</td>
+</tr>
+<tr>
+<td><code>include_org_related</code></td>
+<td>Set to <code>true</code> to request all activities from related organizations (<code>true</code> or <code>false</code>)</td>
+</tr>
+<tr>
+<td><code>include_deal_related</code></td>
+<td>Set to <code>true</code> to request all activities from related deals (<code>true</code> or <code>false</code>)</td>
+</tr>
+<tr>
+<td><code>item_type</code></td>
+<td>Set type of record activities to get related activities from (<code>opportunities</code>, <code>organizations</code>, <code>indviduals</code>)</td>
+</tr>
+<tr>
+<td><code>item_id</code></td>
+<td>ID for the recrod to get related activities from</td>
+</tr>
+</tbody></table>
+<h1 id='tag-api'>Tag API</h1>
+<blockquote>
+<p>An example response body for a tag would look like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6e9f2fa6-d376-4313-aaea-13dfde3856a4"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Renewal"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"creator_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8baadb17-d37e-47f7-b116-0f15c06f297e"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-05-11T11:32:12.366298"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"modified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-05-11T11:32:12.366298"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_modified_by_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8baadb17-d37e-47f7-b116-0f15c06f297e"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='tag-attributes'>Tag Attributes</h2>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td>The unique identifier for this tag <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>The name for this tag <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>creator_id</code></td>
+<td>The ID for the user that created the tag <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>created</code></td>
+<td>Tag creation timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>modified</code></td>
+<td>Tag last modified timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>last_modified_by_id</code></td>
+<td>The unique ID for the SalesSeek user that last modified this tag <strong>String</strong></td>
+</tr>
+</tbody></table>
+<h2 id='create-tag'>Create Tag</h2>
+<blockquote>
+<p>An example request body for creating a new tag would look like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Renewal"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Creates a new tag and then returns the newly created Tag ID.</p>
+<h3 id='request-url'>Request URL</h3>
+<p><code>POST https://{CLIENT_ID}.salesseek.net/api/tags</code></p>
+<h2 id='update-tag'>Update Tag</h2>
+<p>Updates values of organization by <code>tag_id</code>. The resulting tag is returned. </p>
+<h3 id='request-url-2'>Request URL</h3>
+<p><code>PATCH https://{CLIENT_ID}.salesseek.net/api/tags/{tag_id}</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td>The ID for the organization you&#39;d like to update <strong>String</strong></td>
+</tr>
+</tbody></table>
+<h3 id='request-body'>Request Body</h3>
+<p>The only value that can be updated for tags via the API is the Tag <code>name</code>. Pass the updated name as a JSON object.</p>
+<h2 id='delete-tag'>Delete Tag</h2>
+<p>Deletes the tag matching the <code>tag_id</code></p>
+<h3 id='request-url-3'>Request URL</h3>
+<p><code>DELETE https://{CLIENT_ID}.salesseek.net/api/tags/{tag_id}</code></p>
+<h3 id='request-query-parameters'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>tag_id</code></td>
+<td>The ID for the tag to be deleted.</td>
+</tr>
+</tbody></table>
+<h2 id='list-tags'>List Tags</h2>
+<blockquote>
+<p>An example request to get all tags in your SalesSeek account (when ordered alphabetically by modified date) would be:</p>
+</blockquote>
+<pre class="highlight http tab-http"><code><span class="err">https://example.salesseek.net/api/tags?start=0&amp;rows=-1&amp;order_by=modified%20desc
+</span></code></pre>
+<blockquote>
+<p>The reponse header contains the following information:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Records-Rows: 50
+Records-Start: 0
+Records-Total: 2000
+</code></pre>
+<p>Returns a list of tags from your SalesSeek account.</p>
+<h3 id='request-url-4'>Request URL</h3>
+<p><code>GET https://{CLIENT_ID}.salesseek.net/api/tags</code></p>
+<h3 id='request-query-parameters-2'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>rows</code></td>
+<td>The maximum number of organizations to be returned.</td>
+</tr>
+<tr>
+<td><code>start</code></td>
+<td>The row number to start to retrieve data. (0 for start)</td>
+</tr>
+<tr>
+<td><code>order_by</code></td>
+<td>Results are ordered by the provided field name followed by &amp;desc or &amp;asc</td>
+</tr>
+</tbody></table>
+
+<div class="wrap">
+  <p class="flash info">
+    The response header contains the total number of records.
+  </p>
+</div>
+<h3 id='response-header-parameters'>Response Header Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>Records-Rows</code></td>
+<td>The number of rows returned in this request</td>
+</tr>
+<tr>
+<td><code>Records-Start</code></td>
+<td>The start number of rows in this request (out of total)</td>
+</tr>
+<tr>
+<td><code>Records-Total</code></td>
+<td>The total number of rows available</td>
+</tr>
+</tbody></table>
+<h1 id='custom-field-api'>Custom Field API</h1><h2 id='custom-field-attributes'>Custom Field Attributes</h2>
+<blockquote>
+<p>An example response body for a custom field would look like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"409306ef-1e5c-4763-836a-819e65646da9"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data Status"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dropDown"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"view"</span><span class="p">:</span><span class="w"> </span><span class="s2">"individuals"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f84cca3b-b096-4331-9f40-dd73d830a8b4"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subscribed"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"58562322-0efc-4ed8-8eb3-e5b05f0f5501"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unsubscribed"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0ff89e07-ff32-4082-93f9-d048d4439b29"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6fc3036a-8ccd-428a-b609-639d8ac438b9"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cleaned"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f84cca3b-b096-4331-9f40-dd73d830a8b4"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subscribed"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"58562322-0efc-4ed8-8eb3-e5b05f0f5501"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unsubscribed"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0ff89e07-ff32-4082-93f9-d048d4439b29"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6fc3036a-8ccd-428a-b609-639d8ac438b9"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cleaned"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"creator_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8baadb17-d37e-47f7-b116-0f15c06f297e"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_modified_by_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8baadb17-d37e-47f7-b116-0f15c06f297e"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"owner_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8baadb17-d37e-47f7-b116-0f15c06f297e"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-04-28T16:15:08.434816"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"modified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-04-28T16:15:08.434816"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"order"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> 
+  </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td>The unique identifier for this custom field <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>The name for the custom field, this will appear in the SalesSeek UI <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>The type of custom field (<code>text</code>,<code>dropDown</code>, <code>checkbox</code>, <code>currency</code>, <code>date</code>, <code>individual</code>, <code>number</code>, <code>organization</code>, <code>paragraph</code>, <code>url</code>, <code>urlImage</code>)<strong>Enum (String)</strong></td>
+</tr>
+<tr>
+<td><code>view</code></td>
+<td>The record type the custom field should appear on (<code>individuals</code>, <code>organizartions</code>, <code>opportunities</code>) <strong>Enum (String)</strong></td>
+</tr>
+<tr>
+<td><code>required</code></td>
+<td>Set to <code>true</code> if this field is a required field <strong>Boolean</strong></td>
+</tr>
+<tr>
+<td><code>options</code></td>
+<td>List of options if field type is set to <code>dropDown</code> <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>options[x].id</code></td>
+<td>ID for the option in the dropdown custom field <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>options[x].value</code></td>
+<td>The value for the option in the dropdown custom field <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td>TODO</td>
+</tr>
+<tr>
+<td><code>creator_id</code></td>
+<td>ID for the user that created this custom field <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>last_modified_by_id</code></td>
+<td>The ID for the user that last modified this custom field <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>owner_id</code></td>
+<td>The ID for the user that owns this custom field <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>created</code></td>
+<td>Custom field creation timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>modified</code></td>
+<td>Custom field last modified timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>order</code></td>
+<td>The position that this custom field should be displayed in the UI <strong>Integer</strong></td>
+</tr>
+<tr>
+<td><code>default</code></td>
+<td>The default value for the custom field <strong>(Mixed)</strong></td>
+</tr>
+<tr>
+<td><code>params</code></td>
+<td>TODO</td>
+</tr>
+</tbody></table>
+<h2 id='get-custom-field'>Get Custom Field</h2>
+<p>Returns the custom field matching the <code>custom_field_id</code></p>
+<h3 id='request-url'>Request URL</h3>
+<p><code>GET https://{CLIENT_ID}.salesseek.net/api/custom_fields/{custom_field_id}</code></p>
+<h3 id='request-query-parameters'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>custom_field_id</code></td>
+<td>The ID for the custom field you&#39;d like to retrieve <strong>String</strong></td>
+</tr>
+</tbody></table>
+<h2 id='create-custom-field'>Create Custom Field</h2>
+<blockquote>
+<p>An example request body to create a date custom field called &#39;First Seen Date&#39; on individuals would look like:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"First Seen Date"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"date"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"view"</span><span class="p">:</span><span class="w"> </span><span class="s2">"individuals"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Creates a new custom field and then returns the newly created custom field.</p>
+<h3 id='request-url-2'>Request URL</h3>
+<p><code>POST https://{CLIENT_ID}.salesseek.net/api/custom_fields/</code></p>
+<h2 id='update-custom-field'>Update Custom Field</h2>
+<blockquote>
+<p>A sample request body to custom field name to &#39;Last Seen Date&#39; would be:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Last Seen Date"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Updates a custom field by <code>custom_field_id</code> and returns the resulting custom field. </p>
+<h3 id='request-url-3'>Request URL</h3>
+<p><code>POST https://{CLIENT_ID}.salesseek.net/api/custom_fields/{custom_field_id}</code></p>
+<h3 id='request-query-parameters-2'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>custom_field_id</code></td>
+<td>The unique ID for the individual to be updated.</td>
+</tr>
+</tbody></table>
+<h3 id='request-body'>Request Body</h3>
+<p>The only fields updated are the one passed on the request body JSON. You can pass any <a href="#custom-field-attributes">attribute</a> to update. </p>
+<h2 id='delete-custom-field'>Delete Custom Field</h2>
+<p>Deletes the custom field matching the <code>custom_field_id</code></p>
+<h3 id='request-url-4'>Request URL</h3>
+<p><code>DELETE https://{CLIENT_ID}.salesseek.net/api/custom_fields/{custom_field_id}</code></p>
+<h3 id='request-query-parameters-3'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>custom_field_id</code></td>
+<td>The unique ID for the custom field to be updated.</td>
+</tr>
+</tbody></table>
+<h2 id='list-custom-fields'>List Custom Fields</h2>
+<blockquote>
+<p>An example request to get all custom fields for the Individual view in your SalesSeek account:</p>
+</blockquote>
+<pre class="highlight http tab-http"><code><span class="err">GET https://example.salesseek.net/api/custom_fields?start=0&amp;rows=-1&amp;order_by=modified%20desc&amp;filter=view%3Dindividuals
+</span></code></pre>
+<blockquote>
+<p>The reponse header contains the following information:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Records-Rows: 50
+Records-Start: 0
+Records-Total: 2000
+</code></pre>
+<p>Returns the list of custom fields for the chosen record type.</p>
+<h3 id='request-url-5'>Request URL</h3>
+<p><code>GET https://{CLIENT_ID}.salesseek.net/api/custom_fields</code></p>
+<h3 id='request-query-parameters-4'>Request Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>rows</code></td>
+<td>The maximum number of organizations to be returned.</td>
+</tr>
+<tr>
+<td><code>start</code></td>
+<td>The row number to start to retrieve data. (0 for start)</td>
+</tr>
+<tr>
+<td><code>order_by</code></td>
+<td>Results are ordered by the provided field name followed by desc or asc</td>
+</tr>
+<tr>
+<td><code>filter=view</code></td>
+<td>The record type that the custom fields are related to (<code>individuals</code>, <code>deals</code>, <code>organizations</code>)</td>
+</tr>
+</tbody></table>
+<h3 id='response-header-parameters'>Response Header Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>Records-Rows</code></td>
+<td>The number of rows returned in this request</td>
+</tr>
+<tr>
+<td><code>Records-Start</code></td>
+<td>The start number of rows in this request (out of total)</td>
+</tr>
+<tr>
+<td><code>Records-Total</code></td>
+<td>The total number of rows available</td>
 </tr>
 </tbody></table>
 
