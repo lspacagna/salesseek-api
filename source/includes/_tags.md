@@ -1,4 +1,4 @@
-# Tags API
+# Tag API
 
 > An example response body for a tag would look like this:
 
@@ -13,7 +13,7 @@
   }
 ```
 
-## Tags Attributes
+## Tag Attributes
 
 Parameter |  Description
 --------- | ------- 
@@ -71,7 +71,7 @@ The only value that can be updated for tags via the API is the Tag `name`. Pass 
 
 
 
-## Delete Organization
+## Delete Tag
 
 Deletes the tag matching the `tag_id`
 
@@ -89,7 +89,7 @@ Parameter |  Description
 
 
 
-## List Organizations
+## List Tags
 
 > An example request to get all tags in your SalesSeek account (when ordered alphabetically by modified date) would be:
 

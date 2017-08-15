@@ -22,6 +22,7 @@ includes:
   - campaigns
   - activities
   - tags
+  - custom-fields
 
 search: true
 ---

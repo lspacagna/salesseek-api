@@ -1,8 +1,8 @@
-# Group Pages API
+# Group Page API
 
 The Group Pages API should be used in conjunction with the [Group API](#group-api). The Group API contains the metadata for each group. The Group Pages API is used to return records associated with a group in a paginated form.
 
-## Group Pages Attributes
+## Group Page Attributes
 
 > A sample Group Pages response on an organization group would look like:
 
