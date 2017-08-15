@@ -36,15 +36,106 @@
     "communication_id": null,
     "real_created": "2017-08-03T10:42:41.843271",
     "user_created": "2017-08-03T10:42:41.843271",
-    "target_is_parent": true,
-    
+    "target_is_parent": true,   
 }
 ```
+
+> An example response body for a sent direct email campaign to an individual would look like:
+
+```json
+{
+    "id": "a3365acc-831c-45ec-b83d-f5d2b31dbc24",
+    "activity_type": "automation:archive:mailshot_sent",
+    "target_type": "individuals",
+    "owner_id": "69c5bc2a-c8e5-4d11-a102-6ec0fb410d1b",
+    "owner": {
+      ...
+    },
+    "creator_id": "69c5bc2a-c8e5-4d11-a102-6ec0fb410d1b",
+    "creator": {
+      ...
+    },
+    "tags": [
+      ...
+    ],
+    "created": "2017-08-14T12:10:59.048847",
+    "modified": "2017-08-14T12:10:59.048847",
+    "last_modified_by_id": "69c5bc2a-c8e5-4d11-a102-6ec0fb410d1b",
+    "individual_id": "285ae016-58d4-4dbc-bff3-339c2b4540ff",
+    "individual_name": "Gregory John",
+    "opportunity_id": null,
+    "opportunity_name": null,
+    "organization_id": null,
+    "organization_name": null,
+    "note": "SalesSeek sent Welcome Email to Gregory John",
+    "params": {
+        "mailshot_id": "91c2c7f6-71d2-4d57-909d-66bc6a978023",
+        "campaign_id": "91c2c7f6-71d2-4d57-909d-66bc6a978023",
+        "mailshot_name": "Welcome Email",
+        "campaign_type": "direct",
+        "campaign_name": "Welcome Email"
+    },
+    "target_date": null,
+    "communication": null,
+    "communication_id": null,
+    "real_created": "2017-08-14T12:10:59.048847",
+    "user_created": "2017-08-14T12:10:59.048847",
+    "target_is_parent": true
+}
+  
+```
+
+> An example response body for a deal phase move would look like:
+
+```json
+{
+    "id": "a300284d-b708-4d50-8d42-e2e8ab4cceeb",
+    "activity_type": "auto:opportunity_movement",
+    "target_type": "opportunities",
+    "owner_id": "69c5bc2a-c8e5-4d11-a102-6ec0fb410d1b",
+    "owner": {
+      ...
+    },
+    "creator_id": "69c5bc2a-c8e5-4d11-a102-6ec0fb410d1b",
+    "creator": {
+      ...
+    },
+    "tags": [
+      ...
+    ],
+    "created": "2017-08-14T13:27:23.254368",
+    "modified": "2017-08-14T13:27:23.254368",
+    "last_modified_by_id": "69c5bc2a-c8e5-4d11-a102-6ec0fb410d1b",
+    "individual_id": null,
+    "individual_name": null,
+    "opportunity_id": "81e96bca-abdc-4753-8763-fc642afb3c99",
+    "opportunity_name": "Aptui",
+    "organization_id": null,
+    "organization_name": null,
+    "note": "SalesSeek moved Aptui from Engaged to Won",
+    "params": {
+        "from_funnel_id": "7d40c1e6-1e66-4dac-bd4b-0e29184c6dcd",
+        "to_id": "c8a2a4c1-420b-4d7e-99d9-3f54eb503f2b",
+        "to": "Lost",
+        "from": "Engaged",
+        "from_funnel": "Online",
+        "who": "Dale Goulding",
+        "from_id": "c4329a4a-44fe-4948-9c90-46a589266643"
+    },
+    "target_date": null,
+    "communication": null,
+    "communication_id": null,
+    "real_created": "2017-08-14T13:27:23.254368",
+    "user_created": "2017-08-14T13:27:23.254368",
+    "target_is_parent": true,
+}
+```
+
 
 Parameter |  Description
 --------- | ------- 
 `id`      | The unique identifier for this activity **String**
-`activity_type` | The type of activity **String**
+`activity_type` | The [type of activity](#activity-types)  **String**
 `target_type` | The record type the activity relates to (organization, opportunity, individual) **Enum (string)**
 `owner_id` | The ID for the SalesSeek user that has ownership of this activity **String**
 `owner` | Object containing detailed information about the activity owner **Object**
@@ -78,7 +169,7 @@ Parameter |  Description
 `params.subject` | The email subject (shown if activity was an archived email) **String**
 `params.completed_by` | The name of the user that completed the task (shown if activity was a completed task) **String**
 `params.description` | Descripion of completed tasks (shown if activity was a comlpleted task) **String**
-`"target_date` | Timestamp for the activity target date **Timestamp (ISO 8601)**
+`target_date` | Timestamp for the activity target date **Timestamp (ISO 8601)**
 `communication` | TODO
 `communication_id` | TODO
 `real_created` | TODO
@@ -100,5 +191,48 @@ Types | Description
 `archive:mailshot_sent` | A [campaign](#campaign-api) was sent
 `archive:mailshot_opened ` | A [campaign](#campaign-api) was opened
 `automation:archive:mailshot_url_clicked` | A link in a [campaign](#campaign-api) was clicked
+`automation:archive:mailshot_sent` | A [campaign](#campaign-api) was sent
 `auto:call` | A call was logged
 `task:completed` | A task was complted
+
+## Get Activity
+
+Returns the unique organization matching the `activity_id`
+
+### Request URL
+
+`GET https://{CLIENT_ID}.salesseek.net/api/activities/{activity_id}`
+
+### Request Query Parameters
+
+Parameter |  Description
+--------- | ------- 
+`activity_id`  | The ID for the activity you'd like to retrieve **String**
+
+
+## Create Activity
+
+> A sample request body to add an activity note looks like:
+
+```json
+{
+  "note": "<p>Called today and agreed on deal terms.</p>",
+  "created": null,
+  "target_date": null,
+  "activity_type": "note",
+  "item_type": "opportunities",
+  "item_id": "0d98b2fa-c4c8-4d56-9cda-17b62b198f4f",
+  "tags": []
+}
+```
+
+Creates a new activity record and then returns the newly created activity.
+
+### Request URL
+
+`POST https://{CLIENT_ID}.salesseek.net/api/activities`
+
+
+
+
+
