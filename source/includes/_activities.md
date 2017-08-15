@@ -1,6 +1,6 @@
-# Activities API
+# Activity API
 
-## Activities Attributes
+## Activity Attributes
 
 > An example response body for an activity note would look like this:
 
@@ -195,6 +195,9 @@ Types | Description
 `auto:call` | A call was logged
 `task:completed` | A task was complted
 
+
+
+
 ## Get Activity
 
 Returns the unique organization matching the `activity_id`
@@ -210,9 +213,13 @@ Parameter |  Description
 `activity_id`  | The ID for the activity you'd like to retrieve **String**
 
 
+
+
+
+
 ## Create Activity
 
-> A sample request body to add an activity note looks like:
+> A sample request body to add an activity note would look like:
 
 ```json
 {
@@ -236,3 +243,92 @@ Creates a new activity record and then returns the newly created activity.
 
 
 
+
+
+## Update Activity
+
+> A sample request body to change the activity note text would be:
+
+```json
+{
+  "note": "<p>Called yesterday and agreed on deal terms.</p>",
+}
+```
+
+Updates values of activity by `activity_id`. The resulting activity is returned. 
+
+### Request URL
+
+`PATCH https://{CLIENT_ID}.salesseek.net/api/activities/{activity_id}`
+
+Parameter |  Description
+--------- | ------- 
+`activity_id`      | The ID for the activity you'd like to update **String**
+
+### Request Body
+
+The only fields updated are the one passed on the request body JSON. You can pass any [attribute](#activity-attributes) to update. 
+
+
+
+
+
+
+## Delete Activity
+
+Deletes the activity matching the `activity_id`
+
+### Request URL
+
+`DELETE https://{CLIENT_ID}.salesseek.net/api/activities/{activity_id}`
+
+### Request Query Parameters
+
+Parameter |  Description
+--------- | ------- 
+`activity_id` | The unique ID for the organization to be deleted.
+
+
+
+
+
+## List Activities
+
+> An example request to get the first 50 activites for a particular opportunity, ordered by creation date descending, with all activity types returned.
+
+```http
+GET https://example.salesseek.net/api/activities?start=0&rows=50&order_by=created%20desc&notes=true&communications=true&contact_updates=true&deals=true&campaign_emails=true&automation_emails=true&include_ind_related=true&include_org_related=true&include_deal_related=true&item_type=opportunities&item_id=0d98b2fa-c4c8-4d56-9cda-17b62b198f4f
+```
+
+> The reponse header contains the following information:
+
+```
+Records-Rows: 50
+Records-Start: 0
+Records-Total: 2000
+```
+
+Returns a list of activities.
+
+### Request URL
+
+`GET https://{CLIENT_ID}.salesseek.net/api/activities`
+
+### Request Query Parameters
+
+Parameter |  Description
+--------- | ------- 
+`rows` | The maximum number of organizations to be returned.
+`start` | The row number to start to retrieve data. (0 for start)
+`order_by` | Results are ordered by the provided field name followed by &desc or &asc
+`notes` | Set to true to request activity notes (`true` or `false`)
+`communications` | Set to `true` to request all communication activity (`true` or `false`)
+`contact_updates` | Set to `true` to request all contact update activity (`true` or `false`)
+`deals` | Set to `true` to request all deal activity (`true` or `false`)
+`campaign_emails` | Set to `true` to request all campaign email activity (`true` or `false`)
+`automation_emails` | Set to `true` to request all automation email activity (`true` or `false`)
+`include_ind_related` | Set to `true` to request all activities from related individuals (`true` or `false`)
+`include_org_related` | Set to `true` to request all activities from related organizations (`true` or `false`)
+`include_deal_related` | Set to `true` to request all activities from related deals (`true` or `false`)
+`item_type` | Set type of record activities to get related activities from (`opportunities`, `organizations`, `indviduals`)
+`item_id` | ID for the recrod to get related activities from

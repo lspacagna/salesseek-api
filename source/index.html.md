@@ -21,6 +21,7 @@ includes:
   - group-pages
   - campaigns
   - activities
+  - tags
 
 search: true
 ---
