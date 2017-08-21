@@ -525,7 +525,7 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the SalesSeek API! You can use our API to access all our API endpoints, such as the <a href="#deal-api">Deal API</a> to look up deal values, or the <a href="#individual-api">Individual API</a> to look up email addresses. </p>
+<p>Welcome to the SalesSeek API. You can use our API to access all our API endpoints, such as the <a href="#deal-api">Deal API</a> to look up deal values, or the <a href="#individual-api">Individual API</a> to look up email addresses. </p>
 
 <p>The API is organized around <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer">REST</a>. All requests should be made over SSL. All request and response bodies, including errors, are encoded in JSON.</p>
 
@@ -570,6 +570,22 @@
   </span><span class="s2">"is_admin"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="s2">"email_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@salesseek.co.uk"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"913fa210-edf2-49c3-86a2-ec8f063d92ea"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"client"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-07T17:33:48.856990"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"currencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"AED"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.5"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"default_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GBP"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email_sending_domains"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"example.com"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"facebook_page_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"feature_tier"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"marketing_groups"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"selective_unsubscribing"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"short_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example"</span><span class="p">,</span><span class="w">
+  </span><span class="p">},</span><span class="w">
   </span><span class="s2">"modified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-04-27T15:57:34.916670"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-13T10:41:37.403733"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"ical_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/users/a938196a-152d-40f3-ab3d-404385143a4b/icalendar_feed?token=308e39c8-584f-402c-b5d2-4b9214be8424"</span><span class="p">,</span><span class="w">
@@ -605,12 +621,48 @@
 <td>The user email address <strong>String</strong></td>
 </tr>
 <tr>
-<td><code>email_address</code></td>
-<td>The user email address <strong>String</strong></td>
+<td><code>client_id</code></td>
+<td>The unique identifier for the current SalesSeek account <strong>String</strong></td>
 </tr>
 <tr>
-<td><code>client_id</code></td>
-<td>TODO</td>
+<td><code>client.created</code></td>
+<td>SalesSeek account creation timestamp <strong>Timestamp (ISO 8601)</strong></td>
+</tr>
+<tr>
+<td><code>client.currencies</code></td>
+<td>The currencies and their conversions in this SalesSeek account <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>client.default_currency</code></td>
+<td>The default currency for this account <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>client.email_sending_domains</code></td>
+<td>The domains that this SalesSeek account is authorized to send emails from (not user editable)<strong>Array (String)</strong></td>
+</tr>
+<tr>
+<td><code>client.facebook_page_id</code></td>
+<td>The ID for the connected facebook page to this account <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>client.feature_tier</code></td>
+<td>The current tier that this SalesSeek account is registered to (<code>starting</code>, <code>growing</code>, <code>enterprise</code>)(not user editable) <strong>Enum (String)</strong></td>
+</tr>
+<tr>
+<td><code>client.marketing_groups</code></td>
+<td>Array of IDs of the groups in this SalesSeek account which are mailing lists <strong>Array (String)</strong></td>
+</tr>
+<tr>
+<td><code>client.name</code></td>
+<td>The name for this SalesSeek account <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>client.selective_unsubscribing</code></td>
+<td>Set to <code>true</code> if this account has selective unsubscribing enabled <strong>Boolean</strong></td>
+</tr>
+<tr>
+<td><code>client.short_id</code></td>
+<td>The short ID for this SalesSeek account. Also used in the account subdomain <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>modified</code></td>
@@ -626,11 +678,27 @@
 </tr>
 <tr>
 <td><code>password_reset_required</code></td>
-<td>Set to <code>true</code> if this user will be required to reset their password when loggin in. <strong>Boolean</strong></td>
+<td>Set to <code>true</code> if this user will be required to reset their password when loggin in <strong>Boolean</strong></td>
 </tr>
 <tr>
 <td><code>notification_settings</code></td>
 <td>Object contianing users email notification settings <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>notification_settings.instant_email_notifications</code></td>
+<td>Set to <code>&#39;True&#39;</code> if user has instant email notifications when a task has been assigned to them enabled <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>notification_settings.evening_email_notification</code></td>
+<td>Set to <code>&#39;True&#39;</code> if user has enabled a daily email of all completed tasks, and today&#39;s uncompleted tasks <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>notification_settings.morning_email_notification</code></td>
+<td>Set to <code>&#39;True&#39;</code> if user has enabled a daily email with tasks that need completing today <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>notification_settings.new_lead_email_notification</code></td>
+<td>Set to <code>&#39;True&#39;</code> if user has enabled a an email each time a new lead is assigned to them <strong>String</strong></td>
 </tr>
 </tbody></table>
 <h2 id='login'>Login</h2>
