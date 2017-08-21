@@ -15,6 +15,22 @@ SalesSeek expects the cookie to be included in all API requests to the server af
   "is_admin": true,
   "email_address": "example@salesseek.co.uk",
   "client_id": "913fa210-edf2-49c3-86a2-ec8f063d92ea",
+  "client": {
+    "created": "2017-03-07T17:33:48.856990",
+    "currencies": {
+      "AED": "0.5"
+    },
+    "default_currency": "GBP",
+    "email_sending_domains": [
+      "example.com"
+    ],
+    "facebook_page_id": null,
+    "feature_tier": null,
+    "marketing_groups": null,
+    "name": "Example",
+    "selective_unsubscribing": false,
+    "short_id": "example",
+  },
   "modified": "2017-04-27T15:57:34.916670",
   "created": "2017-03-13T10:41:37.403733",
   "ical_url": "/users/a938196a-152d-40f3-ab3d-404385143a4b/icalendar_feed?token=308e39c8-584f-402c-b5d2-4b9214be8424",
@@ -35,13 +51,27 @@ Parameter |  Description
 `name`    | The name of the user logging in **String**
 `is_admin` | Set to `true` if this user is an admin **Boolean**
 `email_address` | The user email address **String**
-`email_address` | The user email address **String**
-`client_id` | _TO DO_
+`client_id` | The unique identifier for the current SalesSeek account **String**
+`client.created` | SalesSeek account creation timestamp **Timestamp (ISO 8601)**
+`client.currencies` | The currencies and their conversions in this SalesSeek account **Object**
+`client.default_currency` | The default currency for this account **String**
+`client.email_sending_domains` | The domains that this SalesSeek account is authorized to send emails from (not user editable)**Array (String)**
+`client.facebook_page_id` | The ID for the connected facebook page to this account **String**
+`client.feature_tier` | The current tier that this SalesSeek account is registered to (`starting`, `growing`, `enterprise`)(not user editable) **Enum (String)**
+`client.marketing_groups` | Array of IDs of the groups in this SalesSeek account which are mailing lists **Array (String)**
+`client.name` | The name for this SalesSeek account **String**
+`client.selective_unsubscribing` | Set to `true` if this account has selective unsubscribing enabled **Boolean**
+`client.short_id` | The short ID for this SalesSeek account. Also used in the account subdomain **String**
 `modified`| User last modified timestamp **Timestamp (ISO 8601)**
 `created` | User creation timestamp **Timestamp (ISO 8601)**
 `ical_url` | URL for the user iCal connection **String (URL)**
-`password_reset_required` | Set to `true` if this user will be required to reset their password when loggin in. **Boolean**
+`password_reset_required` | Set to `true` if this user will be required to reset their password when loggin in **Boolean**
 `notification_settings` | Object contianing users email notification settings **Object**
+`notification_settings.instant_email_notifications` | Set to `'True'` if user has instant email notifications when a task has been assigned to them enabled **String**
+`notification_settings.evening_email_notification` | Set to `'True'` if user has enabled a daily email of all completed tasks, and today's uncompleted tasks **String**
+`notification_settings.morning_email_notification` | Set to `'True'` if user has enabled a daily email with tasks that need completing today **String**
+`notification_settings.new_lead_email_notification` | Set to `'True'` if user has enabled a an email each time a new lead is assigned to them **String**
+
 
 
 ## Login

@@ -1,6 +1,6 @@
 # Introduction
 
-Welcome to the SalesSeek API! You can use our API to access all our API endpoints, such as the [Deal API](#deal-api) to look up deal values, or the [Individual API](#individual-api) to look up email addresses. 
+Welcome to the SalesSeek API. You can use our API to access all our API endpoints, such as the [Deal API](#deal-api) to look up deal values, or the [Individual API](#individual-api) to look up email addresses. 
 
 The API is organized around [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer). All requests should be made over SSL. All request and response bodies, including errors, are encoded in JSON.
 
