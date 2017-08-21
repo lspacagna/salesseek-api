@@ -926,7 +926,7 @@
 </tr>
 <tr>
 <td><code>custom_fields</code></td>
-<td>Custom Fields and their values <strong>Object</strong></td>
+<td><a href="#custom-field-api">Custom Fields</a> and their values <strong>Object</strong></td>
 </tr>
 </tbody></table>
 <h2 id='get-organization'>Get Organization</h2>
@@ -1165,15 +1165,15 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>organization_name</code></td>
-<td>The name for the organization this individual is linked to <strong>String</strong></td>
+<td>The name for the <a href="#organization-api">Organization</a> this individual is linked to <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>organization_id</code></td>
-<td>The unique ID for the organization this individual is linked to <strong>String</strong></td>
+<td>The unique ID for the <a href="#organization-api">Organization</a> this individual is linked to <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>organization</code></td>
-<td>Object containing detailed information about organization this individual is linked to <strong>Object</strong></td>
+<td>Object containing detailed information about <a href="#organization-api">Organization</a> this individual is linked to <strong>Object</strong></td>
 </tr>
 <tr>
 <td><code>created</code></td>
@@ -1237,7 +1237,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>unsubscribed_all</code></td>
-<td>Has this individual unsubscribed from all email campaigns? <strong>Boolean</strong></td>
+<td>Set to <code>true</code> if this individual has unsubscribed from all <a href="#campaign-api">Campaigns</a> <strong>Boolean</strong></td>
 </tr>
 <tr>
 <td><code>source_id</code></td>
@@ -1497,7 +1497,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>organization_id</code></td>
-<td>ID for the assocciated organization <strong>String</strong></td>
+<td>ID for the assocciated <a href="#organization-api">Organization</a> <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>funnel_id</code></td>
@@ -1521,7 +1521,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>status</code></td>
-<td>Deal forecast status. (None, None Upside, Committed Downside, Committed) <strong>Enum (String)</strong></td>
+<td>Deal forecast status. (<code>None</code>, <code>None Upside</code>, <code>Committed Downside</code>, <code>Committed</code>) <strong>Enum (String)</strong></td>
 </tr>
 <tr>
 <td><code>value</code></td>
@@ -1541,7 +1541,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>is_favorite</code></td>
-<td>Is this deal a favorite? <strong>Boolean</strong></td>
+<td>Set to <code>true</code> if this deal is marked as a favourite <strong>Boolean</strong></td>
 </tr>
 <tr>
 <td><code>phase_last_changed</code></td>
@@ -1625,7 +1625,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>funnel.order</code></td>
-<td>When using multi-funnel the position this funnel should be shown <strong>Int</strong></td>
+<td>When using multi-funnel the position this funnel should be shown <strong>Integer</strong></td>
 </tr>
 <tr>
 <td><code>funnel.owner_id</code></td>
@@ -1673,7 +1673,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>order</code></td>
-<td>The position this phase should be shown in the UI <strong>Int</strong></td>
+<td>The position this phase should be shown in the UI <strong>Integer</strong></td>
 </tr>
 <tr>
 <td><code>buckets</code></td>
@@ -1705,7 +1705,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>organization</code></td>
-<td>Object containing detailed information about the organization this deal is related to <strong>Object</strong></td>
+<td>Object containing detailed information about the <a href="#organization-api">Organization</a> this deal is related to <strong>Object</strong></td>
 </tr>
 </tbody></table>
 <h2 id='get-deal'>Get Deal</h2>
@@ -1912,7 +1912,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>related_type</code></td>
-<td>The type of record in SalesSeek that the task is related to (Organization, Individual, Deal) <strong>Enum</strong></td>
+<td>The type of record in SalesSeek that the task is related to (<a href="#organization-api">organization</a>, <a href="#individual-api">individual</a>, <a href="#deal-api">deal</a>) <strong>Enum</strong></td>
 </tr>
 <tr>
 <td><code>related_id</code></td>
@@ -1920,7 +1920,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>completed</code></td>
-<td>Is the task marked as completed? <strong>Boolean</strong></td>
+<td>Set to <code>true</code> if the task is completed <strong>Boolean</strong></td>
 </tr>
 <tr>
 <td><code>complete_date</code></td>
@@ -1940,7 +1940,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>related.type</code></td>
-<td>The type of record in SalesSeek that the task is related to (Organization, Individual, Deal) <strong>Enum</strong></td>
+<td>The type of record in SalesSeek that the task is related to (<a href="#organization-api">organization</a>, <a href="#individual-api">individual</a>, <a href="#deal-api">deal</a>) <strong>Enum</strong></td>
 </tr>
 <tr>
 <td><code>tags</code></td>
@@ -2194,7 +2194,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>filter_type</code></td>
-<td>The type of records to be filtered (indidivuals, opportunities, organizations, tasks) <strong>Enum (String)</strong></td>
+<td>The type of records to be filtered (<code>indidivuals</code>, <code>opportunities</code>, <code>organizations</code>, <code>tasks</code>) <strong>Enum (String)</strong></td>
 </tr>
 <tr>
 <td><code>rules</code></td>
@@ -2252,7 +2252,7 @@ Records-Total: 2000
 <h3 id='request-url-2'>Request URL</h3>
 <p><code>POST https://{CLIENT_ID}.salesseek.net/api/{record_type}/filters/</code></p>
 <h1 id='group-api'>Group API</h1>
-<p>The Group API returns only the metadata for each group. </p>
+<p>The Group API returns only the metadata for each group.</p>
 
 <div class="wrap">
   <p class="flash info">
@@ -2450,11 +2450,11 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>group_type</code></td>
-<td>The type of group (static, smart) <strong>Enum (String)</strong></td>
+<td>The type of group (<code>static</code>, <code>smart</code>) <strong>Enum (String)</strong></td>
 </tr>
 <tr>
 <td><code>element_type</code></td>
-<td>The type of record this group can contain (individuals, organizations, opportunities, tasks) <strong>Enum (String)</strong></td>
+<td>The type of record this group can contain (<code>individuals</code>, <code>organizations</code>, <code>opportunities</code>, <code>tasks</code>) <strong>Enum (String)</strong></td>
 </tr>
 </tbody></table>
 <h2 id='update-group'>Update Group</h2>
@@ -2523,7 +2523,7 @@ Records-Total: 2000
 </thead><tbody>
 <tr>
 <td><code>element_type</code></td>
-<td>Filter by groups containing certain record types (organizations, opportunities, individuals).</td>
+<td>Filter by groups containing certain record types (<code>organizations</code>, <code>opportunities</code>, <code>individuals</code>).</td>
 </tr>
 <tr>
 <td><code>rows</code></td>
@@ -2535,7 +2535,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>order_by</code></td>
-<td>Results are ordered by the provided field name followed by &amp;desc or &amp;asc</td>
+<td>Results are ordered by the provided field name followed by <code>&amp;desc</code> or <code>&amp;asc</code></td>
 </tr>
 </tbody></table>
 
@@ -2677,7 +2677,7 @@ Records-Total: 2000
 </thead><tbody>
 <tr>
 <td><code>item_type</code></td>
-<td>The type of record to return in this group page (individuals, organizations, opportunities, tasks)</td>
+<td>The type of record to return in this group page (<code>individuals</code>, <code>organizations</code>, <code>opportunities</code>, <code>tasks</code>)</td>
 </tr>
 <tr>
 <td><code>group_id</code></td>
@@ -2693,7 +2693,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>order_by</code></td>
-<td>Results are ordered by the provided field name followed by &amp;desc or &amp;asc</td>
+<td>Results are ordered by the provided field name followed by <code>&amp;desc</code> or <code>&amp;asc</code></td>
 </tr>
 </tbody></table>
 <h1 id='campaign-api'>Campaign API</h1><h2 id='campaign-attributes'>Campaign Attributes</h2>
@@ -3496,7 +3496,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>target_type</code></td>
-<td>The record type the activity relates to (organization, opportunity, individual) <strong>Enum (string)</strong></td>
+<td>The record type the activity relates to (<code>organization</code>, <code>opportunity</code>, <code>individual</code>) <strong>Enum (string)</strong></td>
 </tr>
 <tr>
 <td><code>owner_id</code></td>
@@ -3822,7 +3822,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>notes</code></td>
-<td>Set to true to request activity notes (<code>true</code> or <code>false</code>)</td>
+<td>Set to <code>true</code> to request activity notes (<code>true</code> or <code>false</code>)</td>
 </tr>
 <tr>
 <td><code>communications</code></td>
