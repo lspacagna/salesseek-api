@@ -87,8 +87,8 @@ Returns the requested number of records from `group_id`
 
 Parameter |  Description
 --------- | ------- 
-`item_type` | The type of record to return in this group page (individuals, organizations, opportunities, tasks)
+`item_type` | The type of record to return in this group page (`individuals`, `organizations`, `opportunities`, `tasks`)
 `group_id` |  The ID for the group to retrieve records from
 `rows` | The maximum number of organizations to be returned
 `start` | The row number to start to retrieve data. (0 for start)
-`order_by` | Results are ordered by the provided field name followed by &desc or &asc
+`order_by` | Results are ordered by the provided field name followed by `&desc` or `&asc`

@@ -136,7 +136,7 @@ Parameter |  Description
 --------- | ------- 
 `id`      | The unique identifier for this activity **String**
 `activity_type` | The [type of activity](#activity-types)  **String**
-`target_type` | The record type the activity relates to (organization, opportunity, individual) **Enum (string)**
+`target_type` | The record type the activity relates to (`organization`, `opportunity`, `individual`) **Enum (string)**
 `owner_id` | The ID for the SalesSeek user that has ownership of this activity **String**
 `owner` | Object containing detailed information about the activity owner **Object**
 `creator_id` | The unique ID for the SalesSeek user that created this activity **String**
@@ -321,7 +321,7 @@ Parameter |  Description
 `rows` | The maximum number of organizations to be returned.
 `start` | The row number to start to retrieve data. (0 for start)
 `order_by` | Results are ordered by the provided field name followed by &desc or &asc
-`notes` | Set to true to request activity notes (`true` or `false`)
+`notes` | Set to `true` to request activity notes (`true` or `false`)
 `communications` | Set to `true` to request all communication activity (`true` or `false`)
 `contact_updates` | Set to `true` to request all contact update activity (`true` or `false`)
 `deals` | Set to `true` to request all deal activity (`true` or `false`)

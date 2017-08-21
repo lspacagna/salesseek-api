@@ -89,18 +89,18 @@ Parameter |  Description
 `id`      | The unique identifier for this deal **String**
 `name`    | The user provided name for the deal **String**
 `abbreviation` | 3 letter abbreviation derived from the deal name **String**
-`organization_id` | ID for the assocciated organization **String**
+`organization_id` | ID for the assocciated [Organization](#organization-api) **String**
 `funnel_id` | ID for the funnel this deal is assigned to **String**
 `phase_name` | Name for the phase this deal is assigned to **String**
 `phase_id`  | ID for the phase this deal is assigned to **String**
 `owner_id` | ID the the owner of this deal **String**
 `weight` | Weight value for deal. Weights are assigned to phases in the funnel. Used for forecast calculations. **Double**
-`status` | Deal forecast status. (None, None Upside, Committed Downside, Committed) **Enum (String)**
+`status` | Deal forecast status. (`None`, `None Upside`, `Committed Downside`, `Committed`) **Enum (String)**
 `value` | Deal monetary value. Sum of all deal bucket values. **Double**
 `weighted_value` | `value` multiplied by `weight`. Used in forecasating. **Double**
 `currency` | Abbreviation for the currency for all revenue buckets **Enum (String)**
 `bubble_representation_value` | Value used to determine deal bubble size **Double**
-`is_favorite` | Is this deal a favorite? **Boolean**
+`is_favorite` | Set to `true` if this deal is marked as a favourite **Boolean**
 `phase_last_changed` | Timestamp of when the deal phase was last changed. Used for UI activity colouring **Timestamp (ISO 8601)**
 `expected_close_date` | User provided expected close date **Timestamp (ISO 8601)**
 `creator_id` | The ID for the user that created this deal **String**
@@ -121,7 +121,7 @@ Parameter |  Description
 `funnel.bubble_representation` | The value from deal used to generate bubble size **String**
 `funnel.creator_id` | The ID for the user that created this deal **String**
 `funnel.name`    | The user provided name for the funnel **String**
-`funnel.order` | When using multi-funnel the position this funnel should be shown **Int**
+`funnel.order` | When using multi-funnel the position this funnel should be shown **Integer**
 `funnel.owner_id` | ID the the owner of this funnel **String**
 `phase` | Object containing detailed information about the phase the deal is associated to **Object**
 `phase.id` | ID for the associated funnel
@@ -133,7 +133,7 @@ Parameter |  Description
 `phase.name` | The user provided name for the phase **String**
 `phase.hint` | User provided detail for the criteria for a deal to enter this phase **String** 
 `default_weight` | The default weight provided to deals when entering this phase **Double**
-`order` | The position this phase should be shown in the UI **Int**
+`order` | The position this phase should be shown in the UI **Integer**
 `buckets` | Array of objects containg deal bucket values **Objects**
 `buckets.value` | The value applied to this bucket **Double**
 `buckets.name` | The user provided name for this bucket **String**
@@ -141,7 +141,7 @@ Parameter |  Description
 `custom_fields` | Custom Fields and their values **Object**
 `creator` | Object containing detailed information about the deal creator **Object**
 `owner` | Object containing detailed information about the deal owner **Object**
-`organization` | Object containing detailed information about the organization this deal is related to **Object**
+`organization` | Object containing detailed information about the [Organization](#organization-api) this deal is related to **Object**
 
 ## Get Deal
 

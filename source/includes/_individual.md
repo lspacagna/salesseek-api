@@ -64,9 +64,9 @@ Parameter |  Description
 `last_name` | Individual last name **String**
 `full_name` | Individual first name concatenated with last name **String**
 `role` | Individual's Job Role **String**
-`organization_name` | The name for the organization this individual is linked to **String**
-`organization_id` | The unique ID for the organization this individual is linked to **String**
-`organization` | Object containing detailed information about organization this individual is linked to **Object**
+`organization_name` | The name for the [Organization](#organization-api) this individual is linked to **String**
+`organization_id` | The unique ID for the [Organization](#organization-api) this individual is linked to **String**
+`organization` | Object containing detailed information about [Organization](#organization-api) this individual is linked to **Object**
 `created` | Individual creation timestamp **Timestamp (ISO 8601)**
 `modified`| Individual last modified timestamp **Timestamp (ISO 8601)**
 `creator_id` | The unique ID for the SalesSeek user that created this individual **String**
@@ -82,7 +82,7 @@ Parameter |  Description
 `related_file_ids` | Array of Related File IDs associated with this individual **Array (String)**
 `is_favorite` | Is this marked as a favorite? **Boolean**
 `custom_fields` | Custom Fields and their values **Object**
-`unsubscribed_all` | Has this individual unsubscribed from all email campaigns? **Boolean**
+`unsubscribed_all` | Set to `true` if this individual has unsubscribed from all [Campaigns](#campaign-api) **Boolean**
 `source_id` | The ID for the associated lead source **String**
 `became_lead_date` | Timestamp of the user becoming a lead **Timestamp (ISO 8601)**
 `source` | Detailed information about the associated lead source **Object**

@@ -1,6 +1,6 @@
 # Group API
 
-The Group API returns only the metadata for each group. 
+The Group API returns only the metadata for each group.
 
 <div class="wrap">
   <p class="flash info">
@@ -127,8 +127,8 @@ Creates a new group and then returns the newly created group.
 Parameter |  Description
 --------- | ------- 
 `name` | Provided name for the group **String**
-`group_type` | The type of group (static, smart) **Enum (String)**
-`element_type` | The type of record this group can contain (individuals, organizations, opportunities, tasks) **Enum (String)**
+`group_type` | The type of group (`static`, `smart`) **Enum (String)**
+`element_type` | The type of record this group can contain (`individuals`, `organizations`, `opportunities`, `tasks`) **Enum (String)**
 
 
 ## Update Group
@@ -197,10 +197,10 @@ Returns a list of groups from your SalesSeek account.
 
 Parameter |  Description
 --------- | ------- 
-`element_type` | Filter by groups containing certain record types (organizations, opportunities, individuals).
+`element_type` | Filter by groups containing certain record types (`organizations`, `opportunities`, `individuals`).
 `rows` | The maximum number of organizations to be returned
 `start` | The row number to start to retrieve data. (0 for start)
-`order_by` | Results are ordered by the provided field name followed by &desc or &asc
+`order_by` | Results are ordered by the provided field name followed by `&desc` or `&asc`
 
 <div class="wrap">
   <p class="flash info">

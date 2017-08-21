@@ -51,14 +51,14 @@ Parameter |  Description
 `creator_id` | The unique ID for the SalesSeek user that created this task **String**
 `modified`| Task last modified timestamp **Timestamp (ISO 8601)**
 `last_modified_by_id` | The unique ID for the SalesSeek user that last modified this task **String**
-`related_type` | The type of record in SalesSeek that the task is related to (Organization, Individual, Deal) **Enum**
+`related_type` | The type of record in SalesSeek that the task is related to ([organization](#organization-api), [individual](#individual-api), [deal](#deal-api)) **Enum**
 `related_id` | The ID for the record that the task is reated to **String**
-`completed` | Is the task marked as completed? **Boolean**
+`completed` | Set to `true` if the task is completed **Boolean**
 `complete_date` | Timestamp for when the task was completed **Timestamp (ISO 8601)**
 `related` | Object containing detailed information about the record the task is related to **Object**
 `related.id` | The ID for the record that the task is related to **String**
 `related.name` | The name of the record that the task is related to **String**
-`related.type` | The type of record in SalesSeek that the task is related to (Organization, Individual, Deal) **Enum**
+`related.type` | The type of record in SalesSeek that the task is related to ([organization](#organization-api), [individual](#individual-api), [deal](#deal-api)) **Enum**
 `tags` | User provided tags associated with this task **Array (Object)**
 `creator` | Object containing detailed information about the task creator **Object**
 `owner` | Object containing detailed information about the task owner **Object**

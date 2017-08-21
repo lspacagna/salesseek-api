@@ -68,7 +68,7 @@ Filters allow you to segment your records within SalesSeek. You can use any fiel
 Parameter |  Description
 --------- | ------- 
 `id`      | The unique identifier for this filter **String**
-`filter_type` | The type of records to be filtered (indidivuals, opportunities, organizations, tasks) **Enum (String)**
+`filter_type` | The type of records to be filtered (`indidivuals`, `opportunities`, `organizations`, `tasks`) **Enum (String)**
 `rules` | Array containing rules used for this filter **Array**
 `rules[x].field` | The name of the field that is used in this filter **String**
 `rules[x].operator` | The operator used in this filter **String**
