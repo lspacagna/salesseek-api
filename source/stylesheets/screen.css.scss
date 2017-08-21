@@ -603,6 +603,31 @@ html, body {
     border: 1px solid #F7E633;
     background: linear-gradient(to top left, #F7E633 0%, #F1D32F 100%);
   }
+
+  .verb{
+    padding: 3px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1.1px;
+  }
+
+  .verb.post{
+    background: #10a54a;
+  }
+
+  .verb.delete{
+    background: #e54a45;
+  }
+
+  .verb.get{
+    background: #008EFF;
+  }
+
+  .verb.patch{
+    background: #D38042;
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////////////

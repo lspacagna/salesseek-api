@@ -102,7 +102,9 @@ To login, send your email address and password to the endpoint below. If login i
 
 ### Request URL
 
-`POST https://{CLIENT_ID}.salesseek.net/api/login`
+
+<span class='verb post'>POST</span> `https://{CLIENT_ID}.salesseek.net/api/login`
+
 
 ### Request Body Parameters
 
@@ -125,7 +127,7 @@ Executes the logout process for the currently authenticated SalesSeek user
 
 ### Request URL
 
-`DELETE https://{CLIENT_ID}.salesseek.net/api/logout`
+<span class='verb delete'>DELETE</span> `https://{CLIENT_ID}.salesseek.net/api/logout`
 
 ## Request Password Reset
 
@@ -142,7 +144,7 @@ If a user has forgoten their password for their SalesSeek account make a call to
 
 ### Request URL
 
-`POST https://{CLIENT_ID}.salesseek.net/api/forgotten`
+<span class='verb post'>POST</span> `https://{CLIENT_ID}.salesseek.net/api/forgotten`
 
 ### Request Body Parameters
 
@@ -167,7 +169,7 @@ Once the password reset email has been received, the token in the email must be 
 
 ### Request URL
 
-`POST https://{CLIENT_ID}.salesseek.net/api/reset`
+<span class='verb post'>POST</span> `https://{CLIENT_ID}.salesseek.net/api/reset`
 
 ### Request Body Parameters
 

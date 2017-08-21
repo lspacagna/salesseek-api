@@ -64,7 +64,7 @@ Returns the unique organization matching the `organization_id`
 
 ### Request URL
 
-`GET https://{CLIENT_ID}.salesseek.net/api/organizations/{organization_id}`
+<span class='verb get'>GET</span> `https://{CLIENT_ID}.salesseek.net/api/organizations/{organization_id}`
 
 ### Request Query Parameters
 
@@ -81,8 +81,7 @@ Creates a new organization and then returns the newly created organization.
 
 ### Request URL
 
-`POST https://{CLIENT_ID}.salesseek.net/api/organizations`
-
+<span class='verb post'>POST</span> `https://{CLIENT_ID}.salesseek.net/api/organizations`
 
 
 ## Update Organization
@@ -99,11 +98,11 @@ Updates values of organization by `organization_id`. The resulting organization 
 
 ### Request URL
 
-`PATCH https://{CLIENT_ID}.salesseek.net/api/organizations/{organization_id}`
+<span class='verb patch'>PATCH</span> <code>https://{CLIENT_ID}.salesseek.net/api/organizations/{organization_id}</code> 
 
 Parameter |  Description
 --------- | ------- 
-`id`      | The ID for the organization you'd like to update
+`organization_id`      | The ID for the organization you'd like to update
 
 ### Request Body
 
@@ -117,7 +116,7 @@ Deletes the organization matching the `organization_id`
 
 ### Request URL
 
-`DELETE https://{CLIENT_ID}.salesseek.net/api/organizations/{organization_id}`
+<span class='verb delete'>DELETE</span> `https://{CLIENT_ID}.salesseek.net/api/organizations/{organization_id}`
 
 ### Request Query Parameters
 
@@ -147,7 +146,7 @@ Returns a list of organizations from your SalesSeek account.
 
 ### Request URL
 
-`GET https://{CLIENT_ID}.salesseek.net/api/organizations`
+<span class='verb get'>GET</span> `https://{CLIENT_ID}.salesseek.net/api/organizations`
 
 ### Request Query Parameters
 
@@ -185,7 +184,7 @@ Provides the the subset of organizations where the Organization name matches the
 
 ### Request URL
 
-`GET https://{CLIENT_ID}.salesseek.net/api/organizations?search={search_string}`
+<span class='verb get'>GET</span> `https://{CLIENT_ID}.salesseek.net/api/organizations?search={search_string}`
 
 ### Request Query Parameters
 
