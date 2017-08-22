@@ -2405,7 +2405,7 @@ Records-Total: 2000
 <h2 id='get-group'>Get Group</h2>
 <p>Returns the group matching the <code>group_id</code></p>
 <h3 id='request-url'>Request URL</h3>
-<p><code>GET https://{CLIENT_ID}.salesseek.net/api/groups/{group_id}</code></p>
+<p><span class='verb get'>GET</span> <code>https://{CLIENT_ID}.salesseek.net/api/groups/{group_id}</code></p>
 <h3 id='request-query-parameters'>Request Query Parameters</h3>
 <table><thead>
 <tr>
@@ -2436,7 +2436,7 @@ Records-Total: 2000
 
 <p>Creates a new group and then returns the newly created group.</p>
 <h3 id='request-url-2'>Request URL</h3>
-<p><code>POST https://{CLIENT_ID}.salesseek.net/api/{record_type}/filters/</code></p>
+<p><span class='verb post'>POST</span> <code>https://{CLIENT_ID}.salesseek.net/api/{record_type}/filters/</code></p>
 <h3 id='request-body-parameters'>Request Body Parameters</h3>
 <table><thead>
 <tr>
@@ -2474,7 +2474,7 @@ Records-Total: 2000
 </span></code></pre>
 <p>Updates values of group by <code>group_id</code>. The resulting group is returned. </p>
 <h3 id='request-url-3'>Request URL</h3>
-<p><code>PATCH https://{CLIENT_ID}.salesseek.net/api/groups/{group_id}</code></p>
+<p><span class='verb patch'>PATCH</span> <code>https://{CLIENT_ID}.salesseek.net/api/groups/{group_id}</code></p>
 
 <table><thead>
 <tr>
@@ -2492,7 +2492,7 @@ Records-Total: 2000
 <h2 id='delete-group'>Delete Group</h2>
 <p>Deletes the group matching the <code>group_id</code></p>
 <h3 id='request-url-4'>Request URL</h3>
-<p><code>DELETE https://{CLIENT_ID}.salesseek.net/api/groups/{group_id}</code></p>
+<p><span class='verb delete'>DELETE</span> <code>https://{CLIENT_ID}.salesseek.net/api/groups/{group_id}</code></p>
 <h3 id='request-query-parameters-2'>Request Query Parameters</h3>
 <table><thead>
 <tr>
@@ -2513,7 +2513,7 @@ Records-Total: 2000
 </span></code></pre>
 <p>Returns a list of groups from your SalesSeek account.</p>
 <h3 id='request-url-5'>Request URL</h3>
-<p><code>GET https://{CLIENT_ID}.salesseek.net/api/groups</code></p>
+<p><span class='verb get'>GET</span> <code>https://{CLIENT_ID}.salesseek.net/api/groups</code></p>
 <h3 id='request-query-parameters-3'>Request Query Parameters</h3>
 <table><thead>
 <tr>
@@ -2552,7 +2552,7 @@ Records-Total: 2000
 </span></code></pre>
 <p>Adds a record to a static group.</p>
 
-<p><code>PUT https://{CLIENT_ID}.salesseek.net/api/groups/{group_id}/items/{record_id}</code> </p>
+<p><span class='verb put'>PUT</span>  <code>https://{CLIENT_ID}.salesseek.net/api/groups/{group_id}/items/{record_id}</code> </p>
 <h3 id='request-query-parameters-4'>Request Query Parameters</h3>
 <table><thead>
 <tr>
@@ -2667,7 +2667,7 @@ Records-Total: 2000
 </span></code></pre>
 <p>Returns the requested number of records from <code>group_id</code></p>
 
-<p><code>GET https://https://{CLIENT_ID}.salesseek.net/api/group_pages</code></p>
+<p><span class='verb get'>GET</span> <code>https://https://{CLIENT_ID}.salesseek.net/api/group_pages</code></p>
 <h3 id='request-query-parameters'>Request Query Parameters</h3>
 <table><thead>
 <tr>
@@ -3031,7 +3031,7 @@ Records-Total: 2000
 <h2 id='get-campaign'>Get Campaign</h2>
 <p>Returns the unique organization matching the <code>campaign_id</code></p>
 <h3 id='request-url'>Request URL</h3>
-<p><code>GET https://{CLIENT_ID}.salesseek.net/api/campaigns/{campaign_id}</code></p>
+<p><span class='verb get'>GET</span> <code>https://{CLIENT_ID}.salesseek.net/api/campaigns/{campaign_id}</code></p>
 
 <table><thead>
 <tr>
@@ -3047,7 +3047,7 @@ Records-Total: 2000
 <h2 id='create-campaign'>Create Campaign</h2>
 <p>Creates a new campaign and then returns the newly created campaign.</p>
 <h3 id='request-url-2'>Request URL</h3>
-<p><code>POST https://{CLIENT_ID}.salesseek.net/api/campaigns</code></p>
+<p><span class='verb post'>POST</span> <code>https://{CLIENT_ID}.salesseek.net/api/campaigns</code></p>
 <h2 id='update-campaign'>Update Campaign</h2>
 <blockquote>
 <p>A sample request body to update the campaign subject.</p>
@@ -3058,7 +3058,7 @@ Records-Total: 2000
 </span></code></pre>
 <p>Updates values of a campaign by <code>campaign_id</code>. The resulting campaign is returned.</p>
 <h3 id='request-url-3'>Request URL</h3>
-<p><code>PATCH https://{CLIENT_ID}.salesseek.net/api/campaigns/{campaign_id}</code></p>
+<p><span class='verb patch'>PATCH</span> <code>https://{CLIENT_ID}.salesseek.net/api/campaigns/{campaign_id}</code></p>
 
 <table><thead>
 <tr>
@@ -3076,7 +3076,7 @@ Records-Total: 2000
 <h2 id='delete-campaign'>Delete Campaign</h2>
 <p>Deletes the campaign matching the <code>campaign_id</code></p>
 <h3 id='request-url-4'>Request URL</h3>
-<p><code>DELETE https://{CLIENT_ID}.salesseek.net/api/campaigns/{campaign_id}</code></p>
+<p><span class='verb delete'>DELETE</span> <code>https://{CLIENT_ID}.salesseek.net/api/campaigns/{campaign_id}</code></p>
 <h3 id='request-query-parameters'>Request Query Parameters</h3>
 <table><thead>
 <tr>
@@ -3104,7 +3104,7 @@ Records-Total: 2000
 </code></pre>
 <p>Returns a list of campaigns from your SalesSeek account.</p>
 <h3 id='request-url-5'>Request URL</h3>
-<p><code>GET https://{CLIENT_ID}.salesseek.net/api/campaigns</code></p>
+<p><span class='verb get'>GET</span> <code>https://{CLIENT_ID}.salesseek.net/api/campaigns</code></p>
 <h3 id='request-query-parameters-2'>Request Query Parameters</h3>
 <table><thead>
 <tr>
@@ -3186,7 +3186,7 @@ Records-Total: 2000
 
 <p>Sends a test email of the campaign content to chosen SalesSeek users. </p>
 <h3 id='request-url-6'>Request URL</h3>
-<p><code>POST https://{CLIENT_ID}.salesseek.net/api/campaigns?test={user_email}</code></p>
+<p><span class='verb post'>POST</span> <code>https://{CLIENT_ID}.salesseek.net/api/campaigns?test={user_email}</code></p>
 <h3 id='request-query-parameters-3'>Request Query Parameters</h3>
 <table><thead>
 <tr>
@@ -3276,7 +3276,7 @@ Records-Total: 2000
 <h2 id='set-campaign-live'>Set Campaign Live</h2>
 <p>Sets a campaign to live and ready for sending.</p>
 
-<p><code>POST https://salesseek.salesseek.net/api/campaigns?send</code></p>
+<p><span class='verb post'>POST</span> <code>https://salesseek.salesseek.net/api/campaigns?send</code></p>
 <h3 id='request-query-parameters-4'>Request Query Parameters</h3>
 <p>(none)</p>
 <h3 id='request-body-parameters-2'>Request Body Parameters</h3>
@@ -3714,7 +3714,7 @@ Records-Total: 2000
 <h2 id='get-activity'>Get Activity</h2>
 <p>Returns the unique organization matching the <code>activity_id</code></p>
 <h3 id='request-url'>Request URL</h3>
-<p><code>GET https://{CLIENT_ID}.salesseek.net/api/activities/{activity_id}</code></p>
+<p><span class='verb get'>GET</span> <code>https://{CLIENT_ID}.salesseek.net/api/activities/{activity_id}</code></p>
 <h3 id='request-query-parameters'>Request Query Parameters</h3>
 <table><thead>
 <tr>
@@ -3743,7 +3743,7 @@ Records-Total: 2000
 </span></code></pre>
 <p>Creates a new activity record and then returns the newly created activity.</p>
 <h3 id='request-url-2'>Request URL</h3>
-<p><code>POST https://{CLIENT_ID}.salesseek.net/api/activities</code></p>
+<p><span class='verb post'>POST</span> <code>https://{CLIENT_ID}.salesseek.net/api/activities</code></p>
 <h2 id='update-activity'>Update Activity</h2>
 <blockquote>
 <p>A sample request body to change the activity note text would be:</p>
@@ -3754,7 +3754,7 @@ Records-Total: 2000
 </span></code></pre>
 <p>Updates values of activity by <code>activity_id</code>. The resulting activity is returned. </p>
 <h3 id='request-url-3'>Request URL</h3>
-<p><code>PATCH https://{CLIENT_ID}.salesseek.net/api/activities/{activity_id}</code></p>
+<p><span class='verb patch'>PATCH</span> <code>https://{CLIENT_ID}.salesseek.net/api/activities/{activity_id}</code></p>
 
 <table><thead>
 <tr>
@@ -3772,7 +3772,7 @@ Records-Total: 2000
 <h2 id='delete-activity'>Delete Activity</h2>
 <p>Deletes the activity matching the <code>activity_id</code></p>
 <h3 id='request-url-4'>Request URL</h3>
-<p><code>DELETE https://{CLIENT_ID}.salesseek.net/api/activities/{activity_id}</code></p>
+<p><span class='verb delete'>DELETE</span> <code>https://{CLIENT_ID}.salesseek.net/api/activities/{activity_id}</code></p>
 <h3 id='request-query-parameters-2'>Request Query Parameters</h3>
 <table><thead>
 <tr>
@@ -3800,7 +3800,7 @@ Records-Total: 2000
 </code></pre>
 <p>Returns a list of activities.</p>
 <h3 id='request-url-5'>Request URL</h3>
-<p><code>GET https://{CLIENT_ID}.salesseek.net/api/activities</code></p>
+<p><span class='verb get'>GET</span> <code>https://{CLIENT_ID}.salesseek.net/api/activities</code></p>
 <h3 id='request-query-parameters-3'>Request Query Parameters</h3>
 <table><thead>
 <tr>
@@ -3919,11 +3919,11 @@ Records-Total: 2000
 </span></code></pre>
 <p>Creates a new tag and then returns the newly created Tag ID.</p>
 <h3 id='request-url'>Request URL</h3>
-<p><code>POST https://{CLIENT_ID}.salesseek.net/api/tags</code></p>
+<p><span class='verb get'>POST</span> <code>https://{CLIENT_ID}.salesseek.net/api/tags</code></p>
 <h2 id='update-tag'>Update Tag</h2>
 <p>Updates values of organization by <code>tag_id</code>. The resulting tag is returned. </p>
 <h3 id='request-url-2'>Request URL</h3>
-<p><code>PATCH https://{CLIENT_ID}.salesseek.net/api/tags/{tag_id}</code></p>
+<p><span class='verb patch'>PATCH</span> <code>https://{CLIENT_ID}.salesseek.net/api/tags/{tag_id}</code></p>
 
 <table><thead>
 <tr>
@@ -3941,7 +3941,7 @@ Records-Total: 2000
 <h2 id='delete-tag'>Delete Tag</h2>
 <p>Deletes the tag matching the <code>tag_id</code></p>
 <h3 id='request-url-3'>Request URL</h3>
-<p><code>DELETE https://{CLIENT_ID}.salesseek.net/api/tags/{tag_id}</code></p>
+<p><span class='verb delete'>DELETE</span> <code>https://{CLIENT_ID}.salesseek.net/api/tags/{tag_id}</code></p>
 <h3 id='request-query-parameters'>Request Query Parameters</h3>
 <table><thead>
 <tr>
@@ -3969,7 +3969,7 @@ Records-Total: 2000
 </code></pre>
 <p>Returns a list of tags from your SalesSeek account.</p>
 <h3 id='request-url-4'>Request URL</h3>
-<p><code>GET https://{CLIENT_ID}.salesseek.net/api/tags</code></p>
+<p><span class='verb get'>GET</span> <code>https://{CLIENT_ID}.salesseek.net/api/tags</code></p>
 <h3 id='request-query-parameters-2'>Request Query Parameters</h3>
 <table><thead>
 <tr>
@@ -4152,7 +4152,7 @@ Records-Total: 2000
 <h2 id='get-custom-field'>Get Custom Field</h2>
 <p>Returns the custom field matching the <code>custom_field_id</code></p>
 <h3 id='request-url'>Request URL</h3>
-<p><code>GET https://{CLIENT_ID}.salesseek.net/api/custom_fields/{custom_field_id}</code></p>
+<p><span class='verb get'>GET</span> <code>https://{CLIENT_ID}.salesseek.net/api/custom_fields/{custom_field_id}</code></p>
 <h3 id='request-query-parameters'>Request Query Parameters</h3>
 <table><thead>
 <tr>
@@ -4181,7 +4181,7 @@ Records-Total: 2000
 </span></code></pre>
 <p>Creates a new custom field and then returns the newly created custom field.</p>
 <h3 id='request-url-2'>Request URL</h3>
-<p><code>POST https://{CLIENT_ID}.salesseek.net/api/custom_fields/</code></p>
+<p><span class='verb post'>POST</span> <code>https://{CLIENT_ID}.salesseek.net/api/custom_fields/</code></p>
 <h2 id='update-custom-field'>Update Custom Field</h2>
 <blockquote>
 <p>A sample request body to custom field name to &#39;Last Seen Date&#39; would be:</p>
@@ -4192,7 +4192,7 @@ Records-Total: 2000
 </span></code></pre>
 <p>Updates a custom field by <code>custom_field_id</code> and returns the resulting custom field. </p>
 <h3 id='request-url-3'>Request URL</h3>
-<p><code>POST https://{CLIENT_ID}.salesseek.net/api/custom_fields/{custom_field_id}</code></p>
+<p><span class='verb post'>POST</span> <code>https://{CLIENT_ID}.salesseek.net/api/custom_fields/{custom_field_id}</code></p>
 <h3 id='request-query-parameters-2'>Request Query Parameters</h3>
 <table><thead>
 <tr>
@@ -4210,7 +4210,7 @@ Records-Total: 2000
 <h2 id='delete-custom-field'>Delete Custom Field</h2>
 <p>Deletes the custom field matching the <code>custom_field_id</code></p>
 <h3 id='request-url-4'>Request URL</h3>
-<p><code>DELETE https://{CLIENT_ID}.salesseek.net/api/custom_fields/{custom_field_id}</code></p>
+<p><span class='verb delete'>DELETE</span> <code>https://{CLIENT_ID}.salesseek.net/api/custom_fields/{custom_field_id}</code></p>
 <h3 id='request-query-parameters-3'>Request Query Parameters</h3>
 <table><thead>
 <tr>
@@ -4238,7 +4238,7 @@ Records-Total: 2000
 </code></pre>
 <p>Returns the list of custom fields for the chosen record type.</p>
 <h3 id='request-url-5'>Request URL</h3>
-<p><code>GET https://{CLIENT_ID}.salesseek.net/api/custom_fields</code></p>
+<p><span class='verb get'>GET</span> <code>https://{CLIENT_ID}.salesseek.net/api/custom_fields</code></p>
 <h3 id='request-query-parameters-4'>Request Query Parameters</h3>
 <table><thead>
 <tr>
