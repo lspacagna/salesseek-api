@@ -149,7 +149,7 @@ Returns the deal matching the `deal_id`
 
 ### Request URL
 
-`GET https://{CLIENT_ID}.salesseek.net/api/opportunities/{deal_id}`
+<span class='verb get'>GET</span> `https://{CLIENT_ID}.salesseek.net/api/opportunities/{deal_id}`
 
 Parameter |  Description
 --------- | ------- 
@@ -162,7 +162,7 @@ Creates a new deal and then returns the newly created deal.
 
 ### Request URL
 
-`POST https://{CLIENT_ID}.salesseek.net/api/opportunities/`
+<span class='verb post'>POST</span> `https://{CLIENT_ID}.salesseek.net/api/opportunities/`
 
 
 ## Update Deal
@@ -179,7 +179,7 @@ Updates values of deal by `deal_id`. The resulting deal is returned.
 
 ### Request URL
 
-`PATCH https://{CLIENT_ID}.salesseek.net/api/opportunities/{deal_id}`
+<span class='verb patch'>PATCH</span> `https://{CLIENT_ID}.salesseek.net/api/opportunities/{deal_id}`
 
 Parameter |  Description
 --------- | ------- 
@@ -197,7 +197,7 @@ Deletes the deal matching the `deal_id`
 
 ### Request URL
 
-`DELETE https://{CLIENT_ID}.salesseek.net/api/opportunities/{deal_id}`
+<span class='verb delete'>DELETE</span> `https://{CLIENT_ID}.salesseek.net/api/opportunities/{deal_id}`
 
 ### Request Query Parameters
 
@@ -226,7 +226,7 @@ Returns a list of deals from your SalesSeek account.
 
 ### Request URL
 
-`GET https://{CLIENT_ID}.salesseek.net/api/opportunities`
+<span class='verb get'>GET</span> `https://{CLIENT_ID}.salesseek.net/api/opportunities`
 
 ### Request Query Parameters
 

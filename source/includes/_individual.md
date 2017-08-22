@@ -93,7 +93,7 @@ Returns the individual matching the `individual_id`
 
 ### Request URL
 
-`GET https://{CLIENT_ID}.salesseek.net/api/individuals/{individual_id}`
+<span class='verb get'>GET</span> `https://{CLIENT_ID}.salesseek.net/api/individuals/{individual_id}`
 
 ### Request Query Parameters
 
@@ -108,7 +108,7 @@ Creates a new Individual and returns the resulting Individual.
 
 ### Request URL
 
-`POST https://{CLIENT_ID}.salesseek.net/api/individuals/`
+<span class='verb post'>POST</span> `https://{CLIENT_ID}.salesseek.net/api/individuals/`
 
 
 
@@ -127,7 +127,7 @@ Updates an Individual by `individual_id` and returns the resulting Individual.
 
 ### Request URL
 
-`POST https://{CLIENT_ID}.salesseek.net/api/individuals/{individual_id}`
+<span class='verb post'>POST</span> `https://{CLIENT_ID}.salesseek.net/api/individuals/{individual_id}`
 
 ### Request Query Parameters
 
@@ -146,7 +146,7 @@ Deletes the individual matching the `individual_id`
 
 ### Request URL
 
-`DELETE https://{CLIENT_ID}.salesseek.net/api/individuals/{individual_id}`
+<span class='verb delete'>DELETE</span> `https://{CLIENT_ID}.salesseek.net/api/individuals/{individual_id}`
 
 ### Request Query Parameters
 
@@ -175,7 +175,7 @@ Returns the entire list of individuals from your SalesSeek account.
 
 ### Request URL
 
-`GET https://{CLIENT_ID}.salesseek.net/api/individuals`
+<span class='verb get'>GET</span> `https://{CLIENT_ID}.salesseek.net/api/individuals`
 
 ### Request Query Parameters
 
@@ -206,7 +206,7 @@ Provides the the subset of indidivuals where the individual name matches the `se
 
 ### Request URL
 
-`GET https://{CLIENT_ID}.salesseek.net/api/individuals?search={search_string}`
+<span class='verb get'>GET</span> `https://{CLIENT_ID}.salesseek.net/api/individuals?search={search_string}`
 
 ### Request Query Parameters
 

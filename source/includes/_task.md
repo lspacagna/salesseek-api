@@ -71,7 +71,7 @@ Returns the task matching the `task_id`
 
 ### Request URL
 
-`GET https://{CLIENT_ID}.salesseek.net/api/tasks/{task_id}`
+<span class='verb get'>GET</span> `https://{CLIENT_ID}.salesseek.net/api/tasks/{task_id}`
 
 Parameter |  Description
 --------- | ------- 
@@ -97,7 +97,7 @@ Creates a new task and then returns the newly created task.
 
 ### Request URL
 
-`POST https://{CLIENT_ID}.salesseek.net/api/tasks`
+<span class='verb post'>POST</span> `https://{CLIENT_ID}.salesseek.net/api/tasks`
 
 
 ## Update Task
@@ -114,7 +114,7 @@ Updates values of task by `task_id`. The resulting task is returned.
 
 ### Request URL
 
-`PATCH https://{CLIENT_ID}.salesseek.net/api/tasks/{task_id}`
+<span class='verb patch'>PATCH</span> `https://{CLIENT_ID}.salesseek.net/api/tasks/{task_id}`
 
 Parameter |  Description
 --------- | ------- 
@@ -128,7 +128,7 @@ Deletes the task matching the `task_id`
 
 ### Request URL
 
-`DELETE https://{CLIENT_ID}.salesseek.net/api/tasks/{task_id}`
+<span class='verb delete'>DELETE</span> `https://{CLIENT_ID}.salesseek.net/api/tasks/{task_id}`
 
 ### Request Query Parameters
 
@@ -159,7 +159,7 @@ Returns a list of tasks from your SalesSeek account.
 
 ### Request URL
 
-`GET https://{CLIENT_ID}.salesseek.net/api/tasks`
+<span class='verb get'>GET</span> `https://{CLIENT_ID}.salesseek.net/api/tasks`
 
 ### Request Query Parameters
 
@@ -196,7 +196,7 @@ Provides the the subset of tasks where the tasks name matches the `search_string
 
 ### Request URL
 
-`GET https://{CLIENT_ID}.salesseek.net/api/tasks?search={search_string}`
+<span class='verb get'>GET</span> `https://{CLIENT_ID}.salesseek.net/api/tasks?search={search_string}`
 
 ### Request Query Parameters
 

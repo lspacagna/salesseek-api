@@ -88,7 +88,7 @@ Returns the filter matching the `filter_id`
 
 ### Request URL
 
-`GET https://{CLIENT_ID}.salesseek.net/api/{record_type}/filters/{filter_id}`
+<span class='verb get'>GET</span> `https://{CLIENT_ID}.salesseek.net/api/{record_type}/filters/{filter_id}`
 
 ### Request Query Parameters
 
@@ -104,6 +104,6 @@ Creates a new filter and then returns the newly created filter.
 
 ### Request URL
 
-`POST https://{CLIENT_ID}.salesseek.net/api/{record_type}/filters/`
+<span class='verb post'>POST</span> `https://{CLIENT_ID}.salesseek.net/api/{record_type}/filters/`
 
 
