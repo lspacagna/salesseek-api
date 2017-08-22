@@ -4,13 +4,13 @@ The Group API returns only the metadata for each group.
 
 <div class="wrap">
   <p class="flash info">
-    The Group API does not return the records associated with each group. To get the associated records use the get the <code>filter_id</code> from this endpoint and use this value in the [Group Pages API]().
+    The Group API does not return the records associated with each group. To get the associated records use the get the <code>filter_id</code> from this endpoint and use this value in the <a href="#group-page-api">Group Pages API</a>.
   </p>
 </div>
 
 <div class="wrap">
   <p class="flash warn">
-    The Group API funcionality differs depending on if the group is a smart or a static group. For an explanation of the different types of groups see the <a href="">help center article</a>.
+    The Group API funcionality differs depending on if the group is a smart or a static group. For an explanation of the different types of groups see the <a href="http://support.salesseek.net/general/groups-and-reporting/introduction-to-groups">help center article</a>.
   </p>
 </div>
 
