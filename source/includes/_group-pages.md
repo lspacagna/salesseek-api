@@ -81,7 +81,7 @@ GET https://example.salesseek.net/api/group_pages?item_type=individuals&group_id
 
 Returns the requested number of records from `group_id`
 
-`GET https://https://{CLIENT_ID}.salesseek.net/api/group_pages`
+<span class='verb get'>GET</span> `https://https://{CLIENT_ID}.salesseek.net/api/group_pages`
 
 ### Request Query Parameters
 

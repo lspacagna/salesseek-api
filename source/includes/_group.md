@@ -90,7 +90,7 @@ Returns the group matching the `group_id`
 
 ### Request URL
 
-`GET https://{CLIENT_ID}.salesseek.net/api/groups/{group_id}`
+<span class='verb get'>GET</span> `https://{CLIENT_ID}.salesseek.net/api/groups/{group_id}`
 
 ### Request Query Parameters
 
@@ -120,7 +120,7 @@ Creates a new group and then returns the newly created group.
 
 ### Request URL
 
-`POST https://{CLIENT_ID}.salesseek.net/api/{record_type}/filters/`
+<span class='verb post'>POST</span> `https://{CLIENT_ID}.salesseek.net/api/{record_type}/filters/`
 
 ### Request Body Parameters
 
@@ -153,7 +153,7 @@ Updates values of group by `group_id`. The resulting group is returned.
 
 ### Request URL
 
-`PATCH https://{CLIENT_ID}.salesseek.net/api/groups/{group_id}`
+<span class='verb patch'>PATCH</span> `https://{CLIENT_ID}.salesseek.net/api/groups/{group_id}`
 
 Parameter |  Description
 --------- | ------- 
@@ -170,7 +170,7 @@ Deletes the group matching the `group_id`
 
 ### Request URL
 
-`DELETE https://{CLIENT_ID}.salesseek.net/api/groups/{group_id}`
+<span class='verb delete'>DELETE</span> `https://{CLIENT_ID}.salesseek.net/api/groups/{group_id}`
 
 ### Request Query Parameters
 
@@ -191,7 +191,7 @@ Returns a list of groups from your SalesSeek account.
 
 ### Request URL
 
-`GET https://{CLIENT_ID}.salesseek.net/api/groups`
+<span class='verb get'>GET</span> `https://{CLIENT_ID}.salesseek.net/api/groups`
 
 ### Request Query Parameters
 
@@ -218,7 +218,7 @@ PUT https://example.salesseek.net/api/groups/13663429-0f49-4e83-836c-7ecd6d58adf
 
 Adds a record to a static group.
 
-`PUT https://{CLIENT_ID}.salesseek.net/api/groups/{group_id}/items/{record_id}` 
+<span class='verb put'>PUT</span>  `https://{CLIENT_ID}.salesseek.net/api/groups/{group_id}/items/{record_id}` 
 
 ### Request Query Parameters
 

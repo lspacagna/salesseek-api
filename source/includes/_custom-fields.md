@@ -89,7 +89,7 @@ Returns the custom field matching the `custom_field_id`
 
 ### Request URL
 
-`GET https://{CLIENT_ID}.salesseek.net/api/custom_fields/{custom_field_id}`
+<span class='verb get'>GET</span> `https://{CLIENT_ID}.salesseek.net/api/custom_fields/{custom_field_id}`
 
 ### Request Query Parameters
 
@@ -120,7 +120,7 @@ Creates a new custom field and then returns the newly created custom field.
 
 ### Request URL
 
-`POST https://{CLIENT_ID}.salesseek.net/api/custom_fields/`
+<span class='verb post'>POST</span> `https://{CLIENT_ID}.salesseek.net/api/custom_fields/`
 
 
 
@@ -140,7 +140,7 @@ Updates a custom field by `custom_field_id` and returns the resulting custom fie
 
 ### Request URL
 
-`POST https://{CLIENT_ID}.salesseek.net/api/custom_fields/{custom_field_id}`
+<span class='verb post'>POST</span> `https://{CLIENT_ID}.salesseek.net/api/custom_fields/{custom_field_id}`
 
 ### Request Query Parameters
 
@@ -160,7 +160,7 @@ Deletes the custom field matching the `custom_field_id`
 
 ### Request URL
 
-`DELETE https://{CLIENT_ID}.salesseek.net/api/custom_fields/{custom_field_id}`
+<span class='verb delete'>DELETE</span> `https://{CLIENT_ID}.salesseek.net/api/custom_fields/{custom_field_id}`
 
 ### Request Query Parameters
 
@@ -191,7 +191,7 @@ Returns the list of custom fields for the chosen record type.
 
 ### Request URL
 
-`GET https://{CLIENT_ID}.salesseek.net/api/custom_fields`
+<span class='verb get'>GET</span> `https://{CLIENT_ID}.salesseek.net/api/custom_fields`
 
 ### Request Query Parameters
 

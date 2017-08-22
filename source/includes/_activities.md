@@ -204,7 +204,7 @@ Returns the unique organization matching the `activity_id`
 
 ### Request URL
 
-`GET https://{CLIENT_ID}.salesseek.net/api/activities/{activity_id}`
+<span class='verb get'>GET</span> `https://{CLIENT_ID}.salesseek.net/api/activities/{activity_id}`
 
 ### Request Query Parameters
 
@@ -237,7 +237,7 @@ Creates a new activity record and then returns the newly created activity.
 
 ### Request URL
 
-`POST https://{CLIENT_ID}.salesseek.net/api/activities`
+<span class='verb post'>POST</span> `https://{CLIENT_ID}.salesseek.net/api/activities`
 
 
 
@@ -259,7 +259,7 @@ Updates values of activity by `activity_id`. The resulting activity is returned.
 
 ### Request URL
 
-`PATCH https://{CLIENT_ID}.salesseek.net/api/activities/{activity_id}`
+<span class='verb patch'>PATCH</span> `https://{CLIENT_ID}.salesseek.net/api/activities/{activity_id}`
 
 Parameter |  Description
 --------- | ------- 
@@ -280,7 +280,7 @@ Deletes the activity matching the `activity_id`
 
 ### Request URL
 
-`DELETE https://{CLIENT_ID}.salesseek.net/api/activities/{activity_id}`
+<span class='verb delete'>DELETE</span> `https://{CLIENT_ID}.salesseek.net/api/activities/{activity_id}`
 
 ### Request Query Parameters
 
@@ -312,7 +312,7 @@ Returns a list of activities.
 
 ### Request URL
 
-`GET https://{CLIENT_ID}.salesseek.net/api/activities`
+<span class='verb get'>GET</span> `https://{CLIENT_ID}.salesseek.net/api/activities`
 
 ### Request Query Parameters
 

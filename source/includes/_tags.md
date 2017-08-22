@@ -43,7 +43,7 @@ Creates a new tag and then returns the newly created Tag ID.
 
 ### Request URL
 
-`POST https://{CLIENT_ID}.salesseek.net/api/tags`
+<span class='verb get'>POST</span> `https://{CLIENT_ID}.salesseek.net/api/tags`
 
 
 
@@ -56,7 +56,7 @@ Updates values of organization by `tag_id`. The resulting tag is returned.
 
 ### Request URL
 
-`PATCH https://{CLIENT_ID}.salesseek.net/api/tags/{tag_id}`
+<span class='verb patch'>PATCH</span> `https://{CLIENT_ID}.salesseek.net/api/tags/{tag_id}`
 
 Parameter |  Description
 --------- | ------- 
@@ -77,7 +77,7 @@ Deletes the tag matching the `tag_id`
 
 ### Request URL
 
-`DELETE https://{CLIENT_ID}.salesseek.net/api/tags/{tag_id}`
+<span class='verb delete'>DELETE</span> `https://{CLIENT_ID}.salesseek.net/api/tags/{tag_id}`
 
 ### Request Query Parameters
 
@@ -109,7 +109,7 @@ Returns a list of tags from your SalesSeek account.
 
 ### Request URL
 
-`GET https://{CLIENT_ID}.salesseek.net/api/tags`
+<span class='verb get'>GET</span> `https://{CLIENT_ID}.salesseek.net/api/tags`
 
 ### Request Query Parameters
 

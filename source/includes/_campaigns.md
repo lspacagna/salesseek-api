@@ -157,7 +157,7 @@ Returns the unique organization matching the `campaign_id`
 
 ### Request URL
 
-`GET https://{CLIENT_ID}.salesseek.net/api/campaigns/{campaign_id}`
+<span class='verb get'>GET</span> `https://{CLIENT_ID}.salesseek.net/api/campaigns/{campaign_id}`
 
 Parameter |  Description
 --------- | ------- 
@@ -170,7 +170,7 @@ Creates a new campaign and then returns the newly created campaign.
 
 ### Request URL
 
-`POST https://{CLIENT_ID}.salesseek.net/api/campaigns`
+<span class='verb post'>POST</span> `https://{CLIENT_ID}.salesseek.net/api/campaigns`
 
 ## Update Campaign
 
@@ -186,7 +186,7 @@ Updates values of a campaign by `campaign_id`. The resulting campaign is returne
 
 ### Request URL
 
-`PATCH https://{CLIENT_ID}.salesseek.net/api/campaigns/{campaign_id}`
+<span class='verb patch'>PATCH</span> `https://{CLIENT_ID}.salesseek.net/api/campaigns/{campaign_id}`
 
 Parameter |  Description
 --------- | ------- 
@@ -203,7 +203,7 @@ Deletes the campaign matching the `campaign_id`
 
 ### Request URL
 
-`DELETE https://{CLIENT_ID}.salesseek.net/api/campaigns/{campaign_id}`
+<span class='verb delete'>DELETE</span> `https://{CLIENT_ID}.salesseek.net/api/campaigns/{campaign_id}`
 
 ### Request Query Parameters
 
@@ -233,7 +233,7 @@ Returns a list of campaigns from your SalesSeek account.
 
 ### Request URL
 
-`GET https://{CLIENT_ID}.salesseek.net/api/campaigns`
+<span class='verb get'>GET</span> `https://{CLIENT_ID}.salesseek.net/api/campaigns`
 
 ### Request Query Parameters
 
@@ -296,7 +296,7 @@ Sends a test email of the campaign content to chosen SalesSeek users.
 
 ### Request URL
 
-`POST https://{CLIENT_ID}.salesseek.net/api/campaigns?test={user_email}`
+<span class='verb post'>POST</span> `https://{CLIENT_ID}.salesseek.net/api/campaigns?test={user_email}`
 
 ### Request Query Parameters
 
@@ -334,7 +334,7 @@ Parameter |  Description
 
 Sets a campaign to live and ready for sending.
 
-`POST https://salesseek.salesseek.net/api/campaigns?send`
+<span class='verb post'>POST</span> `https://salesseek.salesseek.net/api/campaigns?send`
 
 ### Request Query Parameters
 
