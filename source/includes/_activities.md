@@ -169,12 +169,10 @@ Parameter |  Description
 `params.subject` | The email subject (shown if activity was an archived email) **String**
 `params.completed_by` | The name of the [User](#user-api) that completed the task (shown if activity was a completed task) **String**
 `params.description` | Descripion of completed tasks (shown if activity was a comlpleted task) **String**
+`params.subject` | The email subject for archived emails **String**
 `target_date` | Timestamp for the activity target date **Timestamp (ISO 8601)**
-`communication` | TODO
-`communication_id` | TODO
-`real_created` | TODO
-`user_created` | TODO
-`target_is_parent` | TODO
+`real_created` | Timestamp for when the activity was created in the system **Timestamp (ISO 8601)**
+`user_created` | Timestamp for when a [User](#user-api) has said the activity was created (if user has overridden the time) **Timestamp (ISO 8601)**
 
 
 ## Activity Types
