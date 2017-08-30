@@ -629,19 +629,19 @@
 </thead><tbody>
 <tr>
 <td><code>id</code></td>
-<td>The unique identifier for the user logging in <strong>String</strong></td>
+<td>The unique identifier for the <a href="#user-api">User</a> logging in <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>name</code></td>
-<td>The name of the user logging in <strong>String</strong></td>
+<td>The name of the <a href="#user-api">User</a> logging in <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>is_admin</code></td>
-<td>Set to <code>true</code> if this user is an admin <strong>Boolean</strong></td>
+<td>Set to <code>true</code> if this <a href="#user-api">User</a> is an admin <strong>Boolean</strong></td>
 </tr>
 <tr>
 <td><code>email_address</code></td>
-<td>The user email address <strong>String</strong></td>
+<td>The <a href="#user-api">User</a> email address <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>client_id</code></td>
@@ -689,19 +689,19 @@
 </tr>
 <tr>
 <td><code>modified</code></td>
-<td>User last modified timestamp <strong>Timestamp (ISO 8601)</strong></td>
+<td><a href="#user-api">User</a> last modified timestamp <strong>Timestamp (ISO 8601)</strong></td>
 </tr>
 <tr>
 <td><code>created</code></td>
-<td>User creation timestamp <strong>Timestamp (ISO 8601)</strong></td>
+<td><a href="#user-api">User</a> creation timestamp <strong>Timestamp (ISO 8601)</strong></td>
 </tr>
 <tr>
 <td><code>ical_url</code></td>
-<td>URL for the user iCal connection <strong>String (URL)</strong></td>
+<td>URL for the <a href="#user-api">User</a> iCal connection <strong>String (URL)</strong></td>
 </tr>
 <tr>
 <td><code>password_reset_required</code></td>
-<td>Set to <code>true</code> if this user will be required to reset their password when loggin in <strong>Boolean</strong></td>
+<td>Set to <code>true</code> if this <a href="#user-api">User</a> will be required to reset their password when loggin in <strong>Boolean</strong></td>
 </tr>
 <tr>
 <td><code>notification_settings</code></td>
@@ -901,15 +901,15 @@
 </tr>
 <tr>
 <td><code>creator_id</code></td>
-<td>The unique ID for the SalesSeek user that created this organization <strong>String</strong></td>
+<td>The unique ID for the SalesSeek <a href="#user-api">User</a> that created this organization <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>last_modified_by_id</code></td>
-<td>The unique ID for the SalesSeek user that last modified this organization <strong>String</strong></td>
+<td>The unique ID for the SalesSeek <a href="#user-api">User</a> that last modified this organization <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>owner_id</code></td>
-<td>The unique ID for the SalesSeek user that has ownership of this organization <strong>String</strong></td>
+<td>The unique ID for the SalesSeek <a href="#user-api">User</a> that has ownership of this organization <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>last_viewed</code></td>
@@ -925,11 +925,11 @@
 </tr>
 <tr>
 <td><code>creator</code></td>
-<td>Object containing detailed information about the organization creator <strong>Object</strong></td>
+<td>Object containing detailed information about the <a href="#user-api">User</a> that created the organization <strong>Object</strong></td>
 </tr>
 <tr>
 <td><code>owner</code></td>
-<td>Object containing detailed information about the organization owner <strong>Object</strong></td>
+<td>Object containing detailed information about the <a href="#user-api">User</a> that has ownership over the organization <strong>Object</strong></td>
 </tr>
 <tr>
 <td><code>comments</code></td>
@@ -945,11 +945,11 @@
 </tr>
 <tr>
 <td><code>is_favorite</code></td>
-<td>Is this marked as a favorite? <strong>Boolean</strong></td>
+<td>Set to <code>true</code> if this organization is marked as a favorite <strong>Boolean</strong></td>
 </tr>
 <tr>
 <td><code>custom_fields</code></td>
-<td><a href="#custom-field-api">Custom Fields</a> and their values <strong>Object</strong></td>
+<td>Object containing information about the organization <a href="#custom-field-api">Custom Fields</a> and their values <strong>Object</strong></td>
 </tr>
 </tbody></table>
 <h2 id='get-organization'>Get Organization</h2>
@@ -1208,15 +1208,15 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>creator_id</code></td>
-<td>The unique ID for the SalesSeek user that created this individual <strong>String</strong></td>
+<td>The unique ID for the SalesSeek <a href="#user-api">User</a> that created this individual <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>last_modified_by_id</code></td>
-<td>The unique ID for the SalesSeek user that last modified this individual <strong>String</strong></td>
+<td>The unique ID for the SalesSeek <a href="#user-api">User</a> that last modified this individual <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>owner_id</code></td>
-<td>The unique ID for the SalesSeek user that has ownership of this individual <strong>String</strong></td>
+<td>The unique ID for the SalesSeek <a href="#user-api">User</a> that has ownership of this individual <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>last_viewed</code></td>
@@ -1232,11 +1232,11 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>creator</code></td>
-<td>Object containing detailed information about the individual creator <strong>Object</strong></td>
+<td>Object containing detailed information about the <a href="#user-api">User</a> that created this individual <strong>Object</strong></td>
 </tr>
 <tr>
 <td><code>owner</code></td>
-<td>Object containing detailed information about the individual owner <strong>Object</strong></td>
+<td>Object containing detailed information about the <a href="#user-api">User</a> the has ownership over this individual <strong>Object</strong></td>
 </tr>
 <tr>
 <td><code>comments</code></td>
@@ -1268,7 +1268,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>became_lead_date</code></td>
-<td>Timestamp of the user becoming a lead <strong>Timestamp (ISO 8601)</strong></td>
+<td>Timestamp of the individual becoming a lead <strong>Timestamp (ISO 8601)</strong></td>
 </tr>
 <tr>
 <td><code>source</code></td>
@@ -1431,7 +1431,7 @@ Records-Total: 2000
   </span><span class="s2">"funnel_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6cfc3549-c674-4ba6-8f02-3043d0beb174"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"phase_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Contacted"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"phase_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bf2005c2-bcf0-4978-8c49-af8d41bdb225"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"owner_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"39ee847e-3391-4d34-9114-e26fc5bbe7d2"</span><span class="w">
+  </span><span class="s2">"owner_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"39ee847e-3391-4d34-9114-e26fc5bbe7d2"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.1</span><span class="p">,</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"none"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">2225</span><span class="p">,</span><span class="w">
@@ -1536,7 +1536,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>owner_id</code></td>
-<td>ID the the owner of this deal <strong>String</strong></td>
+<td>The ID for the SalesSeek <a href="#user-api">User</a> that has ownership of this deal <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>weight</code></td>
@@ -1576,7 +1576,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>creator_id</code></td>
-<td>The ID for the user that created this deal <strong>String</strong></td>
+<td>The ID for the <a href="#user-api">User</a> that created this deal <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>tags</code></td>
@@ -1604,7 +1604,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>latest_activity_in_days</code></td>
-<td>Number of days since the last activity on deal <strong>Int</strong></td>
+<td>Number of days since the last activity on deal <strong>Integer</strong></td>
 </tr>
 <tr>
 <td><code>related_file_ids</code></td>
@@ -1720,11 +1720,11 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>creator</code></td>
-<td>Object containing detailed information about the deal creator <strong>Object</strong></td>
+<td>Object containing detailed information about the <a href="#user-api">User</a> that created this deal <strong>Object</strong></td>
 </tr>
 <tr>
 <td><code>owner</code></td>
-<td>Object containing detailed information about the deal owner <strong>Object</strong></td>
+<td>Object containing detailed information about the <a href="#user-api">User</a> that has ownership of this deal <strong>Object</strong></td>
 </tr>
 <tr>
 <td><code>organization</code></td>
@@ -1911,11 +1911,11 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>assignee_id</code></td>
-<td>The unique ID for the SalesSeek user that the task is currently assigned to <strong>String</strong></td>
+<td>The unique ID for the SalesSeek <a href="#user-api">User</a> that the task is currently assigned to <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>owner_id</code></td>
-<td>The unique ID for the SalesSeek user that has ownership of this task <strong>String</strong></td>
+<td>The unique ID for the SalesSeek <a href="#user-api">User</a> that has ownership of this task <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>created</code></td>
@@ -1923,7 +1923,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>creator_id</code></td>
-<td>The unique ID for the SalesSeek user that created this task <strong>String</strong></td>
+<td>The unique ID for the SalesSeek <a href="#user-api">User</a> that created this task <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>modified</code></td>
@@ -1931,7 +1931,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>last_modified_by_id</code></td>
-<td>The unique ID for the SalesSeek user that last modified this task <strong>String</strong></td>
+<td>The unique ID for the SalesSeek <a href="#user-api">User</a> that last modified this task <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>related_type</code></td>
@@ -1971,15 +1971,15 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>creator</code></td>
-<td>Object containing detailed information about the task creator <strong>Object</strong></td>
+<td>Object containing detailed information about the <a href="#user-api">User</a> that created this task <strong>Object</strong></td>
 </tr>
 <tr>
 <td><code>owner</code></td>
-<td>Object containing detailed information about the task owner <strong>Object</strong></td>
+<td>Object containing detailed information about the <a href="#user-api">User</a> that has ownership of this task <strong>Object</strong></td>
 </tr>
 <tr>
 <td><code>assignee</code></td>
-<td>Object containing detailed information about the task assignee <strong>Object</strong></td>
+<td>Object containing detailed information about the <a href="#user-api">User</a> this task is assigned to <strong>Object</strong></td>
 </tr>
 </tbody></table>
 <h2 id='get-task'>Get Task</h2>
@@ -2147,19 +2147,19 @@ Records-Total: 2000
 
 <div class="wrap">
   <p class="flash info">
-    Filters are designed to be applied to [groups]() to allow you to view records.
+    Filters are designed to be applied to <a href="#groups-api"> Groups </a> to allow you to view records.
   </p>
 </div>
 
 <div class="wrap">
   <p class="flash info">
-    The SalesSeek API does allow updating, deleting, or listing of filters. To update a filter, create a new filter with the amended values.
+    The SalesSeek API does not support updating, deleting, or listing of filters. To update a filter, create a new filter with the amended values.
   </p>
 </div>
 
 <div class="wrap">
   <p class="flash warn">
-    Filters that are not associated with a group will be cleaned up periodically.
+    Filters that are not associated with a <a href="#groups-api"> Groups </a> will be cleaned up periodically. To ensure your filter does not get deleted ensure that it is assigned to a <a href="#groups-api"> Groups </a>.
   </p>
 </div>
 <h2 id='filter-attributes'>Filter Attributes</h2>
@@ -2346,11 +2346,11 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>group_type</code></td>
-<td>The type of group (static, smart) <strong>Enum (String)</strong></td>
+<td>The type of group (<code>static</code>, <code>smart</code>) <strong>Enum (String)</strong></td>
 </tr>
 <tr>
 <td><code>element_type</code></td>
-<td>The type of record this group can contain (individuals, organizations, opportunities, tasks)<strong>Enum (String)</strong></td>
+<td>The type of record this group can contain (<code>individuals</code>, <code>organizations</code>, <code>opportunities</code>, <code>tasks</code>)<strong>Enum (String)</strong></td>
 </tr>
 <tr>
 <td><code>locked</code></td>
@@ -2374,23 +2374,23 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>owner_id</code></td>
-<td>ID for the group owner <strong>String</strong></td>
+<td>ID for the <a href="#user-api">User</a> that has ownership for this group <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>creator_id</code></td>
-<td>ID for the group creator <strong>String</strong></td>
+<td>ID for the <a href="#user-api">User</a> that created this group <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>last_modified_by_id</code></td>
-<td>ID for the user that last modified the group <strong>String</strong></td>
+<td>ID for the <a href="#user-api">User</a> that last modified the group <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>creator</code></td>
-<td>Object containing detailed information about the group creator <strong>Object</strong></td>
+<td>Object containing detailed information about the <a href="#user-api">User</a> that created this group <strong>Object</strong></td>
 </tr>
 <tr>
 <td><code>owner</code></td>
-<td>Object containing detailed information about the group owner <strong>Object</strong></td>
+<td>Object containing detailed information about the <a href="#user-api">User</a> that owns this group <strong>Object</strong></td>
 </tr>
 <tr>
 <td><code>filter_id</code></td>
@@ -2406,7 +2406,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>creator</code></td>
-<td>Object containing detailed information about the group creator <strong>Object</strong></td>
+<td>Object containing detailed information about the <a href="#user-api">User</a> that created this group <strong>Object</strong></td>
 </tr>
 <tr>
 <td><code>order_by</code></td>
@@ -2884,15 +2884,15 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>owner_id</code></td>
-<td>Object containing detailed information about the campaign owner <strong>Object</strong></td>
+<td>The ID for the <a href="#user-api">User</a> that has ownership over this campaign <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>creator_id</code></td>
-<td>Object containing detailed information about the campaign creator <strong>Object</strong></td>
+<td>The ID for the <a href="#user-api">User</a> that created this campaign <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>last_modified_by_id</code></td>
-<td>The ID for the SalesSeek user that last modified this campaign <strong>String</strong></td>
+<td>The ID for the SalesSeek <a href="#user-api">User</a> that last modified this campaign <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>created</code></td>
@@ -2904,19 +2904,19 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>from_user_id</code></td>
-<td>ID of the user the campaign will be sent from <strong>String</strong></td>
+<td>ID of the <a href="#user-api">User</a> the campaign will be sent from <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>from_user</code></td>
-<td>Object containing detailed information about the user the campaign will be sent from <strong>Object</strong></td>
+<td>Object containing detailed information about the <a href="#user-api">User</a> the campaign will be sent from <strong>Object</strong></td>
 </tr>
 <tr>
 <td><code>creator</code></td>
-<td>Object containing detailed information about the campaign creator <strong>Object</strong></td>
+<td>Object containing detailed information about the <a href="#user-api">User</a> that created this campaign <strong>Object</strong></td>
 </tr>
 <tr>
 <td><code>owner</code></td>
-<td>Object containing detailed information about the campaign owner <strong>Object</strong></td>
+<td>Object containing detailed information about the <a href="#user-api">User</a> that owns this campaign <strong>Object</strong></td>
 </tr>
 <tr>
 <td><code>email_status_stats</code></td>
@@ -3243,27 +3243,27 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>from_user</code></td>
-<td>Object containing detailed information about the user the campaign will be sent from <strong>Object</strong></td>
+<td>Object containing detailed information about the <a href="#user-api">User</a> the campaign will be sent from <strong>Object</strong></td>
 </tr>
 <tr>
 <td><code>from_user.id</code></td>
-<td>ID of the SalesSeek user the email will be sent from <strong>String</strong></td>
+<td>ID of the SalesSeek <a href="#user-api">User</a> the email will be sent from <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>from_user.name</code></td>
-<td>Name of the SalesSeek user the email will be sent from <strong>String</strong></td>
+<td>Name of the SalesSeek <a href="#user-api">User</a> the email will be sent from <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>from_user.email_address</code></td>
-<td>Email address of the SalesSeek user the email will be sent from <strong>String</strong></td>
+<td>Email address of the SalesSeek <a href="#user-api">User</a> the email will be sent from <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>from_user.email_signature</code></td>
-<td>Signature for the SalesSeek user the email will be sent from <strong>String</strong></td>
+<td>Signature for the SalesSeek <a href="#user-api">User</a> the email will be sent from <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>include_signature</code></td>
-<td>Set to <code>true</code> if the signature for the user this campaign will be sent from will be appended to the email (direct emails only) <strong>Boolean</strong></td>
+<td>Set to <code>true</code> if the signature for the <a href="#user-api">User</a> this campaign will be sent from will be appended to the email (direct emails only) <strong>Boolean</strong></td>
 </tr>
 <tr>
 <td><code>track</code></td>
@@ -3323,27 +3323,27 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>from_user</code></td>
-<td>Object containing detailed information about the user the campaign will be sent from <strong>Object</strong></td>
+<td>Object containing detailed information about the <a href="#user-api">User</a> the campaign will be sent from <strong>Object</strong></td>
 </tr>
 <tr>
 <td><code>from_user.id</code></td>
-<td>ID of the SalesSeek user the email will be sent from <strong>String</strong></td>
+<td>ID of the SalesSeek <a href="#user-api">User</a> the email will be sent from <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>from_user.name</code></td>
-<td>Name of the SalesSeek user the email will be sent from <strong>String</strong></td>
+<td>Name of the SalesSeek <a href="#user-api">User</a> the email will be sent from <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>from_user.email_address</code></td>
-<td>Email address of the SalesSeek user the email will be sent from <strong>String</strong></td>
+<td>Email address of the SalesSeek <a href="#user-api">User</a> the email will be sent from <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>from_user.email_signature</code></td>
-<td>Signature for the SalesSeek user the email will be sent from <strong>String</strong></td>
+<td>Signature for the SalesSeek <a href="#user-api">User</a> the email will be sent from <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>include_signature</code></td>
-<td>Set to <code>true</code> if the signature for the user this campaign will be sent from will be appended to the email (direct emails only) <strong>Boolean</strong></td>
+<td>Set to <code>true</code> if the signature for the <a href="#user-api">User</a> this campaign will be sent from will be appended to the email (direct emails only) <strong>Boolean</strong></td>
 </tr>
 <tr>
 <td><code>track</code></td>
@@ -3523,19 +3523,19 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>owner_id</code></td>
-<td>The ID for the SalesSeek user that has ownership of this activity <strong>String</strong></td>
+<td>The ID for the SalesSeek <a href="#user-api">User</a> that has ownership of this activity <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>owner</code></td>
-<td>Object containing detailed information about the activity owner <strong>Object</strong></td>
+<td>Object containing detailed information about the <a href="#user-api">User</a> that owns this activity <strong>Object</strong></td>
 </tr>
 <tr>
 <td><code>creator_id</code></td>
-<td>The unique ID for the SalesSeek user that created this activity <strong>String</strong></td>
+<td>The unique ID for the SalesSeek <a href="#user-api">User</a> that created this activity <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>creator</code></td>
-<td>Object containing detailed information about the activity creator <strong>Object</strong></td>
+<td>Object containing detailed information about the <a href="#user-api">User</a> that created this activity <strong>Object</strong></td>
 </tr>
 <tr>
 <td><code>tags</code></td>
@@ -3551,7 +3551,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>last_modified_by_id</code></td>
-<td>The unique ID for the SalesSeek user that last modified this activity <strong>String</strong></td>
+<td>The unique ID for the SalesSeek <a href="#user-api">User</a> that last modified this activity <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>individual_id</code></td>
@@ -3619,7 +3619,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>params.who</code></td>
-<td>Name of the user who performed the activity (shown if activity was a phase move) <strong>String</strong></td>
+<td>Name of the <a href="#user-api">User</a> who performed the activity (shown if activity was a phase move) <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>params.campaign_id</code></td>
@@ -3643,7 +3643,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>params.completed_by</code></td>
-<td>The name of the user that completed the task (shown if activity was a completed task) <strong>String</strong></td>
+<td>The name of the <a href="#user-api">User</a> that completed the task (shown if activity was a completed task) <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>params.description</code></td>
@@ -3731,7 +3731,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>task:completed</code></td>
-<td>A task was complted</td>
+<td>A task was completed</td>
 </tr>
 </tbody></table>
 <h2 id='get-activity'>Get Activity</h2>
@@ -3841,7 +3841,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>order_by</code></td>
-<td>Results are ordered by the provided field name followed by &amp;desc or &amp;asc</td>
+<td>Results are ordered by the provided field name followed by <code>&amp;desc</code> or <code>&amp;asc</code></td>
 </tr>
 <tr>
 <td><code>notes</code></td>
@@ -3917,7 +3917,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>creator_id</code></td>
-<td>The ID for the user that created the tag <strong>String</strong></td>
+<td>The ID for the <a href="#user-api">User</a> that created the tag <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>created</code></td>
@@ -3929,7 +3929,7 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>last_modified_by_id</code></td>
-<td>The unique ID for the SalesSeek user that last modified this tag <strong>String</strong></td>
+<td>The unique ID for the SalesSeek <a href="#user-api">User</a> that last modified this tag <strong>String</strong></td>
 </tr>
 </tbody></table>
 <h2 id='create-tag'>Create Tag</h2>
@@ -4141,15 +4141,15 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>creator_id</code></td>
-<td>ID for the user that created this custom field <strong>String</strong></td>
+<td>ID for the <a href="#user-api">User</a> that created this custom field <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>last_modified_by_id</code></td>
-<td>The ID for the user that last modified this custom field <strong>String</strong></td>
+<td>The ID for the <a href="#user-api">User</a> that last modified this custom field <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>owner_id</code></td>
-<td>The ID for the user that owns this custom field <strong>String</strong></td>
+<td>The ID for the <a href="#user-api">User</a> that owns this custom field <strong>String</strong></td>
 </tr>
 <tr>
 <td><code>created</code></td>
