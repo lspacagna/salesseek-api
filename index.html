@@ -2250,6 +2250,12 @@ Records-Total: 2000
 <p>The provided example would have the following appearance in the SalesSeek app.</p>
 
 <p><img src="images/filter-example.png" title="Filter Example" alt="Filter Example" /></p>
+
+<div class="wrap">
+  <p class="flash info">
+    Due to the fact that the SalesSeek app uses the same API, you can inspect the XHR calls that the application performs. This allows you to create complex filters via the UI and replicate the API calls in your own application.
+  </p>
+</div>
 <h2 id='get-filter'>Get Filter</h2>
 <p>Returns the filter matching the <code>filter_id</code></p>
 <h3 id='request-url'>Request URL</h3>
@@ -3888,19 +3894,19 @@ Records-Total: 2000
 <td>ID for the recrod to get related activities from</td>
 </tr>
 </tbody></table>
-<h1 id='tag-api'>Tag API</h1>
+<h1 id='tag-api'>Tag API</h1><h2 id='tag-attributes'>Tag Attributes</h2>
 <blockquote>
 <p>An example response body for a tag would look like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6e9f2fa6-d376-4313-aaea-13dfde3856a4"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Renewal"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6e9f2fa6-d376-4313-aaea-13dfde3856a4"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Renewal"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"creator_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8baadb17-d37e-47f7-b116-0f15c06f297e"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-05-11T11:32:12.366298"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"modified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-05-11T11:32:12.366298"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"last_modified_by_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8baadb17-d37e-47f7-b116-0f15c06f297e"</span><span class="w">
   </span><span class="p">}</span><span class="w">
-</span></code></pre><h2 id='tag-attributes'>Tag Attributes</h2>
+</span></code></pre>
 <table><thead>
 <tr>
 <th>Parameter</th>
