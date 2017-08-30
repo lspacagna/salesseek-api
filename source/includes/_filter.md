@@ -82,6 +82,12 @@ The provided example would have the following appearance in the SalesSeek app.
 
 ![Filter Example](../images/filter-example.png "Filter Example")
 
+<div class="wrap">
+  <p class="flash info">
+    Due to the fact that the SalesSeek app uses the same API, you can inspect the XHR calls that the application performs. This allows you to create complex filters via the UI and replicate the API calls in your own application.
+  </p>
+</div>
+
 ## Get Filter
 
 Returns the filter matching the `filter_id`
