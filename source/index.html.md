@@ -23,6 +23,7 @@ includes:
   - activities
   - tags
   - custom-fields
+  - user
 
 search: true
 ---

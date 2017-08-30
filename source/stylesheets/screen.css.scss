@@ -552,7 +552,7 @@ html, body {
     background-color: rgba(0,0,0,0.1);
     padding: 3px 3px 4px 3px;
     border-radius: 3px;
-    @extend %break-words;
+    //@extend %break-words;
     @extend %code-font;
   }
 
@@ -630,7 +630,7 @@ html, body {
   }
 
   .verb.put{
-    background: #ffaa6b;
+    background: #A26D8C;
   }
 }
 
