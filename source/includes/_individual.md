@@ -1,5 +1,11 @@
 # Individual API
 
+<div class="wrap">
+  <p class="flash info">
+    To add a 'lead' to SalesSeek you should add an Indvidual and set the <code>source</code> field to a valid value. You can read more about this in our <a href="http://support.salesseek.net/general/deals-organizations-and-individuals/what-are-individuals-and-what-are-leads">help centre article</a>
+  </p>
+</div>
+
 ## Individual Attributes
 
 > The JSON encoded response looks like this.
