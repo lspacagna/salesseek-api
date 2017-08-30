@@ -17,7 +17,7 @@
   "used_in_automations": false,
   "used_in_live_automations": null,
   "include_signature": true,
-  "campaign_schedule_id": a1053ecf-ef72-4f5f-8b74-56ce1b7b401e,
+  "campaign_schedule_id": "a1053ecf-ef72-4f5f-8b74-56ce1b7b401e",
   "campaign_schedule": {
     "id": "a1053ecf-ef72-4f5f-8b74-56ce1b7b401e",
     "timezone": "UTC",
