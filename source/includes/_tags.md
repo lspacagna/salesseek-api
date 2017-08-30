@@ -1,19 +1,19 @@
 # Tag API
 
+## Tag Attributes
+
 > An example response body for a tag would look like this:
 
 ```json
 {
-	"id": "6e9f2fa6-d376-4313-aaea-13dfde3856a4",
-	"name": "Renewal",
+  "id": "6e9f2fa6-d376-4313-aaea-13dfde3856a4",
+  "name": "Renewal",
     "creator_id": "8baadb17-d37e-47f7-b116-0f15c06f297e",
     "created": "2017-05-11T11:32:12.366298",
     "modified": "2017-05-11T11:32:12.366298",
     "last_modified_by_id": "8baadb17-d37e-47f7-b116-0f15c06f297e"
   }
 ```
-
-## Tag Attributes
 
 Parameter |  Description
 --------- | ------- 
