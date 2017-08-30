@@ -222,6 +222,11 @@
     <link rel="apple-touch-icon" sizes="144x144" href="../images/favicon/apple-touch-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="../images/favicon/apple-touch-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon-180x180.png">
+
+    <!-- TypeKit Fonts -->
+    <script src="https://use.typekit.net/ecl0ugf.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
   </head>
 
   <body class="index" data-languages="[]">
@@ -1102,7 +1107,13 @@ Records-Total: 2000
     The set of information returned is reduced to maintain search performance.
   </p>
 </div>
-<h1 id='individual-api'>Individual API</h1><h2 id='individual-attributes'>Individual Attributes</h2>
+<h1 id='individual-api'>Individual API</h1>
+<div class="wrap">
+  <p class="flash info">
+    To add a 'lead' to SalesSeek you should add an Indvidual and set the <code>source</code> field to a valid value. You can read more about this in our <a href="http://support.salesseek.net/general/deals-organizations-and-individuals/what-are-individuals-and-what-are-leads">help centre article</a>
+  </p>
+</div>
+<h2 id='individual-attributes'>Individual Attributes</h2>
 <blockquote>
 <p>The JSON encoded response looks like this.</p>
 </blockquote>
@@ -2415,20 +2426,20 @@ Records-Total: 2000
 <td>Object containing detailed information about the <a href="#user-api">User</a> that created this group <strong>Object</strong></td>
 </tr>
 <tr>
-<td><code>order_by</code></td>
-<td>TODO</td>
+<td><code>display_options</code></td>
+<td>Object containing display options for this group <strong>Object</strong></td>
 </tr>
 <tr>
-<td><code>cost_basis</code></td>
-<td>TODO</td>
+<td><code>display_options.sort.direction</code></td>
+<td>Set to <code>true</code> if sort order is ascending, set to <code>false</code> for descending <strong>Boolean</strong></td>
 </tr>
 <tr>
-<td><code>cost</code></td>
-<td>TODO</td>
+<td><code>display_options.sort.field</code></td>
+<td>The name of the column to apply the sort ordering to <strong>String</strong></td>
 </tr>
 <tr>
-<td><code>target</code></td>
-<td>TODO</td>
+<td><code>display_options.show_as</code></td>
+<td>Set to either <code>table</code> or <code>list</code> depending on the chosen default view for this group <strong>String</strong></td>
 </tr>
 </tbody></table>
 <h2 id='get-group'>Get Group</h2>
@@ -2685,7 +2696,19 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>totals</code></td>
-<td>TODO</td>
+<td>Object containing the total values for this group (only available on <a href="#deal-api">Deal</a> groups, <code>null</code> for all other groups)  <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>totals.default_value</code></td>
+<td>Grand total for all deals in this group (shown at bottom of group, when in table view) <strong>Double</strong></td>
+</tr>
+<tr>
+<td><code>totals.comitted_value</code></td>
+<td>Total for all deals in group that have <code>comitted</code> status <strong>Double</strong></td>
+</tr>
+<tr>
+<td><code>totals.closed_value</code></td>
+<td>Total for all deals in group that have <code>closed</code> status <strong>Double</strong></td>
 </tr>
 </tbody></table>
 <h2 id='get-group-page'>Get Group Page</h2>
@@ -3656,28 +3679,20 @@ Records-Total: 2000
 <td>Descripion of completed tasks (shown if activity was a comlpleted task) <strong>String</strong></td>
 </tr>
 <tr>
+<td><code>params.subject</code></td>
+<td>The email subject for archived emails <strong>String</strong></td>
+</tr>
+<tr>
 <td><code>target_date</code></td>
 <td>Timestamp for the activity target date <strong>Timestamp (ISO 8601)</strong></td>
 </tr>
 <tr>
-<td><code>communication</code></td>
-<td>TODO</td>
-</tr>
-<tr>
-<td><code>communication_id</code></td>
-<td>TODO</td>
-</tr>
-<tr>
 <td><code>real_created</code></td>
-<td>TODO</td>
+<td>Timestamp for when the activity was created in the system <strong>Timestamp (ISO 8601)</strong></td>
 </tr>
 <tr>
 <td><code>user_created</code></td>
-<td>TODO</td>
-</tr>
-<tr>
-<td><code>target_is_parent</code></td>
-<td>TODO</td>
+<td>Timestamp for when a <a href="#user-api">User</a> has said the activity was created (if user has overridden the time) <strong>Timestamp (ISO 8601)</strong></td>
 </tr>
 </tbody></table>
 <h2 id='activity-types'>Activity Types</h2>
@@ -4142,10 +4157,6 @@ Records-Total: 2000
 <td>The value for the option in the dropdown custom field <strong>String</strong></td>
 </tr>
 <tr>
-<td><code>value</code></td>
-<td>TODO</td>
-</tr>
-<tr>
 <td><code>creator_id</code></td>
 <td>ID for the <a href="#user-api">User</a> that created this custom field <strong>String</strong></td>
 </tr>
@@ -4175,7 +4186,15 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>params</code></td>
-<td>TODO</td>
+<td>Extra parameters for the custom field (values depend on the <code>type</code> value) <strong>Object</strong></td>
+</tr>
+<tr>
+<td><code>params.show_preview</code></td>
+<td>Set to <code>true</code> if a <code>url</code> field is to show a preview of the resource using the URI <strong>Boolean</strong></td>
+</tr>
+<tr>
+<td><code>params.preview_height</code></td>
+<td>The height of the preview when getting the resource from a <code>url</code> field <strong>Int</strong></td>
 </tr>
 </tbody></table>
 <h2 id='get-custom-field'>Get Custom Field</h2>
@@ -4416,7 +4435,15 @@ Records-Total: 2000
 </tr>
 <tr>
 <td><code>quota</code></td>
-<td>TODO</td>
+<td>Object continaing targets for each revenue bucket for this user (used in Sales Manager Dashboard) <strong>Array (Object)</strong></td>
+</tr>
+<tr>
+<td><code>quota[x].bucket_id</code></td>
+<td>The ID for the bucket this quota is related to <strong>String</strong></td>
+</tr>
+<tr>
+<td><code>quota[x].value</code></td>
+<td>The target value for this bucket <strong>Double</strong></td>
 </tr>
 </tbody></table>
 <h2 id='get-user'>Get User</h2>
