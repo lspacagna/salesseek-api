@@ -57,7 +57,9 @@ Parameter |  Description
 `notification_settings.morning_email_notification` | Set to `'True'` if user has enabled a daily email with tasks that need completing today **String**
 `notification_settings.new_lead_email_notification` | Set to `'True'` if user has enabled a an email each time a new lead is assigned to them **String**
 `preferences` | Object containing this users app preferences (not editable via the API) **Object**
-`quota` | TODO
+`quota` | Object continaing targets for each revenue bucket for this user (used in Sales Manager Dashboard) **Array (Object)**
+`quota[x].bucket_id` | The ID for the bucket this quota is related to **String**
+`quota[x].value` | The target value for this bucket **Double**
 
 ## Get User
 
