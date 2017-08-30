@@ -64,6 +64,11 @@ under the License.
     <link rel="apple-touch-icon" sizes="144x144" href="../images/favicon/apple-touch-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="../images/favicon/apple-touch-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon-180x180.png">
+
+    <!-- TypeKit Fonts -->
+    <script src="https://use.typekit.net/ecl0ugf.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
   </head>
 
   <body class="<%= page_classes %>" data-languages="<%=h language_tabs.map{ |lang| lang.is_a?(Hash) ? lang.keys.first : lang }.to_json %>">
