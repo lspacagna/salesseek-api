@@ -70,7 +70,6 @@ Parameter |  Description
 `options` | List of options if field type is set to `dropDown` **Object**
 `options[x].id` | ID for the option in the dropdown custom field **String**
 `options[x].value` | The value for the option in the dropdown custom field **String**
-`value` | TODO
 `creator_id` | ID for the [User](#user-api) that created this custom field **String**
 `last_modified_by_id` | The ID for the [User](#user-api) that last modified this custom field **String**
 `owner_id` | The ID for the [User](#user-api) that owns this custom field **String**
@@ -78,7 +77,10 @@ Parameter |  Description
 `modified`| Custom field last modified timestamp **Timestamp (ISO 8601)**
 `order` | The position that this custom field should be displayed in the UI **Integer**
 `default` | The default value for the custom field **(Mixed)**
-`params` | TODO
+`params` | Extra parameters for the custom field (values depend on the `type` value) **Object**
+`params.show_preview` | Set to `true` if a `url` field is to show a preview of the resource using the URI **Boolean**
+`params.preview_height` | The height of the preview when getting the resource from a `url` field **Int**
+
 
 
 
