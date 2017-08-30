@@ -62,22 +62,22 @@ Parameter |  Description
 --------- | ------- 
 `id`      | The unique identifier for this group **String**
 `name`		| User provided name for the group **String**
-`group_type` | The type of group (static, smart) **Enum (String)**
-`element_type` | The type of record this group can contain (individuals, organizations, opportunities, tasks)**Enum (String)**
+`group_type` | The type of group (`static`, `smart`) **Enum (String)**
+`element_type` | The type of record this group can contain (`individuals`, `organizations`, `opportunities`, `tasks`)**Enum (String)**
 `locked`  | Set to `true` if editing this group has been locked (usually the result of the group being used in an automation) **boolean**
 `comments`| User provided comments associated with the group **String**
 `mailing_list` | Set to `true` if this group is a mailing list (only applicable on static groups) **boolean**
 `created` | Group creation timestamp **Timestamp (ISO 8601)**
 `modified`| Group last modified timestamp **Timestamp (ISO 8601)**
-`owner_id` | ID for the group owner **String**
-`creator_id` | ID for the group creator **String**
-`last_modified_by_id` | ID for the user that last modified the group **String**
-`creator` | Object containing detailed information about the group creator **Object**
-`owner` | Object containing detailed information about the group owner **Object**
+`owner_id` | ID for the [User](#user-api) that has ownership for this group **String**
+`creator_id` | ID for the [User](#user-api) that created this group **String**
+`last_modified_by_id` | ID for the [User](#user-api) that last modified the group **String**
+`creator` | Object containing detailed information about the [User](#user-api) that created this group **Object**
+`owner` | Object containing detailed information about the [User](#user-api) that owns this group **Object**
 `filter_id` | The ID for the group [filter](#filter-api) **String**
 `filter` | Object containing detailed information about the group filter **Object**
 `columns` | Array of column names to be shown in this group **Object**
-`creator` | Object containing detailed information about the group creator **Object**
+`creator` | Object containing detailed information about the [User](#user-api) that created this group **Object**
 `order_by` | TODO
 `cost_basis` | TODO
 `cost` | TODO

@@ -47,10 +47,10 @@ SalesSeek expects the cookie to be included in all API requests to the server af
 
 Parameter |  Description
 --------- | ------- 
-`id`      | The unique identifier for the user logging in **String**
-`name`    | The name of the user logging in **String**
-`is_admin` | Set to `true` if this user is an admin **Boolean**
-`email_address` | The user email address **String**
+`id`      | The unique identifier for the [User](#user-api) logging in **String**
+`name`    | The name of the [User](#user-api) logging in **String**
+`is_admin` | Set to `true` if this [User](#user-api) is an admin **Boolean**
+`email_address` | The [User](#user-api) email address **String**
 `client_id` | The unique identifier for the current SalesSeek account **String**
 `client.created` | SalesSeek account creation timestamp **Timestamp (ISO 8601)**
 `client.currencies` | The currencies and their conversions in this SalesSeek account **Object**
@@ -62,10 +62,10 @@ Parameter |  Description
 `client.name` | The name for this SalesSeek account **String**
 `client.selective_unsubscribing` | Set to `true` if this account has selective unsubscribing enabled **Boolean**
 `client.short_id` | The short ID for this SalesSeek account. Also used in the account subdomain **String**
-`modified`| User last modified timestamp **Timestamp (ISO 8601)**
-`created` | User creation timestamp **Timestamp (ISO 8601)**
-`ical_url` | URL for the user iCal connection **String (URL)**
-`password_reset_required` | Set to `true` if this user will be required to reset their password when loggin in **Boolean**
+`modified`| [User](#user-api) last modified timestamp **Timestamp (ISO 8601)**
+`created` | [User](#user-api) creation timestamp **Timestamp (ISO 8601)**
+`ical_url` | URL for the [User](#user-api) iCal connection **String (URL)**
+`password_reset_required` | Set to `true` if this [User](#user-api) will be required to reset their password when loggin in **Boolean**
 `notification_settings` | Object contianing users email notification settings **Object**
 `notification_settings.instant_email_notifications` | Set to `'True'` if user has instant email notifications when a task has been assigned to them enabled **String**
 `notification_settings.evening_email_notification` | Set to `'True'` if user has enabled a daily email of all completed tasks, and today's uncompleted tasks **String**

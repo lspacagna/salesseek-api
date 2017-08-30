@@ -137,14 +137,14 @@ Parameter |  Description
 `id`      | The unique identifier for this activity **String**
 `activity_type` | The [type of activity](#activity-types)  **String**
 `target_type` | The record type the activity relates to (`organization`, `opportunity`, `individual`) **Enum (string)**
-`owner_id` | The ID for the SalesSeek user that has ownership of this activity **String**
-`owner` | Object containing detailed information about the activity owner **Object**
-`creator_id` | The unique ID for the SalesSeek user that created this activity **String**
-`creator` | Object containing detailed information about the activity creator **Object**
+`owner_id` | The ID for the SalesSeek [User](#user-api) that has ownership of this activity **String**
+`owner` | Object containing detailed information about the [User](#user-api) that owns this activity **Object**
+`creator_id` | The unique ID for the SalesSeek [User](#user-api) that created this activity **String**
+`creator` | Object containing detailed information about the [User](#user-api) that created this activity **Object**
 `tags` | Array of tags associated with this activity **Array**
 `created` | Activity creation timestamp **Timestamp (ISO 8601)**
 `modified`| Activity last modified timestamp **Timestamp (ISO 8601)**
-`last_modified_by_id` | The unique ID for the SalesSeek user that last modified this activity **String**
+`last_modified_by_id` | The unique ID for the SalesSeek [User](#user-api) that last modified this activity **String**
 `individual_id` | The ID for the [individual](#individual-api) record this activity is associated to - `null` if not associated with an individual **String**
 `individual_name` | The name of the [individual](#individual-api) record that this activity is associated to - `null` if not associated with an individual **String**
 `opportunity_id` | The ID for the [deal](#deal-api) record this activity is associated to - `null` if not associated with a deal **String**
@@ -161,13 +161,13 @@ Parameter |  Description
 `params.to_funnel` | The name for the funnel that the deal was moved to (shown if activity was a phase move) **String**
 `params.from_funnel_id` | The ID for the funnel that the deal was moved from (shown if activity was a phase move) **String**
 `params.from_funnel` | The name for the funnel that the deal was moved from (shown if activity was a phase move) **String**
-`params.who` | Name of the user who performed the activity (shown if activity was a phase move) **String**
+`params.who` | Name of the [User](#user-api) who performed the activity (shown if activity was a phase move) **String**
 `params.campaign_id` | The ID for the campaign where the activity originates (shown if activity was related to a campaign) **String**
 `params.campaign_name` | The name for the campaign where the activity originates (shown if activity was related to a campaign) **String**
 `params.campaign_type` | The type of email campaign (direct, campaign) (shown if activity was related to a campaign) **String**
 `params.url` | The URL that was clicked in the campaign email (shown if activity was related to a campaign link being clicked) **String**
 `params.subject` | The email subject (shown if activity was an archived email) **String**
-`params.completed_by` | The name of the user that completed the task (shown if activity was a completed task) **String**
+`params.completed_by` | The name of the [User](#user-api) that completed the task (shown if activity was a completed task) **String**
 `params.description` | Descripion of completed tasks (shown if activity was a comlpleted task) **String**
 `target_date` | Timestamp for the activity target date **Timestamp (ISO 8601)**
 `communication` | TODO
@@ -193,7 +193,7 @@ Types | Description
 `automation:archive:mailshot_url_clicked` | A link in a [campaign](#campaign-api) was clicked
 `automation:archive:mailshot_sent` | A [campaign](#campaign-api) was sent
 `auto:call` | A call was logged
-`task:completed` | A task was complted
+`task:completed` | A task was completed
 
 
 
@@ -320,7 +320,7 @@ Parameter |  Description
 --------- | ------- 
 `rows` | The maximum number of organizations to be returned.
 `start` | The row number to start to retrieve data. (0 for start)
-`order_by` | Results are ordered by the provided field name followed by &desc or &asc
+`order_by` | Results are ordered by the provided field name followed by `&desc` or `&asc`
 `notes` | Set to `true` to request activity notes (`true` or `false`)
 `communications` | Set to `true` to request all communication activity (`true` or `false`)
 `contact_updates` | Set to `true` to request all contact update activity (`true` or `false`)

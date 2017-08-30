@@ -13,7 +13,7 @@
   "funnel_id": "6cfc3549-c674-4ba6-8f02-3043d0beb174",
   "phase_name": "Contacted",
   "phase_id": "bf2005c2-bcf0-4978-8c49-af8d41bdb225",
-  "owner_id": "39ee847e-3391-4d34-9114-e26fc5bbe7d2"
+  "owner_id": "39ee847e-3391-4d34-9114-e26fc5bbe7d2",
   "weight": 0.1,
   "status": "none",
   "value": 2225,
@@ -93,7 +93,7 @@ Parameter |  Description
 `funnel_id` | ID for the funnel this deal is assigned to **String**
 `phase_name` | Name for the phase this deal is assigned to **String**
 `phase_id`  | ID for the phase this deal is assigned to **String**
-`owner_id` | ID the the owner of this deal **String**
+`owner_id` |  The ID for the SalesSeek [User](#user-api) that has ownership of this deal **String**
 `weight` | Weight value for deal. Weights are assigned to phases in the funnel. Used for forecast calculations. **Double**
 `status` | Deal forecast status. (`None`, `None Upside`, `Committed Downside`, `Committed`) **Enum (String)**
 `value` | Deal monetary value. Sum of all deal bucket values. **Double**
@@ -103,14 +103,14 @@ Parameter |  Description
 `is_favorite` | Set to `true` if this deal is marked as a favourite **Boolean**
 `phase_last_changed` | Timestamp of when the deal phase was last changed. Used for UI activity colouring **Timestamp (ISO 8601)**
 `expected_close_date` | User provided expected close date **Timestamp (ISO 8601)**
-`creator_id` | The ID for the user that created this deal **String**
+`creator_id` | The ID for the [User](#user-api) that created this deal **String**
 `tags` | User provided tags associated with this deal **Array (Object)**
 `comments` | User provided comments associated with this deal **String**
 `created` | Deal creation timestamp **Timestamp (ISO 8601)**
 `modified`| Deal last modified timestamp **Timestamp (ISO 8601)**
 `last_modified_by_id` | ID of the user that last modifed this deal **String**
 `last_viewed`| Timestamp of the last time this deal was viewed **Timestamp (ISO 8601)**
-`latest_activity_in_days` | Number of days since the last activity on deal **Int**
+`latest_activity_in_days` | Number of days since the last activity on deal **Integer**
 `related_file_ids` | Array of related file IDs associated with this deal **Array (String)**
 `generated_files` | Array of gelated file IDs associated with this deal **Array (String)**
 `funnel` | Object containing detailed information about the funnel the deal is associated to **Object**
@@ -139,8 +139,8 @@ Parameter |  Description
 `buckets.name` | The user provided name for this bucket **String**
 `buckets.id` | The unique identifier for this bucket **String**
 `custom_fields` | Custom Fields and their values **Object**
-`creator` | Object containing detailed information about the deal creator **Object**
-`owner` | Object containing detailed information about the deal owner **Object**
+`creator` | Object containing detailed information about the [User](#user-api) that created this deal **Object**
+`owner` | Object containing detailed information about the [User](#user-api) that has ownership of this deal **Object**
 `organization` | Object containing detailed information about the [Organization](#organization-api) this deal is related to **Object**
 
 ## Get Deal

@@ -4,19 +4,19 @@ Filters allow you to segment your records within SalesSeek. You can use any fiel
 
 <div class="wrap">
   <p class="flash info">
-    Filters are designed to be applied to [groups]() to allow you to view records.
+    Filters are designed to be applied to <a href="#groups-api"> Groups </a> to allow you to view records.
   </p>
 </div>
 
 <div class="wrap">
   <p class="flash info">
-    The SalesSeek API does allow updating, deleting, or listing of filters. To update a filter, create a new filter with the amended values.
+    The SalesSeek API does not support updating, deleting, or listing of filters. To update a filter, create a new filter with the amended values.
   </p>
 </div>
 
 <div class="wrap">
   <p class="flash warn">
-  	Filters that are not associated with a group will be cleaned up periodically.
+  	Filters that are not associated with a <a href="#groups-api"> Groups </a> will be cleaned up periodically. To ensure your filter does not get deleted ensure that it is assigned to a <a href="#groups-api"> Groups </a>.
   </p>
 </div>
 

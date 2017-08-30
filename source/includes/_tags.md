@@ -19,10 +19,10 @@ Parameter |  Description
 --------- | ------- 
 `id`      | The unique identifier for this tag **String**
 `name` 	  | The name for this tag **String**
-`creator_id` | The ID for the user that created the tag **String**
+`creator_id` | The ID for the [User](#user-api) that created the tag **String**
 `created` | Tag creation timestamp **Timestamp (ISO 8601)**
 `modified` | Tag last modified timestamp **Timestamp (ISO 8601)**
-`last_modified_by_id` | The unique ID for the SalesSeek user that last modified this tag **String**
+`last_modified_by_id` | The unique ID for the SalesSeek [User](#user-api) that last modified this tag **String**
 
 
 

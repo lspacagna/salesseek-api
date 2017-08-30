@@ -107,15 +107,15 @@ Parameter |  Description
 `campaign_schedule.when` | Timestamp for when this campaign should be sent **Timestamp (ISO 8601)**
 `campaign_schedule.when_utc` | Timestamp for when this campaign should be sent in UTC **Timestamp (ISO 8601)**
 `track` | Set to `true` if SalesSeek should track statistics on this campaign **Boolean**
-`owner_id` | Object containing detailed information about the campaign owner **Object**
-`creator_id` | Object containing detailed information about the campaign creator **Object**
-`last_modified_by_id` | The ID for the SalesSeek user that last modified this campaign **String**
+`owner_id` | The ID for the [User](#user-api) that has ownership over this campaign **String**
+`creator_id` | The ID for the [User](#user-api) that created this campaign **String**
+`last_modified_by_id` | The ID for the SalesSeek [User](#user-api) that last modified this campaign **String**
 `created` | Campaign creation timestamp **Timestamp (ISO 8601)**
 `modified`| Campaign last modified timestamp **Timestamp (ISO 8601)**
-`from_user_id` | ID of the user the campaign will be sent from **String**
-`from_user`| Object containing detailed information about the user the campaign will be sent from **Object**
-`creator` | Object containing detailed information about the campaign creator **Object**
-`owner` | Object containing detailed information about the campaign owner **Object**
+`from_user_id` | ID of the [User](#user-api) the campaign will be sent from **String**
+`from_user`| Object containing detailed information about the [User](#user-api) the campaign will be sent from **Object**
+`creator` | Object containing detailed information about the [User](#user-api) that created this campaign **Object**
+`owner` | Object containing detailed information about the [User](#user-api) that owns this campaign **Object**
 `email_status_stats` | Object containing email status statistics **Object**
 `email_status_stats.sent` | Number of sent emails in campaign **Integer**
 `email_status_stats.queued` | Number of emails queued in campaign **Integer**
@@ -311,12 +311,12 @@ Parameter |  Description
 `campaign_type` | The type of the campaign (`direct`, `campaign`) **Enum (String)**
 `content` | HTML content for this email **String**
 `status`  | Current status of the campaign (`draft`, `ready`, `scheduled`, `sent`) **Enum (String)**
-`from_user`| Object containing detailed information about the user the campaign will be sent from **Object**
-`from_user.id` | ID of the SalesSeek user the email will be sent from **String**
-`from_user.name` | Name of the SalesSeek user the email will be sent from **String**
-`from_user.email_address` | Email address of the SalesSeek user the email will be sent from **String**
-`from_user.email_signature` | Signature for the SalesSeek user the email will be sent from **String**
-`include_signature` | Set to `true` if the signature for the user this campaign will be sent from will be appended to the email (direct emails only) **Boolean**
+`from_user`| Object containing detailed information about the [User](#user-api) the campaign will be sent from **Object**
+`from_user.id` | ID of the SalesSeek [User](#user-api) the email will be sent from **String**
+`from_user.name` | Name of the SalesSeek [User](#user-api) the email will be sent from **String**
+`from_user.email_address` | Email address of the SalesSeek [User](#user-api) the email will be sent from **String**
+`from_user.email_signature` | Signature for the SalesSeek [User](#user-api) the email will be sent from **String**
+`include_signature` | Set to `true` if the signature for the [User](#user-api) this campaign will be sent from will be appended to the email (direct emails only) **Boolean**
 `track` | Set to `true` if SalesSeek should track statistics on this campaign **Boolean**
 `name`    | The user provided title for the campaign **String**
 `subject` | The subject line for the campaign **String**
@@ -347,12 +347,12 @@ Parameter |  Description
 `campaign_type` | The type of the campaign (`direct`, `campaign`) **Enum (String)**
 `content` | HTML content for this email **String**
 `status`  | Current status of the campaign (`draft`, `ready`, `scheduled`, `sent`) **Enum (String)**
-`from_user`| Object containing detailed information about the user the campaign will be sent from **Object**
-`from_user.id` | ID of the SalesSeek user the email will be sent from **String**
-`from_user.name` | Name of the SalesSeek user the email will be sent from **String**
-`from_user.email_address` | Email address of the SalesSeek user the email will be sent from **String**
-`from_user.email_signature` | Signature for the SalesSeek user the email will be sent from **String**
-`include_signature` | Set to `true` if the signature for the user this campaign will be sent from will be appended to the email (direct emails only) **Boolean**
+`from_user`| Object containing detailed information about the [User](#user-api) the campaign will be sent from **Object**
+`from_user.id` | ID of the SalesSeek [User](#user-api) the email will be sent from **String**
+`from_user.name` | Name of the SalesSeek [User](#user-api) the email will be sent from **String**
+`from_user.email_address` | Email address of the SalesSeek [User](#user-api) the email will be sent from **String**
+`from_user.email_signature` | Signature for the SalesSeek [User](#user-api) the email will be sent from **String**
+`include_signature` | Set to `true` if the signature for the [User](#user-api) this campaign will be sent from will be appended to the email (direct emails only) **Boolean**
 `track` | Set to `true` if SalesSeek should track statistics on this campaign **Boolean**
 `name`    | The user provided title for the campaign **String**
 `subject` | The subject line for the campaign **String**

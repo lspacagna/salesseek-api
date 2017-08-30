@@ -71,9 +71,9 @@ Parameter |  Description
 `options[x].id` | ID for the option in the dropdown custom field **String**
 `options[x].value` | The value for the option in the dropdown custom field **String**
 `value` | TODO
-`creator_id` | ID for the user that created this custom field **String**
-`last_modified_by_id` | The ID for the user that last modified this custom field **String**
-`owner_id` | The ID for the user that owns this custom field **String**
+`creator_id` | ID for the [User](#user-api) that created this custom field **String**
+`last_modified_by_id` | The ID for the [User](#user-api) that last modified this custom field **String**
+`owner_id` | The ID for the [User](#user-api) that owns this custom field **String**
 `created` | Custom field creation timestamp **Timestamp (ISO 8601)**
 `modified`| Custom field last modified timestamp **Timestamp (ISO 8601)**
 `order` | The position that this custom field should be displayed in the UI **Integer**

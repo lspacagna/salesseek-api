@@ -43,19 +43,19 @@ Parameter |  Description
 `abbreviation` | A system generated abbreviation, derived from the organization name **String**
 `created` | Organization creation timestamp **Timestamp (ISO 8601)**
 `modified`| Organization last modified timestamp **Timestamp (ISO 8601)**
-`creator_id` | The unique ID for the SalesSeek user that created this organization **String**
-`last_modified_by_id` | The unique ID for the SalesSeek user that last modified this organization **String**
-`owner_id` | The unique ID for the SalesSeek user that has ownership of this organization **String**
+`creator_id` | The unique ID for the SalesSeek [User](#user-api) that created this organization **String**
+`last_modified_by_id` | The unique ID for the SalesSeek [User](#user-api) that last modified this organization **String**
+`owner_id` | The unique ID for the SalesSeek [User](#user-api) that has ownership of this organization **String**
 `last_viewed` | Organization last viewed timestamp **Timestamp (ISO 8601)**
 `communication` | An array containing the different communication methods associated with this organization **Array (Object)**
 `locations` | An array containing the different locations associated with this organization **Array (Object)**
-`creator` | Object containing detailed information about the organization creator **Object**
-`owner` | Object containing detailed information about the organization owner **Object**
+`creator` | Object containing detailed information about the [User](#user-api) that created the organization **Object**
+`owner` | Object containing detailed information about the [User](#user-api) that has ownership over the organization **Object**
 `comments` | User provided comments associated with this organization **String**
 `tags` | User provided tags associated with this organization **Array (Object)**
 `related_file_ids` | Array of Related File IDs associated with this organization **Array (String)**
-`is_favorite` | Is this marked as a favorite? **Boolean**
-`custom_fields` | [Custom Fields](#custom-field-api) and their values **Object**
+`is_favorite` | Set to `true` if this organization is marked as a favorite **Boolean**
+`custom_fields` | Object containing information about the organization [Custom Fields](#custom-field-api) and their values **Object**
 
 
 ## Get Organization
@@ -75,7 +75,6 @@ Parameter |  Description
 
 
 ## Create Organization
-
 
 Creates a new organization and then returns the newly created organization.
 

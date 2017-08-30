@@ -69,14 +69,14 @@ Parameter |  Description
 `organization` | Object containing detailed information about [Organization](#organization-api) this individual is linked to **Object**
 `created` | Individual creation timestamp **Timestamp (ISO 8601)**
 `modified`| Individual last modified timestamp **Timestamp (ISO 8601)**
-`creator_id` | The unique ID for the SalesSeek user that created this individual **String**
-`last_modified_by_id` | The unique ID for the SalesSeek user that last modified this individual **String**
-`owner_id` | The unique ID for the SalesSeek user that has ownership of this individual **String**
+`creator_id` | The unique ID for the SalesSeek [User](#user-api) that created this individual **String**
+`last_modified_by_id` | The unique ID for the SalesSeek [User](#user-api) that last modified this individual **String**
+`owner_id` | The unique ID for the SalesSeek [User](#user-api) that has ownership of this individual **String**
 `last_viewed` | Individual last viewed timestamp **Timestamp (ISO 8601)**
 `communication` | An array containing the different communication methods associated with this individual **Array (Object)**
 `locations` | An array containing the different locations associated with this individual **Array (Object)**
-`creator` | Object containing detailed information about the individual creator **Object**
-`owner` | Object containing detailed information about the individual owner **Object**
+`creator` | Object containing detailed information about the [User](#user-api) that created this individual **Object**
+`owner` | Object containing detailed information about the [User](#user-api) the has ownership over this individual **Object**
 `comments` | User provided comments associated with this individual **String**
 `tags` | User provided tags associated with this organization **Array (Object)**
 `related_file_ids` | Array of Related File IDs associated with this individual **Array (String)**
@@ -84,7 +84,7 @@ Parameter |  Description
 `custom_fields` | Custom Fields and their values **Object**
 `unsubscribed_all` | Set to `true` if this individual has unsubscribed from all [Campaigns](#campaign-api) **Boolean**
 `source_id` | The ID for the associated lead source **String**
-`became_lead_date` | Timestamp of the user becoming a lead **Timestamp (ISO 8601)**
+`became_lead_date` | Timestamp of the individual becoming a lead **Timestamp (ISO 8601)**
 `source` | Detailed information about the associated lead source **Object**
 
 ## Get Individual

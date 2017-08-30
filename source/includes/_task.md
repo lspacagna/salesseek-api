@@ -45,12 +45,12 @@ Parameter |  Description
 `id`      | The unique identifier for this task **String**
 `text` 	  | User provided task detail text **String**
 `due_date` | Timestamp for when the task is due **Timestamp (ISO 8601)**
-`assignee_id` | The unique ID for the SalesSeek user that the task is currently assigned to **String**
-`owner_id` | The unique ID for the SalesSeek user that has ownership of this task **String**
+`assignee_id` | The unique ID for the SalesSeek [User](#user-api) that the task is currently assigned to **String**
+`owner_id` | The unique ID for the SalesSeek [User](#user-api) that has ownership of this task **String**
 `created` | Task creation timestamp **Timestamp (ISO 8601)**
-`creator_id` | The unique ID for the SalesSeek user that created this task **String**
+`creator_id` | The unique ID for the SalesSeek [User](#user-api) that created this task **String**
 `modified`| Task last modified timestamp **Timestamp (ISO 8601)**
-`last_modified_by_id` | The unique ID for the SalesSeek user that last modified this task **String**
+`last_modified_by_id` | The unique ID for the SalesSeek [User](#user-api) that last modified this task **String**
 `related_type` | The type of record in SalesSeek that the task is related to ([organization](#organization-api), [individual](#individual-api), [deal](#deal-api)) **Enum**
 `related_id` | The ID for the record that the task is reated to **String**
 `completed` | Set to `true` if the task is completed **Boolean**
@@ -60,9 +60,9 @@ Parameter |  Description
 `related.name` | The name of the record that the task is related to **String**
 `related.type` | The type of record in SalesSeek that the task is related to ([organization](#organization-api), [individual](#individual-api), [deal](#deal-api)) **Enum**
 `tags` | User provided tags associated with this task **Array (Object)**
-`creator` | Object containing detailed information about the task creator **Object**
-`owner` | Object containing detailed information about the task owner **Object**
-`assignee` | Object containing detailed information about the task assignee **Object**
+`creator` | Object containing detailed information about the [User](#user-api) that created this task **Object**
+`owner` | Object containing detailed information about the [User](#user-api) that has ownership of this task **Object**
+`assignee` | Object containing detailed information about the [User](#user-api) this task is assigned to **Object**
 
 
 ## Get Task
