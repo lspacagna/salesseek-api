@@ -78,11 +78,10 @@ Parameter |  Description
 `filter` | Object containing detailed information about the group filter **Object**
 `columns` | Array of column names to be shown in this group **Object**
 `creator` | Object containing detailed information about the [User](#user-api) that created this group **Object**
-`order_by` | TODO
-`cost_basis` | TODO
-`cost` | TODO
-`target` | TODO
-
+`display_options` | Object containing display options for this group **Object**
+`display_options.sort.direction` | Set to `true` if sort order is ascending, set to `false` for descending **Boolean**
+`display_options.sort.field` | The name of the column to apply the sort ordering to **String**
+`display_options.show_as` | Set to either `table` or `list` depending on the chosen default view for this group **String**
 
 ## Get Group
 
