@@ -68,7 +68,10 @@ Parameter |  Description
 `columns` | Array containing the column names in the returned data **Array (String)**
 `rows` 	  | Array containing the rows of data returned as objects **Array (Object)**
 `order_by` | Array of the values the returned data is ordered by **Array (String)**
-`totals` | TODO
+`totals` | Object containing the total values for this group (only available on [Deal](#deal-api) groups, `null` for all other groups)  **Object**
+`totals.default_value` | Grand total for all deals in this group (shown at bottom of group, when in table view) **Double**
+`totals.comitted_value` | Total for all deals in group that have `comitted` status **Double**
+`totals.closed_value` | Total for all deals in group that have `closed` status **Double**
 
 
 ## Get Group Page
