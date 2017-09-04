@@ -14,3 +14,9 @@ Variable |  Description
 `RESOURCE` | Specific resource type to be requested.
 `KEYx` | Parameter identifier matching one resource's parameter
 `VALUEx` | Value asociated to `KEYx` 
+
+<div class="wrap">
+  <p class="flash info">
+    The SalesSeek application itself is developed using this API. Therefore it is possible to inspect the API calls that the application makes using your browser developer tools.
+  </p>
+</div>
