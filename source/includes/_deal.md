@@ -138,7 +138,7 @@ Parameter |  Description
 `buckets.value` | The value applied to this bucket **Double**
 `buckets.name` | The user provided name for this bucket **String**
 `buckets.id` | The unique identifier for this bucket **String**
-`custom_fields` | Custom Fields and their values **Object**
+`custom_field.{custom_field_id}` | Contains the value for the [Custom Field](#custom-field-api) using the `custom_field_id` **(Mixed)**
 `creator` | Object containing detailed information about the [User](#user-api) that created this deal **Object**
 `owner` | Object containing detailed information about the [User](#user-api) that has ownership of this deal **Object**
 `organization` | Object containing detailed information about the [Organization](#organization-api) this deal is related to **Object**

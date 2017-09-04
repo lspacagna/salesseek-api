@@ -87,7 +87,7 @@ Parameter |  Description
 `tags` | User provided tags associated with this organization **Array (Object)**
 `related_file_ids` | Array of Related File IDs associated with this individual **Array (String)**
 `is_favorite` | Is this marked as a favorite? **Boolean**
-`custom_fields` | Custom Fields and their values **Object**
+`custom_field.{custom_field_id}` | Contains the value for the [Custom Field](#custom-field-api) using the `custom_field_id` **(Mixed)**
 `unsubscribed_all` | Set to `true` if this individual has unsubscribed from all [Campaigns](#campaign-api) **Boolean**
 `source_id` | The ID for the associated lead source **String**
 `became_lead_date` | Timestamp of the individual becoming a lead **Timestamp (ISO 8601)**

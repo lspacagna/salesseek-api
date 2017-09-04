@@ -55,7 +55,7 @@ Parameter |  Description
 `tags` | User provided tags associated with this organization **Array (Object)**
 `related_file_ids` | Array of Related File IDs associated with this organization **Array (String)**
 `is_favorite` | Set to `true` if this organization is marked as a favorite **Boolean**
-`custom_fields` | Object containing information about the organization [Custom Fields](#custom-field-api) and their values **Object**
+`custom_field.{custom_field_id}` | Contains the value for the [Custom Field](#custom-field-api) using the `custom_field_id` **(Mixed)**
 
 
 ## Get Organization
